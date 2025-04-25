@@ -1,1 +1,1 @@
-literally got this from youtube
+ts sucks 💔
