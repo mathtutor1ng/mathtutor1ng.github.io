@@ -1,1 +1,1 @@
-ts sucks 💔
+fixed it 
