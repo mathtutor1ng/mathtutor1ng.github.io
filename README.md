@@ -1,4 +1,1 @@
-# BLAZERGAMES
-
-*Subscribe to Blazer!!!*
-https://youtube.com/c/blazerhm
+literally got this from youtube
