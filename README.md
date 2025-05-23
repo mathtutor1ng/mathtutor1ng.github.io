@@ -5,6 +5,7 @@ This is the changelog of the website in order from newest to oldest.
 May 23, 2025
 ---
 - Fixed A Dance Of Fire And Ice from opening Friday Night Funkin' instead of the game
+- Refreshed the popular games on the popular games page
 
 May 22, 2025
 ---
