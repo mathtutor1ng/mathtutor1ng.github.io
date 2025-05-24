@@ -2,6 +2,11 @@
 
 This is the changelog of the website in order from newest to oldest.
 
+May 24, 2025
+---
+- Fixed Minecraft from opening Drive Mad instead of the game
+- Fixed Friday Night Funkin' from opening my portfolio website instead of the game
+
 May 23, 2025
 ---
 - Fixed A Dance Of Fire And Ice from opening Friday Night Funkin' instead of the game
