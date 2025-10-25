@@ -7,6 +7,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added Survival Race
 - Fixed Survival Race from open A Dance of Fire and Ice
 - Changed homepage title from, "Neurvy Games" to, "Neruvy Games"
+- Added Vex 3, 4, and 5
 
 May 24, 2025
 ---
