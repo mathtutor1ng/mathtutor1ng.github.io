@@ -13,6 +13,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added New Logo
 - Added R.E.P.O.
 - Added Snow Rider
+- Added Smash Karts
 
 May 24, 2025
 ---

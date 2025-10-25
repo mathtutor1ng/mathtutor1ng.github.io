@@ -1,0 +1,2711 @@
+<html lang="en-us"><head><script src="//www.google.com/jsapi"></script><script>window.parent.maeExportApis_();</script>
+
+
+	<script>
+'use strict';
+
+
+const AdProviderPlaywire = "Playwire";
+const AdProviderGoogleH5Games = "GoogleH5Games";
+const AdProviderAdinplay = "AdinPlay";
+var displayAdProvider = AdProviderAdinplay;
+var videoAdProvider = AdProviderAdinplay;
+
+var playwireRampInitialised = false;
+
+function isPlaywireEnabled()
+{
+  return displayAdProvider === AdProviderPlaywire || videoAdProvider === AdProviderPlaywire;
+}
+
+function isAdinPlayEnabled()
+{
+  return displayAdProvider === AdProviderAdinplay || videoAdProvider === AdProviderAdinplay;
+}
+
+function isGoogleH5GamesEnabled()
+{
+  return videoAdProvider === AdProviderGoogleH5Games;
+}
+
+
+var debugAdContainers = false;
+var offCanvasAdsEnabled = false;
+var showBtmAd = false;
+var showRightAd = true;
+var setOffCanvasAdDivDimensions = false; 
+var onlyShowOffCanvasAdsOnDeath = false;
+
+var maxAdWidthPercentage = 0.25;
+var maxAdHeightPercentage = 0.25;
+var offCanvasBorderSize = "5";
+var offCanvasBorderStyle = `#99c7fc ${offCanvasBorderSize}px solid`;
+var offCanvasBorderBtmRightCornerRadiusStyle = "8px";
+
+var btmAdResolutions = [
+  { w: 970, h: 250, adId: "smashkarts-io_970x250_2" },
+  { w: 970, h: 90, adId: "smashkarts-io_970x90" },
+  { w: 728, h: 90, adId: "smashkarts-io_728x90_2" },
+];
+
+var rightAdResolutions = [
+  { w: 336, h: 1050, adId: "smashkarts-io_336x1050" },
+  { w: 300, h: 600, adId: "smashkarts-io_300x600" },
+  { w: 160, h: 600, adId: "smashkarts-io_160x600" },
+];
+
+var btmAdResolutionsMobile = [
+  { w: 320, h: 50, adId: "smashkarts-io_320x50" },
+];
+
+var rightAdResolutionsMobile = [
+];
+
+var currBtmAdIndex = -1;
+var currRightAdIndex = -1;
+</script>	<meta charset="utf-8">
+	    <style>
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{margin:0;width:100%;height:100%;overflow:hidden}#xsolla-iframe{position:absolute;width:820px;height:100%;left:50.5%;display:none;transform:translate(-50%,0%)}#mainContainer{display:flex;width:100vw;height:100vh;padding:0 env(safe-area-inset-right)0 env(safe-area-inset-left)}#mainContainerBg{position:absolute;z-index:-1;margin:0 calc(-1 * env(safe-area-inset-right));transform:scale(1.1);width:100vw;height:100vh;background:url(https://lh7-us.googleusercontent.com/KNTcIQ34j2ftK1tqcrhLvDbOn3PRmOmCgmC8wkIYyFnn5_5kfGApi5tyW0j5Nn9HrgbfhPAXOYayMlaYEZZJp8jCjh3s1EW5kcmYEWm5d-vbOg33Qk_0gkXj2Dgy55hl-5jVmvH9_lPLQcMdAoyOkmo),#496486;background-size:10%;background-repeat:repeat;background-blend-mode:multiply;filter:blur(4px)}#leftContainer{display:flex;flex-direction:column}#gameContainer{display:flex;justify-content:center}#gameCanvas{width:100vw;height:100vh}#btmContainer{display:none;align-items:center;justify-content:center;padding:0}#btmAdPlaceholder{align-items:center;justify-content:center;position:absolute}#btmAdPlaceholderBg{background-color:#00000030;position:absolute;width:100%;height:100%;filter:blur(4px);z-index:-1}#btmAdResText{color:#fff;font-size:40px;font-family:'baloo 2';filter:drop-shadow(2px 2px 0 #2050A9)}#btmAdBlockerContainer{display:flex;align-items:center;height:100%}#btmAdBlockerImg{max-height:90%;margin-right:20px}#btmAdBlockerText{color:#fff;font-family:'baloo 2';font-size:35px;filter:drop-shadow(2px 2px 0 #2050A9)}#rightContainer{display:none;align-items:center;justify-content:center;padding:0}#rightAdPlaceholder{align-items:center;justify-content:center;position:absolute}#rightAdPlaceholderBg{background-color:#00000030;position:absolute;width:100%;height:100%;filter:blur(4px);z-index:-1}#rightAdBlockerContainer{display:flex;flex-direction:column;align-items:center;justify-content:center;width:90%;height:100%}#rightAdBlockerImg{max-width:100%}#rightAdBlockerText{color:#fff;font-family:'baloo 2';font-size:30px;filter:drop-shadow(2px 2px 0 #2050A9);line-height:1;text-align:center}#rightAdResText{color:#fff;font-size:40px;font-family:'baloo 2';filter:drop-shadow(2px 2px 0 #2050A9)}#adContainerDeath{display:none;--shown_display:flex;position:absolute;z-index:100;bottom:0;right:0;width:fit-content;height:fit-content;align-items:center}#adContainerLoadingLeft{display:none;--shown_display:block;position:absolute;transform-origin:left top;transform:translate(0,-50%);z-index:100;top:50%;left:10px;width:auto;height:auto}#adContainerMainMenu{display:none;--shown_display:block;position:absolute;transform-origin:right top;transform:translate(0,-50%);z-index:100;top:50%;right:10px;width:auto;height:auto}@media screen and (max-width:600px){#smashkarts-io_300x250{display:none}}#adContainerWin{display:none;--shown_display:block;position:absolute;transform-origin:right bottom;z-index:100;bottom:10px;right:10px;width:auto;height:auto}#adContainerSpectate{display:none;--shown_display:block;position:absolute;transform-origin:right bottom;z-index:100;bottom:10px;right:10px;width:auto;height:auto}#pw-video-container{width:100%;height:100%;position:absolute;display:none}#pw-video-placeholder{width:100%;height:100%}@media screen and (max-width:600px){#smashkarts-io_300x250_2{display:none}}canvas+*{z-index:2}.logo{display:block;width:35vw}.progress{margin:1.5em;border:2px solid;width:25vw;display:none}.progress .full{margin:2px;background:#fff;height:1em;transform-origin:top left}#loader{position:absolute;left:0;top:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1b70f0;background-image:url(https://lh7-us.googleusercontent.com/dG1lRv1bUxfDxb7J4yMp7ECv4BSofuUsQJQcwLW7koMMlAy24_mKEe-GpJNirwYBahpPM-2bg7wae7oFZcRLc0MLTd2zuZ8yS2L9fTEvZaPZQvVbjjf1veM6JSQR8KIGz_2OaZHGagF8yHeeLy1upnw),url(https://lh7-us.googleusercontent.com/KNTcIQ34j2ftK1tqcrhLvDbOn3PRmOmCgmC8wkIYyFnn5_5kfGApi5tyW0j5Nn9HrgbfhPAXOYayMlaYEZZJp8jCjh3s1EW5kcmYEWm5d-vbOg33Qk_0gkXj2Dgy55hl-5jVmvH9_lPLQcMdAoyOkmo);background-size:cover,13vw;background-repeat:no-repeat,repeat}.spinner{position:absolute;left:2vw;bottom:2vh;border:10px solid #f3f3f3;border-top:10px solid #3498db;border-radius:50%;width:10vh;height:10vh;animation:spin 1s linear infinite}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}#rotate-landscape{display:none}@media all and (orientation:portrait){#rotate-landscape{position:absolute;left:0;top:0;width:100vw;height:100vh;display:block;background:#1b70f0;background-image:url(https://lh7-us.googleusercontent.com/dG1lRv1bUxfDxb7J4yMp7ECv4BSofuUsQJQcwLW7koMMlAy24_mKEe-GpJNirwYBahpPM-2bg7wae7oFZcRLc0MLTd2zuZ8yS2L9fTEvZaPZQvVbjjf1veM6JSQR8KIGz_2OaZHGagF8yHeeLy1upnw),url(https://lh7-us.googleusercontent.com/KNTcIQ34j2ftK1tqcrhLvDbOn3PRmOmCgmC8wkIYyFnn5_5kfGApi5tyW0j5Nn9HrgbfhPAXOYayMlaYEZZJp8jCjh3s1EW5kcmYEWm5d-vbOg33Qk_0gkXj2Dgy55hl-5jVmvH9_lPLQcMdAoyOkmo);background-size:cover,13vw;background-repeat:no-repeat,repeat}}.center{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90vw}
+    </style>	<meta name="viewport" content="minimal-ui, user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, viewport-fit=cover">
+	<script>
+'use strict';
+
+
+let adBreak;
+let adConfig;
+
+
+if(isPlaywireEnabled())
+{
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    window.ramp = window.ramp || {};
+    window.ramp.que = window.ramp.que || [];
+    window.ramp.passiveMode = true;
+    window.ramp.onReady = function()
+    {
+        playwireRampInitialised = true;
+
+        
+        const handleSlotRenderEnded = () => {
+            let hasFocus = true;
+            let intervalId;
+
+            const handleBlur = () => {
+                hasFocus = false;
+            };
+
+            const handleFocus = () => {
+                hasFocus = true;
+            };
+
+            window.addEventListener('blur', handleBlur);
+            window.addEventListener('focus', handleFocus);
+
+            intervalId = setInterval(() => {
+                if (!hasFocus) {
+                    window.focus();
+                    clearInterval(intervalId);
+                    window.removeEventListener('blur', handleBlur);
+                    window.removeEventListener('focus', handleFocus);
+                } else {
+                    clearInterval(intervalId);
+                    window.removeEventListener('blur', handleBlur);
+                    window.removeEventListener('focus', handleFocus);
+                }
+            }, 1000);
+        };
+
+        window.googletag.pubads().addEventListener('slotRenderEnded', handleSlotRenderEnded);
+    };
+
+    window._pwGA4PageviewId = ''.concat(Date.now());
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+        dataLayer.push(arguments);
+    };
+    gtag('js', new Date());
+    gtag('config', 'G-F2WLE0BJLM', { 'send_page_view': false, 'cookie_flags': 'samesite=none;secure' });
+    gtag(
+        'event',
+        'ramp_js',
+        {
+            'send_to': 'G-F2WLE0BJLM',
+            'pageview_id': window._pwGA4PageviewId
+        }
+    );
+
+    var playwireScript = document.createElement("script");
+    playwireScript.type = "text/javascript";
+    playwireScript.async = true;
+    playwireScript.src = "//cdn.intergient.com/1024690/73592/ramp.js";
+    document.head.appendChild(playwireScript);
+
+    
+    addPreconnectLink("https://cdn.intergi.com", true);
+    addPreconnectLink("https://cdn.intergient.com", true);
+    addPreconnectLink("https://securepubads.g.doubleclick.net", true);
+    addPreconnectLink("https://cdn.playwire.com", true);
+    addPreconnectLink("https://z.moatads.com", true);
+
+    function addPreconnectLink(preconnectUrl, crossOriginEnabled)
+    {
+        var link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = preconnectUrl;
+
+        if(crossOriginEnabled)
+        {
+            link.crossOrigin = 'anonymous';
+        }
+
+        document.head.appendChild(link);
+    }
+}
+
+
+if(isAdinPlayEnabled())
+{
+    window.aiptag = window.aiptag || {cmd: []};
+    aiptag.cmd.display = aiptag.cmd.display || [];
+    aiptag.cmd.player = aiptag.cmd.player || [];
+
+    
+    aiptag.cmp = {
+        show: true,
+        position: "bottom",  
+        button: false,
+        buttonText: "Privacy settings",
+        buttonPosition: "bottom-left" 
+    }
+
+    
+    if(videoAdProvider === AdProviderAdinplay)
+    {
+        aiptag.cmd.player.push(function() {
+            aiptag.adplayer = new aipPlayer({
+                AD_WIDTH: 960,
+                AD_HEIGHT: 540,
+                AD_DISPLAY: 'fullscreen', 
+                LOADING_TEXT: 'loading advertisement',
+                PREROLL_ELEM: function(){return document.getElementById('preroll');},
+                AIP_COMPLETE: function(evt){onInterstitialComplete(evt);},
+                AIP_REWARDEDCOMPLETE: function(evt){onRewardedInterstitialComplete(evt);},
+                AIP_REWARDEDGRANTED: function(){onRewardedInterstitialGranted();}
+            });
+        });
+    }
+
+    var adinplayScript = document.createElement("script");
+    adinplayScript.type = "text/javascript";
+    adinplayScript.async = true;
+    adinplayScript.src = "//api.adinplay.com/libs/aiptag/pub/SHK/smashkarts.io/tag.min.js";
+    document.head.appendChild(adinplayScript);
+}
+
+
+if(isGoogleH5GamesEnabled())
+{
+    window.googletag = window.googletag || { cmd: [] };
+    googletag.cmd.push(() =>
+    {
+        var url = (window.location != window.parent.location) ? document.referrer : document.location.href;
+        if (url.startsWith("https://smashkarts.io/") || url.startsWith("http://smashkarts.io/") ||
+            url.startsWith("https://www.smashkarts.io/") || url.startsWith("http://www.smashkarts.io/")
+            || url.includes("smashkarts-dev.firebaseapp.com"))
+        {
+            (function ()
+            {
+                var afgads = document.createElement('script');
+                afgads.setAttribute("async", true);
+                afgads.setAttribute("type", "text/javascript");
+                afgads.setAttribute("data-ad-frequency-hint", "30s");
+                afgads.setAttribute("data-ad-client", "ca-pub-1463476156508236");
+                afgads.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+                var node = document.getElementsByTagName('script')[0];
+                node.parentNode.insertBefore(afgads, node);
+            })();
+
+            window.adsbygoogle = window.adsbygoogle || [];
+            adBreak = adConfig = function (o) { adsbygoogle.push(o); };
+            adConfig({ preloadAdBreaks: "on", sound: "on" });
+        }
+    });
+}
+</script><script type="text/javascript" async="" src="//api.adinplay.com/libs/aiptag/pub/SHK/smashkarts.io/tag.min.js"></script><script src="data:@file/javascript;base64,Ly8gVXNlZCBmb3IgZGV0ZWN0aW5nIGlmIGFkIGJsb2NrZXJzIGFyZSBlbmFibGVkCnZhciBlPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwplLmlkPSdza2xvY2Fsc2NyaXB0YmFpdCc7CmUuc3R5bGUuZGlzcGxheT0nbm9uZSc7CmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZSk7Cg=="></script><style type="text/css">#button {
+  display:none;
+}
+.imgb_vis {
+  animation: imgb-animation 7s linear;
+}
+@keyframes imgb-animation {
+  10% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(100px);
+  }
+  90% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}</style><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-1W23DRFHK9" async=""></script></head>
+<body>
+<div id="mainContainer">
+	<div id="mainContainerBg"></div>
+	<div id="leftContainer">
+		<div id="gameContainer" style="border-bottom: 0px; border-right: 0px; border-bottom-right-radius: 0px;">
+			<canvas id="gameCanvas" style="width: 782px; height: 480px; cursor: default;" width="782" height="480"></canvas>
+
+			
+			<div id="adContainerLoadingLeft" style="display: none;"> 
+				<div id="smashkarts-io_300x600_2"></div> 
+			</div>	
+			<div id="adContainerMainMenu" style="transform: scale(1) translate(0px, -50%);"> 
+				<div id="smashkarts-io_300x250"></div> 
+			
+				
+				<div id="pw_mainmenu"></div>
+				
+				<div id="pw_mainmenu_dummy" data-pw-desk="med_rect_atf" data-pw-mobi="med_rect_atf"></div> 
+			</div>
+			<div id="adContainerWin" style="transform: scale(1) translate(0px);"> 
+				<div id="smashkarts-io_300x250_2"></div> 
+
+				
+				<div id="pw_roundend"></div>
+				
+			</div>
+			<div id="adContainerSpectate" style="transform: scale(1) translate(0px);"> 
+				<div id="smashkarts-io_300x250_3"></div> 
+			</div>
+			<div id="adContainerDeath" style="bottom: 0px; transform: scale(1) translate(-10px, -10px);"> 
+
+				
+				<div id="smashkarts-io_728x90-new"></div>
+				<div id="smashkarts-io_320x100"></div>
+
+				
+				<div id="pw_ondeath"></div>
+				
+			</div>
+		</div>
+		<div id="btmContainer" style="display: none;">
+			<div id="btmAdPlaceholder" style="display: none;">
+				<div id="btmAdPlaceholderBg"></div>
+				<div id="btmAdBlockerContainer" style="display: none;">
+					<img id="btmAdBlockerImg" src="https://lh7-us.googleusercontent.com/wWylcDXm1tJvoxhUAgwnBIRckoRv6S7XRGcyyRry3NcaGOzwMyxbK4zbQQFTvcPsZtrok1F-6Fg8Ef1aHsw54v6fSsdQRpRAy6t3GzUfOpi5AdFaiYizTWSEkc-SaRJY-Q8r-J-GrvBHYiIYFTDWxxA">
+					<h1 id="btmAdBlockerText">Disable AdBlock for extra XP</h1>
+				</div>
+			<div id="smashkarts-io_970x250_2" style="display: none;"></div><div id="smashkarts-io_970x90" style="display: none;"></div><div id="smashkarts-io_728x90_2" style="display: none;"></div></div>
+			<h1 id="btmAdResText" style="display: none;">unset</h1>
+		</div>
+		<div id="pw-video-container"> 
+			<div id="pw-video-placeholder"></div>
+		</div>
+		<div id="preroll"></div> 
+		<iframe id="xsolla-iframe"></iframe>
+	</div>
+	<div id="rightContainer" style="display: none;">
+		<div id="rightAdPlaceholder" style="display: none;">
+			<div id="rightAdPlaceholderBg"></div>
+			<div id="rightAdBlockerContainer" style="display: none;">
+				<img id="rightAdBlockerImg" src="https://lh7-us.googleusercontent.com/wWylcDXm1tJvoxhUAgwnBIRckoRv6S7XRGcyyRry3NcaGOzwMyxbK4zbQQFTvcPsZtrok1F-6Fg8Ef1aHsw54v6fSsdQRpRAy6t3GzUfOpi5AdFaiYizTWSEkc-SaRJY-Q8r-J-GrvBHYiIYFTDWxxA">
+				<h1 id="rightAdBlockerText">Disable AdBlock for extra XP</h1>
+			</div>
+		<div id="smashkarts-io_336x1050" style="display: none;"></div><div id="smashkarts-io_300x600" style="display: none;"></div><div id="smashkarts-io_160x600" style="display: none;"></div></div>
+		<h1 id="rightAdResText" style="display: none;">unset</h1>
+	</div>
+</div>
+<div id="loader" style="display: none;">
+	<img class="logo" src="https://lh7-us.googleusercontent.com/S_n_ZLK4Ya15BrTp5JCv5DiuaDeADHZOR29EyBMlRuRCpZsemFYrazrVP3CooXaJC6BeXJVEeDfT8p20cqrgmNACakQkMShXIEWWnRE9exaVwpdA03rIeFBhqv0XiL3igzCz5S8guPCoEFa6GZ-g_A">
+	<div class="spinner"></div>
+	<div class="progress" style="display: block;">
+		<div class="full" style="width: 100%;"></div>
+	</div>
+</div>
+<div id="rotateLandscapeOff" style="display: none;">
+	<img src="https://lh7-us.googleusercontent.com/zv1nWIQiqvVSKiM0--H8lF_-WtZd6jo0TCTUjc7HEqycIVChE5KmDH71TpStj6i_i7spatoOO5skEXYK60uf7-A0HetTaiWkcrZVEtIT80EHYy8fbhcIWs03mWwPoWk9QGG_pXwtXsdBLfZReZ_nfbQ" class="center">
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-functions-compat.js"></script>
+
+<script>
+'use strict';
+
+function setV(val2)
+{
+    if(window.unityGame != null)
+    {
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, "V2", val2);
+    }
+}
+
+function isMobile()
+{
+  var isMobile = RegExp(/Android|webOS|iPhone|iPod|iPad/i).test(navigator.userAgent);
+  return isMobile || isIpad();
+}
+
+function isTablet()
+{
+  var userAgent = navigator.userAgent.toLowerCase();
+  var isAndroidTablet = ((userAgent.search("android") > -1) && !(userAgent.search("mobile") > -1));
+
+  return isAndroidTablet || isIpad();
+}
+
+function isIpad()
+{
+  var isIpad = RegExp(/iPad/i).test(navigator.userAgent);
+
+  if (!isIpad) 
+  {
+    const isMac = RegExp(/Macintosh/i).test(navigator.userAgent);
+
+    if (isMac && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) 
+    {
+      isIpad = true;
+    }
+  }
+  return isIpad;
+}
+
+function getOS()
+{
+  var detectedOS = "Unknown";
+  if (window.navigator.userAgent.indexOf("Windows") != -1) {  detectedOS = "Windows";}
+  else if (window.navigator.userAgent.indexOf("CrOS") != -1) { detectedOS = "Chrome";}
+  else if (window.navigator.userAgent.indexOf("Mac")            != -1) detectedOS="Mac/iOS";
+  else if (window.navigator.userAgent.indexOf("X11")            != -1) detectedOS="UNIX";
+  else if (window.navigator.userAgent.indexOf("Linux")          != -1) detectedOS="Linux";
+  
+  return detectedOS;
+}
+
+function isIos()
+{
+  var isIos = (/iPhone|iPad|iPod/i.test(navigator.userAgent));
+  return isIos || isIpad();
+}
+
+
+function copyTextToClipboard(text) 
+{
+  var textArea = document.createElement("textarea");
+  textArea.style.position = 'fixed';
+  textArea.style.top = 0;
+  textArea.style.left = 0;
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+  textArea.style.padding = 0;
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+  textArea.style.background = 'transparent';
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.warn('Unable to copy text');
+  }
+  document.body.removeChild(textArea);
+}
+
+window.copyText = function (text) {
+  var listener = function () {
+
+    copyTextToClipboard(text);
+    if(isMobile())
+    {
+      document.removeEventListener('touchend', listener);
+    }
+    else
+    {
+      document.removeEventListener('mouseup', listener);
+    }
+    
+  };
+
+  if(isMobile())
+  {
+    document.addEventListener('touchend', listener);
+  }
+  else
+  {
+    document.addEventListener('mouseup', listener);
+  }
+};
+
+function firebaseLogEvent(eventName)
+{
+  if(firebase.analytics != null) firebase.analytics().logEvent(eventName);
+}
+
+function firebaseSetScreen(screenName)
+{
+  if(firebase.analytics != null) firebase.analytics().setCurrentScreen(screenName);  
+  if(firebase.analytics != null) firebase.analytics().logEvent("screen_view", { "screen_name": screenName})
+}
+
+function firebaseLogEventWithParam(eventName, p, v)
+{
+  if(firebase.analytics != null) firebase.analytics().logEvent(eventName, { [p]: v});
+}
+
+function firebaseLogEventWithParamDict(eventName, paramsDict)
+{
+  if(firebase.analytics != null) firebase.analytics().logEvent(eventName, paramsDict);
+}
+
+var fs = false;
+function toggleFullscreen()
+{
+  if(fs)
+  {
+    console.log("exitFullScreen");
+    exitFullScreen();
+  }
+  else
+  {
+    console.log("setElementFullScreen");
+    var elem = document.documentElement; 
+    setElementFullScreen(elem);
+  }
+  fs = !fs;
+}
+
+function isFullscreen()
+{
+  return fs;
+}
+
+
+  function onNextMouseUp(a)
+  {
+    var listenerName = isMobile() ? 'touchend' : 'mouseup';
+    var listener = function () {
+          a();
+          document.removeEventListener(listenerName, listener);
+        };
+        document.addEventListener(listenerName, listener);
+  }
+
+  function openUrl(url)
+  {
+    onNextMouseUp(function () {
+      console.log("openUrl onNextMouseUp");
+      window.open(url, "_blank");
+    });
+  }
+
+  function openPrivacyUrl()
+  {
+    onNextMouseUp(function () {
+      console.log("openPrivacyUrl onNextMouseUp");
+      if(isPlaywireEnabled())
+      {
+        window.open("https://smashkarts.io/privacy/privacyPW.html", "_blank");
+      }
+      else if(isAdinPlayEnabled())
+      {
+        window.open("https://smashkarts.io/privacy/privacyAdinplay.html", "_blank");
+      }
+      else
+      {
+        window.open("https://smashkarts.io/privacy/privacy.html", "_blank");
+      }
+    });
+  }
+
+  function setElementFullScreen(el) {
+		onNextMouseUp(function () {
+      var request = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			request.call(el);
+		});
+	}
+
+	function exitFullScreen() {
+		onNextMouseUp(function () {
+			var exitFS = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+			exitFS.call(document);
+		});
+  }
+   
+  function handleKeyDown(keycode) 
+  {
+    if(window.unityGame) window.unityGame.SendMessage(unityFirebaseGameOjbectName, "HandleKeyDown", keycode);
+  }
+
+  function handleKeyUp(keycode) 
+  {
+    if(window.unityGame) window.unityGame.SendMessage(unityFirebaseGameOjbectName, "HandleKeyUp", keycode);
+  }
+  
+  var source = "notset";
+  function setUrlSource(src)
+  {
+    source = src;
+    console.log("setUrlSource " + src);
+  }
+
+  function reloadPage()
+  {
+    location.reload();
+  }
+  
+  var loadingState = "None";
+  function updateLoadingState(state)
+  {
+    loadingState = state;
+  }
+  
+  function onLoadingToMainMenuComplete(isCG)
+  {
+    hideLoadingBanner();
+
+    if(isCG && !cgEnvDisabled)
+    {
+      window.CrazyGames.SDK.game.sdkGameLoadingStop();
+    }
+  }
+</script><script>
+'use strict';
+
+var unityFirebaseGameOjbectName = 'JavascriptMessageReceiver';
+
+var firstLoad = true;
+
+function onAuthStateChanged(user) {
+  if(!user)
+  {
+    if(firstLoad)
+    {
+      signInAnonymously();
+    }
+  }
+  else
+  {
+    getUserNoAdsEndTimestamp();
+    sendAuthDataToUnity();
+  }
+  firstLoad = false;
+}
+
+
+function signInAnonymously()
+{
+  firebase.auth().signInAnonymously().catch(function(error) {
+    var errorCode = error.code;
+    console.log("error logging in " + errorCode);
+    console.error(error);
+  });
+}
+
+function signInWithEmail(email, password)
+{
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    console.log("signInWithEmailAndPassword Success");
+  })
+  .catch(function(error)
+  {
+    console.log("error logging in " + error.code);
+    console.error(error);
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseSignInWithEmailFailed", error.message);
+  });
+}
+
+function linkUserWithEmail(email, password)
+{
+  if(firebase.auth().currentUser != null && firebase.auth().currentUser.isAnonymous)
+  {
+    var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+    firebase.auth().currentUser.linkWithCredential(credential).then(function(user) {
+      console.log("Anonymous account successfully upgraded", user);
+      sendAuthDataToUnity();
+    }, function(error) {
+      console.log("Error upgrading anonymous account", error);
+      console.error(error);
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseLinkUserWithEmailFailed", error.message);
+    });
+  }
+}
+
+function checkForRedirect()
+{
+  firebase.auth().getRedirectResult().then(function(result)
+  {
+    console.log("linkOrSignInWithGoogle:success");
+    sendAuthDataToUnity();
+  }, function(error)
+  {
+    if(error.code == "auth/credential-already-in-use")
+    {
+      console.log("linkOrSignInWithGoogle:fail auth/credential-already-in-use try signInWithCredential");
+      firebase.auth().signInWithCredential(error.credential).catch(function(error)
+      {
+        console.log("signInWithCredential:: Error logging in " + error.code);
+        console.error(error);
+        window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseSignInWithEmailFailed", error.message);
+      });
+    }
+    else
+    {
+      console.log("linkOrSignInWithGoogle:: Error logging in " + error.code);
+      console.error(error);
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseLinkUserWithEmailFailed", error.message);
+    }
+  });
+}
+
+function linkOrSignInWithGoogle()
+{
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  if(firebase.auth().currentUser != null && firebase.auth().currentUser.isAnonymous)
+  {
+    var isSafariBrowser = (navigator.userAgent.indexOf('Safari') > -1 && navigator.userAgent.indexOf('Chrome') <= -1);
+    if(isMobile() || isSafariBrowser)
+    {
+      firebase.auth().currentUser.linkWithRedirect(provider);
+    }
+    else
+    {
+      firebase.auth().currentUser.linkWithPopup(provider).then((result) =>
+      {
+        console.log("linkOrSignInWithGoogle:: Success");
+        sendAuthDataToUnity();
+      }).catch((error) =>
+      {
+        if(error.code == "auth/credential-already-in-use")
+        {
+          firebase.auth().signInWithCredential(error.credential).catch(function(error)
+          {
+            console.log("signInWithCredential:: Error logging in " + error.code);
+            console.error(error);
+            window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseSignInWithEmailFailed", error.message);
+          });
+        }
+        else
+        {
+          console.log("linkOrSignInWithGoogle:: Error logging in " + error.code);
+          console.error(error);
+          window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseLinkUserWithEmailFailed", error.message);
+        }
+      });
+    }
+  }
+}
+
+function linkOrSignInWithApple()
+{
+  var provider = new firebase.auth.OAuthProvider('apple.com');
+
+  if(firebase.auth().currentUser != null && firebase.auth().currentUser.isAnonymous)
+  {
+    var isSafariBrowser = (navigator.userAgent.indexOf('Safari') > -1 && navigator.userAgent.indexOf('Chrome') <= -1);
+    if(isMobile() || isSafariBrowser)
+    {
+      firebase.auth().currentUser.linkWithRedirect(provider);
+    }
+    else
+    {
+      firebase.auth().currentUser.linkWithPopup(provider).then((result) =>
+      {
+        console.log("linkOrSignInWithApple:: Success");
+        sendAuthDataToUnity();
+      }).catch((error) =>
+      {
+        if(error.code == "auth/credential-already-in-use")
+        {
+          firebase.auth().signInWithCredential(error.credential).catch(function(error)
+          {
+            console.log("signInWithCredential:: Error logging in " + error.code);
+            console.error(error);
+            window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseSignInWithEmailFailed", error.message);
+          });
+        }
+        else
+        {
+          console.log("linkOrSignInWithApple:: Error logging in " + error.code);
+          console.error(error);
+          window.unityGame.SendMessage(unityFirebaseGameOjbectName, "firebaseLinkUserWithEmailFailed", error.message);
+        }
+      });
+    }
+  }
+}
+
+function signOut()
+{
+  firebase.auth().signOut().then(function() {
+    console.log("signOut:: Success");
+    signInAnonymously();
+  }).catch(function(error) {
+    console.log("signOut:: Failed ");
+    console.error(error);
+  });
+}
+
+function sendAuthDataToUnity()
+{
+  if(window.unityGame != null && firebase.auth().currentUser != null)
+  {
+    var firebaseUid = firebase.auth().currentUser.uid;
+    var isAnon = firebase.auth().currentUser.isAnonymous;
+    var data = {authToken:"",uid:firebaseUid,isAnonymous:isAnon};
+    var dataJson = JSON.stringify(data);
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, 'SetAuthToken', dataJson);
+  }
+}
+
+function sendPasswordResetEmail(emailAddress)
+{
+  firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
+    console.log("sendPasswordResetEmail:: Success");
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, "SendPasswordResetEmailSuccess");
+  }).catch(function(error) {
+    console.log("sendPasswordResetEmail:: Failed ");
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, "SendPasswordResetEmailFailed", error.message);
+    console.error(error);
+  });
+}
+
+function getValueTT(nodeKey)
+{
+  const dbRef = firebase.database().ref();
+  dbRef.child(nodeKey).once('value').then((snapshot) => {
+    if (snapshot.exists())
+    {
+      var valJsonStr = JSON.stringify(snapshot.val());
+      SendDataToUnity("OnGetValueSuccess", nodeKey, valJsonStr);
+    }
+    else
+    {
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnGetValueEmptySuccess", nodeKey);
+    }
+  }).catch((error) =>
+  {
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnGetValueError", nodeKey, error.message);
+    console.error(error);
+  });
+}
+
+function SendDataToUnity(functionName, nk, ds)
+{
+  var obj =
+      {
+        nodeKey: nk,
+        dataStr: ds
+      }
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, functionName, JSON.stringify(obj));
+}
+
+
+function SendResponseToUnity(functionName, k, resonseData)
+{
+  resonseData["key"] = k;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, functionName, JSON.stringify(resonseData));
+}
+
+function setValueTT(nodeKey, jsonData)
+{
+  if(firebase.auth().currentUser != null)
+  {
+    const dbRef = firebase.database().ref();
+    var jsonObj = JSON.parse(jsonData);
+    dbRef.child(nodeKey).set(jsonObj, (error) => {
+      if (error) {
+        console.log("auth.js::setValue - Error " + nodeKey);
+        SendDataToUnity("OnSetValueError", nodeKey, error.message);
+      } else {
+        window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnSetValueSuccess", nodeKey);
+      }
+    });
+  }
+}
+
+function removeValueTT(nodeKey)
+{
+  if(firebase.auth().currentUser != null)
+  {
+    const dbRef = firebase.database().ref();
+    dbRef.child(nodeKey).remove()
+    .then(function(){
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnRemoveValueSuccess", nodeKey);
+    })
+    .catch(function(error){
+      console.log("auth.js::removeValueTT error");
+      SendDataToUnity("OnRemoveValueError", nodeKey, error.message);
+    });
+  }
+}
+
+function updateValueTT(nodeKey, jsonData)
+{
+  if(firebase.auth().currentUser != null)
+  {
+    const dbRef = firebase.database().ref();
+    var jsonObj = JSON.parse(jsonData);
+    dbRef.child(nodeKey).update(jsonObj, (error) => {
+      if (error) {
+        console.log("auth.js::updateValue Error " + nodeKey);
+        SendDataToUnity( "OnUpdateValueError", nodeKey, error.message);
+      } else {
+        window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnUpdateValueSuccess", nodeKey);
+      }
+    });
+  }
+}
+
+var cloudFunctionSuccess = 0;
+var cloudFunctionFail = 0;
+
+var regions = ["us-central1", "us-east1", "europe-west1"];
+var lastError = "internal";
+
+async function callCloudFunction(functionId, jsonData, key)
+{
+  var success = false;
+  for(var i=0;i<regions.length; i++)
+  {
+    var success = await callCloudFunctionNew(functionId, jsonData, key, regions[i], i);
+    if(success){ break; }
+  }
+
+  if(!success)
+  {
+    SendDataToUnity( "OnFunctionError", key, lastError);
+  }
+}
+
+async function callCloudFunctionNew(functionId, jsonData, key, region, count)
+{
+  if(firebase.auth().currentUser != null)
+  {
+    try
+    {
+      const dataObject = JSON.parse(jsonData);
+      var functionRef = firebase.app().functions(region).httpsCallable(functionId + "Multi");
+
+      var fbResponse = await functionRef(dataObject);
+      if(fbResponse != null)
+      {
+        var gameResponse = fbResponse.data;
+
+        if(gameResponse != null)
+        {
+          SendResponseToUnity( "OnFunctionComplete", key, gameResponse);
+          cloudFunctionSuccess++;
+          if(!gameResponse.result)
+          {
+            logCloudFunctionError("v5-" + count + "-f", jsonData, gameResponse.debugMessage, functionId);
+          }
+          return true;
+        }
+        else
+        {
+          logCloudFunctionError("v5-" + count + "-r", "null game response", functionId);
+          return false;
+        }
+      }
+      else
+      {
+        logCloudFunctionError("v5-" + count + "-n", jsonData, "null FB response", functionId);
+        return false;
+      }
+    } catch (error)
+    {
+      cloudFunctionFail++;
+      logCloudFunctionError("v5-" + count + "-e", jsonData, error.message, functionId);
+      lastError = error.message;
+      return false;
+    }
+  }
+}
+
+const logCloudFunctionErrors = false;
+function logCloudFunctionError(debugErrorRootNode, jsonData, message, functionId)
+{
+  if(logCloudFunctionErrors)
+  {
+    var firebaseUid = firebase.auth().currentUser.uid;
+    var currentTime = new Date().getTime();
+    var debugErrorNode = "cferror/" + debugErrorRootNode + "/" + firebaseUid + "/" + functionId + "/" + currentTime;
+    const dbRef = firebase.database().ref();
+    dbRef.child(debugErrorNode).set({
+      errorData: jsonData,
+      os: getOS(),
+      time: currentTime,
+      successCount: cloudFunctionSuccess,
+      failCound: cloudFunctionFail,
+      errorMessage: message
+    }, (setValueError) =>
+    {
+      if (setValueError)
+      {
+        console.log("logCloudFunctionError setValueError:: " + setValueError.message);
+      } else
+      {
+        var debugErrorWriteSuccessNode = "cferror/" + debugErrorRootNode + "/" + firebaseUid + "/" + functionId + "/" + currentTime + "/successTime";
+        var successTime = new Date().getTime();
+        dbRef.child(debugErrorWriteSuccessNode).set(successTime);
+        
+      }
+    });
+  }
+  else 
+  {
+    console.log("logCloudFunctionError:: " + debugErrorRootNode + " " + message);
+  }
+}
+
+function logCloudFunctionSuccess(debugErrorRootNode, jsonData, functionId)
+{
+  var firebaseUid = firebase.auth().currentUser.uid;
+  var currentTime = new Date().getTime();
+  var debugErrorNode = "cferror/" + debugErrorRootNode + "/" + firebaseUid + "/" + functionId + "/" + currentTime;
+  const dbRef = firebase.database().ref();
+
+  dbRef.child(debugErrorNode).set({
+        errorData: jsonData,
+        os: getOS(),
+        time : currentTime,
+        successCount : cloudFunctionSuccess,
+        failCount : cloudFunctionFail,
+      }, (setValueError) => {
+        if (setValueError) {
+          console.log("logCloudFunctionSuccess setValueError:: " + setValueError.message);
+
+        } else {
+          console.log("logCloudFunctionSuccess Success ");
+        }
+      }
+  );
+}
+
+function getCurrentUserId()
+{
+  if(firebase.auth().currentUser != null)
+  {
+    return firebase.auth().currentUser.uid;
+  }
+  return "";
+}
+
+function getCurrentUserIsAnon()
+{
+  if(firebase.auth().currentUser != null)
+  {
+    return firebase.auth().currentUser.isAnonymous;
+  }
+  return true;
+}
+
+var userNoAdsEndTimestamp;
+function getUserNoAdsEndTimestamp()
+{
+  if (typeof firebase !== 'undefined' && firebase.database() != null && firebase.auth() != null)
+  {
+    try
+    {
+      var uid = getCurrentUserId();
+
+      if(uid != null && uid !== "")
+      {
+        const dbRef = firebase.database().ref();
+
+        dbRef.child(`users/${uid}/udro/noAdsEndTimestamp`).once("value").then((snapshot) =>
+        {
+          if (snapshot.exists())
+          {
+            userNoAdsEndTimestamp = snapshot.val();
+          }
+          else
+          {
+            userNoAdsEndTimestamp = 0;
+          }
+        });
+      }
+    }
+    catch (e)
+    {
+      console.log(e);
+    }
+  }
+}
+
+window.addEventListener('load', function() {
+  console.log('Init Auth');
+  if (typeof firebase !== 'undefined' && firebase.auth() != null)
+  {
+    firebase.auth().onAuthStateChanged(onAuthStateChanged);
+    checkForRedirect();
+  }
+}, false);
+
+
+function getBrowser()
+{
+  return window.navigator.userAgent;
+}
+
+function getBrowserVisibilityState()
+{
+  return document.visibilityState;
+}
+</script><script>
+'use strict';
+
+var currentOrderId = "";
+var currentProductId = "";
+var completedOrderId = "";
+var sandbox = false;
+var shopUrl = (sandbox ? "https://sandbox-secure.xsolla.com" : "https://secure.xsolla.com");
+
+async function buyProduct(productId)
+{
+  console.log("buyProduct " + productId);
+
+  var functionRef = firebase.app().functions().httpsCallable("getXsollaTokenForItemMulti");
+
+  var response = await functionRef(productId);
+  if(response != null && response.data != null)
+  {
+    var url = shopUrl + "/paystation3/?access_token=" + response.data.token;
+    currentOrderId = response.data.order_id;
+    currentProductId = productId;
+    openStoreWindowInFrame(url);
+  }
+}
+
+async function openStoreWindoWithToken(productId, token, orderId)
+{
+  var url = shopUrl + "/paystation3/?access_token=" + token;
+  currentOrderId = orderId;
+  currentProductId = productId;
+  openStoreWindowInFrame(url);
+}
+
+
+async function openStoreWindowInFrame(url)
+{
+  var elem = document.getElementById("xsolla-iframe");
+  elem.src = url;
+  elem.style.display = "block";
+}
+
+window.addEventListener("message", (event) => {
+ if (event.origin == shopUrl)
+ {
+   if(event.data != null)
+   {
+     var jsonData = JSON.parse(event.data);
+     if(jsonData != null)
+     {
+      if(jsonData.data != null)
+      {
+        if(jsonData.data.action ==  "change-status" && jsonData.data.value == "done")
+        {
+          completedOrderId = jsonData.data.purchase_invoice_id;  
+        }
+        else if (jsonData.data.action == "close-widget")
+        {
+          purchaseComplete();
+        }
+      }
+      
+      if(jsonData.command == "return" || jsonData.command == "close-widget")
+      {
+        purchaseComplete();
+      }
+         
+     }
+   }      
+   console.log("Window event " + event.data);
+ }
+}, false);
+
+  function purchaseComplete()
+  {
+    if(currentOrderId != "")
+    {
+      var elem = document.getElementById("xsolla-iframe");
+      elem.style.display = "none";
+
+      var obj = 
+      {
+        orderId: currentOrderId.toString(),
+        productId: currentProductId
+      }
+      const functionName = (completedOrderId != "") ? "PurchaseComplete" : "PurchaseCanceled";
+      window.unityGame.SendMessage(unityFirebaseGameOjbectName, functionName, JSON.stringify(obj)); 
+      completedOrderId = "";
+      currentProductId = "";
+      currentOrderId = "";
+    }
+  }
+</script><script>
+"use strict";
+
+if(typeof(Worker) !== "undefined")
+{
+    const checkTimeDelay = 500;
+    let consoleOpen = false;
+    let checkTimestamp = Date.now();
+
+    const consoleCheckerThread = new Worker("data:@file/javascript;base64,InVzZSBzdHJpY3QiOwoKc2V0SW50ZXJ2YWwoKCkgPT4KewogICAgc2VsZi5wb3N0TWVzc2FnZShEYXRlLm5vdygpKTsKICAgIGRlYnVnZ2VyOwp9LCBzZWxmLmNoZWNrVGltZURlbGF5KTsK");
+
+    consoleCheckerThread.addEventListener("message", (msg) =>
+    {
+        checkTimestamp = msg.data;
+    });
+
+    setInterval(() =>
+    {
+        const wasConsoleOpen = consoleOpen;
+        consoleOpen = (Date.now() - checkTimestamp > checkTimeDelay);
+        
+        if(consoleOpen && !wasConsoleOpen)
+        {
+            console.log("%cSTOP!", "color:red; font-style:heavy; font-size:75px; font-weight:900; text-shadow:2px 2px 0 rgb(0,0,0)");
+            console.log("%cThis is a browser feature intended for developers. If someone told you to copy and paste something here, there is a good chance that they are attempting to gain access to your account and personal information!", "font-size:20px;");
+        }
+    }, checkTimeDelay);
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+</script> 
+<script>
+'use strict';
+
+
+var baitScript = document.createElement('script');
+baitScript.setAttribute('src','data:@file/javascript;base64,Ly8gVXNlZCBmb3IgZGV0ZWN0aW5nIGlmIGFkIGJsb2NrZXJzIGFyZSBlbmFibGVkCnZhciBlPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwplLmlkPSdza2xvY2Fsc2NyaXB0YmFpdCc7CmUuc3R5bGUuZGlzcGxheT0nbm9uZSc7CmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZSk7Cg==');
+baitScript.async = false;
+document.head.appendChild(baitScript);
+
+
+var bannerMinRefreshDelayMillisecs = 0; 
+
+var loadingBannerShownTimestamp = {val: -1}; 
+const divIdLoadingBanner = "adContainerLoadingLeft";
+
+var mainMenuBannerShownTimestamp = {val: -1}; 
+const divIdMainMenuBanner = "adContainerMainMenu";
+
+var winCeremonyBannerShownTimestamp = {val: -1}; 
+const divIdWinCeremonyBanner = "adContainerWin";
+
+var spectateBannerShownTimestamp = {val: -1}; 
+const divIdSpectateBanner = "adContainerSpectate";
+
+var deathBannerShownTimestamp = {val: -1}; 
+const divIdDeathBanner = "adContainerDeath";
+
+const testBaitDelay = 1000;
+var adblockDetectedType;
+var pendingAdblockDetectedMessage;
+
+var isVideoAdPlaying; 
+
+const loadingAdBannerPollDelay = 100;
+var loadingAdBannerIntervalId;
+
+function createAdBlockBaitDiv(divId, classList)
+{
+  var div = document.getElementById(divId);
+
+  if(div == null)
+  {
+    div = document.createElement("div");
+
+    div.id = divId;
+
+    if(classList != null)
+    {
+      div.classList.add(classList);
+
+    }
+
+    div.style.display = "block";
+    div.style.backgroundColor = 'transparent';
+    div.style.height = '10px';
+    div.style.width = '10px';
+    div.style.position = 'fixed';
+    div.style.bottom = '-100px';
+    div.style.left = '-100px';
+
+    div.innerHTML = '&nbsp;';
+
+    document.body.appendChild(div);
+  }
+
+  return div;
+}
+
+function wasAdBlockDivRemoved(div)
+{
+  return getComputedStyle(div).display === "none" || div.getBoundingClientRect().height === 0;
+}
+
+function onUpdateAdBlockDetectedComplete(detectionType)
+{
+  if(!window.adblockDetected)
+  {
+    adblockDetectedType = detectionType;
+
+    window.adblockDetected = (detectionType != null);
+
+    if(window.adblockDetected)
+    {
+      console.log(`Adblock detected: ${detectionType}`);
+    }
+
+    pendingAdblockDetectedMessage = true;
+    trySendAdBlockDetectedMessage();
+  }
+}
+
+function trySendAdBlockDetectedMessage()
+{
+  if(window.unityGame != null && pendingAdblockDetectedMessage)
+  {
+    window.unityGame.SendMessage(unityFirebaseGameOjbectName, "OnUpdateAdBlockDetectedComplete", adblockDetectedType != null ? adblockDetectedType : "");
+
+    pendingAdblockDetectedMessage = false;
+  }
+}
+
+function updateAdBlockDetected()
+{
+  if(window.adblockDetected)
+    return;
+
+  var imgUrlTestPassed = false;
+  var fbDivTestPassed = false;
+
+  
+  function checkAllAsyncTestsComplete()
+  {
+    if(imgUrlTestPassed && fbDivTestPassed)
+    {
+      onUpdateAdBlockDetectedComplete(null);
+    }
+  }
+
+  
+  var localAdBlockDiv = createAdBlockBaitDiv("AdBanner", ['adLeaderboard', 'adBanner', 'leaderboard_ad']);
+
+  
+  setTimeout(() =>
+  {
+    
+    if(document.getElementById('sklocalscriptbait') == null)
+    {
+      onUpdateAdBlockDetectedComplete("Local Script");
+      return;
+    }
+
+    
+    if(wasAdBlockDivRemoved(localAdBlockDiv))
+    {
+      onUpdateAdBlockDetectedComplete("Local Div");
+      return;
+    }
+
+    
+    var img = new Image();
+
+    img.onload = () =>
+    {
+      imgUrlTestPassed = true;
+      checkAllAsyncTestsComplete();
+    }
+
+    img.onerror = () =>
+    {
+      onUpdateAdBlockDetectedComplete("Img Url Test");
+      return;
+    };
+
+    img.src = 'https://px.moatads.com/pixel.gif';
+
+    
+    if (typeof firebase !== 'undefined' && firebase.database() != null && firebase.auth() != null)
+    {
+      try
+      {
+        const dbRef = firebase.database().ref();
+
+        dbRef.child("adblock").once("value").then((snapshot) =>
+        {
+          if (snapshot.exists())
+          {
+            var adblockDivIds = snapshot.val();
+
+            if(Array.isArray(adblockDivIds))
+            {
+              var adblockDivs = [];
+
+              adblockDivIds.forEach(divId =>
+              {
+                const div = createAdBlockBaitDiv(divId);
+                adblockDivs.push(div);
+              });
+
+              
+              setTimeout(() =>
+              {
+                
+                for (let i = 0; i < adblockDivs.length; i++)
+                {
+                  const div = adblockDivs[i];
+
+                  if(wasAdBlockDivRemoved(div))
+                  {
+                    onUpdateAdBlockDetectedComplete("Firebase Div");
+                    return;
+                  }
+                }
+
+                fbDivTestPassed = true;
+                checkAllAsyncTestsComplete();
+              }, testBaitDelay);
+            }
+          }
+        });
+      }
+      catch(e)
+      {
+        console.log(`updateAdBlockDetected error: ${e}`);
+      }
+    }
+  }, testBaitDelay);
+}
+
+function setElementSize(identifier, x, y, w, h)
+{
+  const el = document.getElementById(identifier);
+  if(el != null)
+  {
+    el.style.left = x + "px";
+    el.style.top = y + "px";
+    el.style.width = w + "px";
+    el.style.height = h + "px";
+  }
+}
+
+function hideAdContainer(adElementId)
+{
+  const ad = document.getElementById(adElementId);
+
+  if(ad != null)
+  {
+    ad.style.display = "none";
+  }
+}
+
+function showAdContainer(adElementId)
+{
+  const ad = document.getElementById(adElementId);
+
+  if(ad != null)
+  {
+    ad.style.position = "absolute";
+    ad.style.display = getComputedStyle(ad).getPropertyValue("--shown_display");
+  }
+}
+
+function hideLoadingBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideAdContainer(divIdLoadingBanner);
+    hideLoadingAd();
+  }
+}
+
+function showLoadingBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    
+    if(!isMobile() && !window.adblockDetected)
+    {
+      showAdContainer(divIdLoadingBanner);
+      requestLoadingAd();
+    }
+  }
+}
+
+
+function showDummyMainMenuBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideWinCeremonyBanner();
+    hideLongBanner();
+    hideMainMenuBanner();
+    hideSpectateBanner();
+
+    showAdContainer(divIdMainMenuBanner);
+
+    requestDummyMainMenuAd();
+  }
+}
+
+function hideMainMenuBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideAdContainer(divIdMainMenuBanner);
+    hideMainMenuAd();
+  }
+}
+
+function showMainMenuBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideWinCeremonyBanner();
+    hideLongBanner();
+    hideSpectateBanner();
+
+    
+    if(!isMobile() && !window.adblockDetected)
+    {
+      showAdContainer(divIdMainMenuBanner);
+      requestMainMenuAd();
+    }
+  }
+}
+
+function hideWinCeremonyBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideAdContainer(divIdWinCeremonyBanner);
+    hideWinCeremonyAd();
+  }
+}
+
+function showWinCeremonyBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideLongBanner();
+    hideMainMenuBanner();
+    hideSpectateBanner();
+
+    showAdContainer(divIdWinCeremonyBanner);
+    requestWinCeremonyAd();
+  }
+}
+
+function hideSpectateBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideAdContainer(divIdSpectateBanner);
+    hideSpectateAd();
+  }
+}
+
+function showSpectateBanner()
+{
+  if(!offCanvasAdsEnabled)
+  {
+    hideLongBanner();
+    hideMainMenuBanner();
+    hideWinCeremonyBanner();
+
+    showAdContainer(divIdSpectateBanner);
+    requestSpectateAd();
+  }
+}
+
+function hideLongBanner()
+{
+  if(offCanvasAdsEnabled)
+  {
+    if(onlyShowOffCanvasAdsOnDeath)
+    {
+      hideBtmAdContainer();
+      hideRightAdContainer();
+      updateGameCanvasSize();
+    }
+    else if(!showBtmAd)
+    {
+      
+      hideAdContainer(divIdDeathBanner);
+      hideDeathAd();
+    }
+  }
+  else
+  {
+    hideAdContainer(divIdDeathBanner);
+    hideDeathAd();
+  }
+}
+
+function showLongBanner()
+{
+  if(offCanvasAdsEnabled)
+  {
+    if(onlyShowOffCanvasAdsOnDeath)
+    {
+      if(showBtmAd)
+      {
+        updateBtmAdContainer();
+      }
+
+      if(showRightAd)
+      {
+        updateRightAdContainer();
+      }
+
+      updateGameCanvasSize();
+    }
+    else if(!showBtmAd)
+    {
+      
+      hideWinCeremonyBanner();
+      hideMainMenuBanner();
+
+      showAdContainer(divIdDeathBanner);
+      requestDeathAd();
+    }
+  }
+  else
+  {
+    hideWinCeremonyBanner();
+    hideMainMenuBanner();
+
+    showAdContainer(divIdDeathBanner);
+    requestDeathAd();
+  }
+}
+
+function showNonRewardedInterstitial(audioOn, interstitialType, interstitialName)
+{
+  if(!window.adblockDetected)
+  {
+    
+    
+    showInterstitial(audioOn, interstitialType, interstitialName)
+  }
+}
+
+function interstitialStart(rewarded)
+{
+  isVideoAdPlaying = true;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, "InterstitialStart", rewarded ? 1 : 0);
+
+  if(offCanvasAdsEnabled)
+  {
+    hideAllOffCanvasAds();
+  }
+}
+
+function interstitialError(rewarded)
+{
+  isVideoAdPlaying = false;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, "InterstitialFailed", rewarded ? 1 : 0);
+
+  if(offCanvasAdsEnabled)
+  {
+    refreshAllOffCanvasAds();
+  }
+}
+
+function interstitialSkipped(rewarded)
+{
+  isVideoAdPlaying = false;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, "InterstitialSkipped", rewarded ? 1 : 0);
+
+  if(offCanvasAdsEnabled)
+  {
+    refreshAllOffCanvasAds();
+  }
+}
+
+function interstitialNoFill(rewarded)
+{
+  isVideoAdPlaying = false;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, "InterstitialNoFill", rewarded ? 1 : 0);
+
+  if(offCanvasAdsEnabled)
+  {
+    refreshAllOffCanvasAds();
+  }
+}
+
+function interstitialComplete(rewarded)
+{
+  isVideoAdPlaying = false;
+
+  window.unityGame.SendMessage(unityFirebaseGameOjbectName, "InterstitialComplete", rewarded ? 1 : 0);
+
+  if(offCanvasAdsEnabled)
+  {
+    refreshAllOffCanvasAds();
+  }
+}
+
+function canShowLoadingAdBanner()
+{
+  return (!window.adblockDetected &&
+      (loadingState === "None" || loadingState === "Closing" || loadingState === "Closed") &&
+      (userNoAdsEndTimestamp != null && userNoAdsEndTimestamp <= Date.now()) &&
+      !isMobile());
+}
+
+function updateLoadingAdBanner()
+{
+  
+  loadingAdBannerIntervalId = setInterval(() =>
+  {
+    if(canShowLoadingAdBanner())
+    {
+      showLoadingBanner();
+      showMainMenuBanner();
+      clearInterval(loadingAdBannerIntervalId);
+    }
+    else if(userNoAdsEndTimestamp != null)
+    {
+      clearInterval(loadingAdBannerIntervalId);
+    }
+  }, loadingAdBannerPollDelay);
+}
+</script><script>
+'use strict';
+
+function displayingBtmAd()
+{
+  return currBtmAdIndex >= 0;
+}
+
+function displayingRightAd()
+{
+  return currRightAdIndex >= 0;
+}
+
+function sortAdResArrays()
+{
+  btmAdResolutions.sort(sortRightAdResArrays);
+  rightAdResolutions.sort(sortBtmAdResArrays);
+  btmAdResolutionsMobile.sort(sortRightAdResArrays);
+  rightAdResolutionsMobile.sort(sortBtmAdResArrays);
+}
+
+function sortBtmAdResArrays(adResObj1, adResObj2)
+{
+  if(adResObj1.w === adResObj2.w)
+  {
+    if(adResObj1.h === adResObj2.h)
+    {
+      return 0;
+    }
+    else if(adResObj1.h > adResObj2.h)
+    {
+      return -1;
+    }
+    else
+    {
+      return 1;
+    }
+  }
+  else if(adResObj1.w > adResObj2.w)
+  {
+    return -1;
+  }
+  else
+  {
+    return 1;
+  }
+}
+
+function sortRightAdResArrays(adResObj1, adResObj2)
+{
+  if(adResObj1.h === adResObj2.h)
+  {
+    if(adResObj1.w === adResObj2.w)
+    {
+      return 0;
+    }
+    else if(adResObj1.w > adResObj2.w)
+    {
+      return -1;
+    }
+    else
+    {
+      return 1;
+    }
+  }
+  else if(adResObj1.h > adResObj2.h)
+  {
+    return -1;
+  }
+  else
+  {
+    return 1;
+  }
+}
+
+function updateOffCanvasAdContainers()
+{
+  if(onlyShowOffCanvasAdsOnDeath)
+  {
+    if(displayingBtmAd())
+    {
+      updateBtmAdContainer();
+    }
+    else
+    {
+      hideBtmAdContainer();
+    }
+
+    if(displayingRightAd())
+    {
+      updateRightAdContainer();
+    }
+    else
+    {
+      hideRightAdContainer();
+    }
+  }
+  else
+  {
+    updateBtmAdContainer();
+    updateRightAdContainer();
+  }
+}
+
+function updateOffCanvasBorderCorner()
+{
+  
+  if(displayingBtmAd() && displayingRightAd())
+  {
+    gameContainer.style.borderBottomRightRadius = offCanvasBorderBtmRightCornerRadiusStyle;
+  }
+  else
+  {
+    gameContainer.style.borderBottomRightRadius = "0px";
+  }
+}
+
+function updateBtmAdContainer()
+{
+  if (offCanvasAdsEnabled && showBtmAd)
+  {
+    
+    
+    var mainContainerStyle = getComputedStyle(mainContainer);
+    var mainContainerPadLeft = parseInt(mainContainerStyle.getPropertyValue("padding-left"));
+    var mainContainerPadRight = parseInt(mainContainerStyle.getPropertyValue("padding-right"));
+    var mainContainerPadTop = parseInt(mainContainerStyle.getPropertyValue("padding-top"));
+    var mainContainerPadBtm = parseInt(mainContainerStyle.getPropertyValue("padding-bottom"));
+
+    
+    var btmAdContainerStyle = getComputedStyle(btmAdContainer);
+    var btmAdContainerPadLeft = parseInt(btmAdContainerStyle.getPropertyValue("padding-left"));
+    var btmAdContainerPadRight = parseInt(btmAdContainerStyle.getPropertyValue("padding-right"));
+    var btmAdContainerPadTop = parseInt(btmAdContainerStyle.getPropertyValue("padding-top"));
+    var btmAdContainerPadBtm = parseInt(btmAdContainerStyle.getPropertyValue("padding-bottom"));
+
+    
+    var maxAdWidth = window.innerWidth - mainContainerPadLeft - mainContainerPadRight - btmAdContainerPadLeft - btmAdContainerPadRight - rightAdContainer.getBoundingClientRect().width;
+    var maxAdHeight = (window.innerHeight * maxAdHeightPercentage) - mainContainerPadTop - mainContainerPadBtm - btmAdContainerPadTop - btmAdContainerPadBtm;
+
+    
+    var bestAdWidth = 0;
+    var bestAdHeight = 0;
+
+    var tempBtmAdIndex = -1;
+    var btmAdResArray = isMobile() ? btmAdResolutionsMobile : btmAdResolutions;
+
+    for (let i = 0; i < btmAdResArray.length; i++)
+    {
+      const adRes = btmAdResArray[i];
+
+      const adWidth = adRes.w;
+      const adHeight = adRes.h;
+
+      if (adHeight <= maxAdHeight && adHeight >= bestAdHeight && adWidth <= maxAdWidth && adWidth >= bestAdWidth)
+      {
+        tempBtmAdIndex = i;
+
+        bestAdWidth = adWidth;
+        bestAdHeight = adHeight;
+      }
+    }
+
+    
+
+    if (tempBtmAdIndex >= 0)
+    {
+      gameContainer.style.borderBottom = offCanvasBorderStyle;
+
+      var containerHeight = bestAdHeight + btmAdContainerPadTop + btmAdContainerPadBtm + "px";
+      btmAdContainer.style.display = "flex";
+      btmAdContainer.style.minHeight = containerHeight;
+      btmAdContainer.style.height = containerHeight;
+
+      btmAdPlaceholder.style.display = "flex";
+      btmAdPlaceholder.style.width = bestAdWidth + "px";
+      btmAdPlaceholder.style.height = bestAdHeight + "px";
+
+      if(debugAdContainers)
+      {
+        btmAdResText.style.display = "block";
+        btmAdResText.innerHTML = `${bestAdWidth}x${bestAdHeight}`;
+      }
+      else
+      {
+        btmAdResText.style.display = "none";
+      }
+
+      
+      if(currBtmAdIndex != tempBtmAdIndex)
+      {
+        currBtmAdIndex = tempBtmAdIndex;
+
+        const adTagIdToShow = btmAdResArray[currBtmAdIndex].adId;
+
+        requestOffCanvasAd(btmAdResArray, adTagIdToShow);
+      }
+    }
+    else
+    {
+      hideBtmAdContainer();
+    }
+  }
+  else
+  {
+    hideBtmAdContainer();
+  }
+}
+
+function hideBtmAdContainer()
+{
+  gameContainer.style.borderBottom = "0px";
+
+  btmAdContainer.style.display = "none";
+  btmAdPlaceholder.style.display = "none";
+  btmAdResText.style.display = "none";
+
+  hideOffCanvasAds(btmAdResolutions);
+  hideOffCanvasAds(btmAdResolutionsMobile);
+
+  currBtmAdIndex = -1;
+}
+
+function updateRightAdContainer()
+{
+  if (offCanvasAdsEnabled && showRightAd)
+  {
+    
+    
+    var mainContainerStyle = getComputedStyle(mainContainer);
+    var mainContainerPadLeft = parseInt(mainContainerStyle.getPropertyValue("padding-left"));
+    var mainContainerPadRight = parseInt(mainContainerStyle.getPropertyValue("padding-right"));
+    var mainContainerPadTop = parseInt(mainContainerStyle.getPropertyValue("padding-top"));
+    var mainContainerPadBtm = parseInt(mainContainerStyle.getPropertyValue("padding-bottom"));
+
+    
+    var rightAdContainerStyle = getComputedStyle(rightAdContainer);
+    var rightAdContainerPadLeft = parseInt(rightAdContainerStyle.getPropertyValue("padding-left"));
+    var rightAdContainerPadRight = parseInt(rightAdContainerStyle.getPropertyValue("padding-right"));
+    var rightAdContainerPadTop = parseInt(rightAdContainerStyle.getPropertyValue("padding-top"));
+    var rightAdContainerPadBtm = parseInt(rightAdContainerStyle.getPropertyValue("padding-bottom"));
+
+    
+    var maxAdWidth = (window.innerWidth * maxAdWidthPercentage) - mainContainerPadLeft - mainContainerPadRight - rightAdContainerPadLeft - rightAdContainerPadRight;
+    var maxAdHeight = window.innerHeight - mainContainerPadTop - mainContainerPadBtm - rightAdContainerPadTop - rightAdContainerPadBtm;
+
+    
+    var bestAdWidth = 0;
+    var bestAdHeight = 0;
+
+    var tempRightAdIndex = -1;
+    var rightAdResArray = isMobile() ? rightAdResolutionsMobile : rightAdResolutions;
+
+    for (let i = 0; i < rightAdResArray.length; i++)
+    {
+      const adRes = rightAdResArray[i];
+
+      const adWidth = adRes.w;
+      const adHeight = adRes.h;
+
+      if (adWidth <= maxAdWidth && adWidth >= bestAdWidth && adHeight <= maxAdHeight && adHeight >= bestAdHeight)
+      {
+        tempRightAdIndex = i;
+
+        bestAdWidth = adWidth;
+        bestAdHeight = adHeight;
+      }
+    }
+
+    
+
+    
+    if (tempRightAdIndex >= 0)
+    {
+      gameContainer.style.borderRight = offCanvasBorderStyle;
+
+      var containerWidth = bestAdWidth + rightAdContainerPadLeft + rightAdContainerPadRight + "px";
+      rightAdContainer.style.display = "flex";
+      rightAdContainer.style.minWidth = containerWidth;
+      rightAdContainer.style.width = containerWidth;
+
+      rightAdPlaceholder.style.display = "flex";
+      rightAdPlaceholder.style.width = bestAdWidth + "px";
+      rightAdPlaceholder.style.height = bestAdHeight + "px";
+
+      if(debugAdContainers)
+      {
+        rightAdResText.style.display = "block";
+        rightAdResText.innerHTML = `${bestAdWidth}x${bestAdHeight}`;
+      }
+      else
+      {
+        
+        rightAdResText.style.display = "none";
+      }
+
+      
+      if(currRightAdIndex != tempRightAdIndex)
+      {
+        currRightAdIndex = tempRightAdIndex;
+
+        const adTagIdToShow = rightAdResArray[currRightAdIndex].adId;
+
+        requestOffCanvasAd(rightAdResArray, adTagIdToShow);
+      }
+    }
+    else
+    {
+      hideRightAdContainer();
+    }
+  }
+  else
+  {
+    hideRightAdContainer();
+  }
+}
+
+function hideRightAdContainer()
+{
+  gameContainer.style.borderRight = "0px";
+
+  rightAdContainer.style.display = "none";
+  rightAdPlaceholder.style.display = "none";
+  rightAdResText.style.display = "none";
+
+  hideOffCanvasAds(rightAdResolutions);
+  hideOffCanvasAds(rightAdResolutionsMobile);
+
+  currRightAdIndex = -1;
+}
+
+function hideAllOffCanvasAds()
+{
+  
+  hideOffCanvasAds(btmAdResolutions);
+  hideOffCanvasAds(btmAdResolutionsMobile);
+  currBtmAdIndex = -1;
+
+  
+  hideOffCanvasAds(rightAdResolutions);
+  hideOffCanvasAds(rightAdResolutionsMobile);
+  currRightAdIndex = -1;
+}
+
+function refreshAllOffCanvasAds()
+{
+  updateOffCanvasAdContainers();
+}
+
+function updateAdBlockerContainer()
+{
+  if(!window.adblockDetected)
+  {
+    document.getElementById("btmAdBlockerContainer").style.display = "none";
+    document.getElementById("rightAdBlockerContainer").style.display = "none";
+  }
+}
+
+function createOffCanvasAdDivs()
+{
+  
+  var btmAdResArray = isMobile() ? btmAdResolutionsMobile : btmAdResolutions;
+
+  btmAdResArray.forEach(btmAdRes => {
+    var adDiv = document.createElement("div");
+    adDiv.id = btmAdRes.adId;
+
+    if(setOffCanvasAdDivDimensions)
+    {
+      adDiv.style.width = btmAdRes.w + "px";
+      adDiv.style.height = btmAdRes.h + "px";
+    }
+
+    btmAdPlaceholder.appendChild(adDiv);
+  });
+
+  
+  var rightAdResArray = isMobile() ? rightAdResolutionsMobile : rightAdResolutions;
+
+  rightAdResArray.forEach(rightAdRes => {
+    var adDiv = document.createElement("div");
+    adDiv.id = rightAdRes.adId;
+
+    if(setOffCanvasAdDivDimensions)
+    {
+      adDiv.style.width = rightAdRes.w + "px";
+      adDiv.style.height = rightAdRes.h + "px";
+    }
+
+    rightAdPlaceholder.appendChild(adDiv);
+  });
+}
+
+function offCanvasAdsOnLoad()
+{  
+  createOffCanvasAdDivs();
+  resizeOffCanvasAdContainers();
+  updateAdBlockerContainer();
+}
+
+function offCanvasAdsOnResize()
+{
+  resizeOffCanvasAdContainers();
+}
+
+function resizeOffCanvasAdContainers()
+{
+  updateOffCanvasAdContainers();
+  updateOffCanvasBorderCorner();
+}
+
+sortAdResArrays();
+
+window.addEventListener("load", offCanvasAdsOnLoad);
+window.addEventListener("resize", offCanvasAdsOnResize);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><script>
+'use strict';
+
+var gameContainer;
+function updateAdSizes()
+{
+  if(gameContainer == null)
+  {
+    gameContainer = document.getElementById('gameContainer');
+  }
+
+  if(gameContainer != null)
+  {
+    updateLongBanner();
+    
+    if(!offCanvasAdsEnabled)
+    {
+      updateMainMenuBanner();
+      updateWinBanner();
+      updateSpectateBanner();
+    }
+  }
+}
+
+var mainMenuBanner;
+const defaultMainMenuScaleStr = "scale(100%, 100%)";
+const defaultMainMenuTranslateStr = "translate(0px, -50%)";
+function updateMainMenuBanner()
+{
+  if(mainMenuBanner == null)
+  {
+    mainMenuBanner = document.getElementById(divIdMainMenuBanner);
+  }
+
+  if(mainMenuBanner != null && mainMenuBanner.style.display !== "none")
+  {
+    var adContainerW = mainMenuBanner.offsetWidth;
+    var adContainerH = mainMenuBanner.offsetHeight;
+    var gameContainerH = gameContainer.offsetHeight;
+
+    if(adContainerH/gameContainerH > 0.75)
+    {
+      var newHeight = gameContainerH * 0.75;
+      var newScale = newHeight / adContainerH;
+      var scaleString = "scale( " + newScale + "," + newScale + ")";
+      mainMenuBanner.style.transform = `${scaleString} ${defaultMainMenuTranslateStr}`;
+    }
+    else
+    {
+      mainMenuBanner.style.transform =  `${defaultMainMenuScaleStr} ${defaultMainMenuTranslateStr}`
+    }
+  }
+}
+
+var winBanner;
+const defaultWinCeremonyScaleStr = "scale(100%, 100%)";
+const defaultWinCeremonyTranslateStr = "translate(0px, 0px)"; 
+function updateWinBanner()
+{
+  if(winBanner == null)
+  {
+    winBanner = document.getElementById(divIdWinCeremonyBanner);
+  }
+
+  if(winBanner != null && winBanner.style.display !== "none")
+  {
+    var adContainerW = winBanner.offsetWidth;
+    var adContainerH = winBanner.offsetHeight;
+    var gameContainerH = gameContainer.offsetHeight;
+
+    if(adContainerH/gameContainerH > 0.75)
+    {
+      var newHeight = gameContainerH * 0.75;
+      var newScale = newHeight / adContainerH;
+      var scaleString = "scale( " + newScale + "," + newScale + ")";
+      winBanner.style.transform = `${scaleString} ${defaultWinCeremonyTranslateStr}`;
+    }
+    else
+    {
+      winBanner.style.transform =  `${defaultWinCeremonyScaleStr} ${defaultWinCeremonyTranslateStr}`
+    }
+  }
+}
+
+var spectateBanner;
+const defaultSpectateScaleStr = "scale(100%, 100%)";
+const defaultSpectateTranslateStr = "translate(0px, 0px)"; 
+function updateSpectateBanner()
+{
+  if(spectateBanner == null)
+  {
+    spectateBanner = document.getElementById(divIdSpectateBanner);
+  }
+
+  if(spectateBanner != null && spectateBanner.style.display !== "none")
+  {
+    var adContainerW = spectateBanner.offsetWidth;
+    var adContainerH = spectateBanner.offsetHeight;
+    var gameContainerH = gameContainer.offsetHeight;
+
+    if(adContainerH/gameContainerH > 0.75)
+    {
+      var newHeight = gameContainerH * 0.75;
+      var newScale = newHeight / adContainerH;
+      var scaleString = "scale( " + newScale + "," + newScale + ")";
+      spectateBanner.style.transform = `${scaleString} ${defaultSpectateTranslateStr}`;
+    }
+    else
+    {
+      spectateBanner.style.transform =  `${defaultSpectateScaleStr} ${defaultSpectateTranslateStr}`
+    }
+  }
+}
+
+var longBanner;
+function updateLongBanner()
+{
+  if(longBanner == null)
+  {
+    longBanner = document.getElementById(divIdDeathBanner);
+
+    if(isMobile() && longBanner != null)
+    {
+      
+      longBanner.style.right = "auto"; 
+    }
+  }
+
+  if(longBanner != null && longBanner.style.display !== "none")
+  {
+    longBanner.style.bottom = 0 + "px";
+    
+    
+
+    var adContainerW = longBanner.offsetWidth;
+    var adContainerH = longBanner.offsetHeight;
+    var gameContainerH = gameContainer.offsetHeight;
+
+    if(isMobile())
+    {
+      longBanner.style.top = (gameContainerH - adContainerH) + "px";
+      longBanner.style.transform =  "scale( 1, 1) translate(0px, -10px)";
+    }
+    else
+    {
+      
+      let heightPercentage = (adContainerW > adContainerH) ? 0.3 : 0.75;
+
+      if(adContainerH/gameContainerH > heightPercentage)
+      {
+        const newHeight = gameContainerH * heightPercentage;
+        const newScale = newHeight / adContainerH;
+        const scaleString = "scale( " + newScale + "," + newScale + ")";
+        
+        const offsetX = (adContainerW - adContainerW*newScale)/2 - 10;
+        const offsetY = (adContainerH - adContainerH*newScale)/2 - 10;
+        const translateString = "translate(" + offsetX + "px, " + offsetY + "px)";
+        longBanner.style.transform = translateString + " " + scaleString;
+      }
+      else
+      {
+        longBanner.style.transform =  "scale( 1, 1) translate(-10px, -10px)";
+      }
+    }
+  }
+}
+
+
+
+setInterval(updateAdSizes, 500);
+</script><script>
+'use strict';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(isPlaywireEnabled())
+{
+    var pwCommonScript = document.createElement("script");
+    pwCommonScript.src = "scripts/ads-pw-common.js";
+    document.body.appendChild(pwCommonScript);
+
+    if(displayAdProvider === AdProviderPlaywire)
+    {
+        var pwDisplayScript = document.createElement("script");
+        pwDisplayScript.src = "scripts/ads-pw-display.js";
+        document.body.appendChild(pwDisplayScript);
+    }
+
+    if(videoAdProvider === AdProviderPlaywire)
+    {
+        var pwVideoScript = document.createElement("script");
+        pwVideoScript.src = "scripts/ads-pw-video.js";
+        document.body.appendChild(pwVideoScript);
+    }
+}
+
+
+if(isAdinPlayEnabled())
+{
+    if(displayAdProvider === AdProviderAdinplay)
+    {
+        var adinplayDisplayScript = document.createElement("script");
+        adinplayDisplayScript.src = "data:@file/javascript;base64,J3VzZSBzdHJpY3QnOwoKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vYWQgdGFncwpjb25zdCBhZFRhZ0xvYWRpbmdCYW5uZXIgPSAic21hc2hrYXJ0cy1pb18zMDB4NjAwXzIiOwpjb25zdCBhZFRhZ01haW5NZW51QmFubmVyID0gInNtYXNoa2FydHMtaW9fMzAweDI1MCI7CmNvbnN0IGFkVGFnV2luQ2VyZW1vbnlCYW5uZXIgPSAic21hc2hrYXJ0cy1pb18zMDB4MjUwXzIiOwpjb25zdCBhZFRhZ1NwZWN0YXRlQmFubmVyID0gInNtYXNoa2FydHMtaW9fMzAweDI1MF8zIjsKY29uc3QgYWRUYWdEZWF0aEJhbm5lcldlYiA9ICJzbWFzaGthcnRzLWlvXzcyOHg5MC1uZXciOwpjb25zdCBhZFRhZ0RlYXRoQmFubmVyTW9iaWxlID0gInNtYXNoa2FydHMtaW9fMzIweDEwMCI7Cgp2YXIgY3VyclNob3duQWRFbGVtZW50SWRzID0gW107CgpmdW5jdGlvbiBoYXNBZENvbnRlbnQoYWRFbGVtZW50SWQpCnsKICAgIGNvbnN0IGFkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYWRFbGVtZW50SWQpOwoKICAgIHJldHVybiAoYWQgIT0gbnVsbCAmJiBhZC5pbm5lckhUTUwpOwp9CgpmdW5jdGlvbiBzaG93QWQoYWRFbGVtZW50SWQpCnsKICAgIGNvbnN0IGFkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYWRFbGVtZW50SWQpOwoKICAgIGlmKGFkICE9IG51bGwpCiAgICB7CiAgICAgICAgYWQuc3R5bGUuZGlzcGxheSA9ICJibG9jayI7CiAgICB9Cn0KCmZ1bmN0aW9uIHJlcXVlc3RBZChhZEVsZW1lbnRJZCwgYWRTaG93blRpbWVzdGFtcCkKewogICAgaWYoY3VyclNob3duQWRFbGVtZW50SWRzLmluY2x1ZGVzKGFkRWxlbWVudElkKSkKICAgICAgICByZXR1cm47CgogICAgaWYoRGF0ZS5ub3coKSA+PSAoYWRTaG93blRpbWVzdGFtcC52YWwgKyBiYW5uZXJNaW5SZWZyZXNoRGVsYXlNaWxsaXNlY3MpIHx8ICFoYXNBZENvbnRlbnQoYWRFbGVtZW50SWQpKQogICAgewogICAgICAgIGFkU2hvd25UaW1lc3RhbXAudmFsID0gRGF0ZS5ub3coKTsKCiAgICAgICAgZGVzdHJveUFkKGFkRWxlbWVudElkKTsKCiAgICAgICAgY3VyclNob3duQWRFbGVtZW50SWRzLnB1c2goYWRFbGVtZW50SWQpOwoKICAgICAgICBhaXB0YWcuY21kLmRpc3BsYXkucHVzaChmdW5jdGlvbigpCiAgICAgICAgewogICAgICAgICAgICBhaXBEaXNwbGF5VGFnLmRpc3BsYXkoYWRFbGVtZW50SWQpOwogICAgICAgICAgICBzaG93QWQoYWRFbGVtZW50SWQpOwogICAgICAgIH0pOwogICAgfQp9CgpmdW5jdGlvbiBoaWRlQWQoYWRFbGVtZW50SWQpCnsKICAgIGlmKGN1cnJTaG93bkFkRWxlbWVudElkcy5pbmNsdWRlcyhhZEVsZW1lbnRJZCkpCiAgICB7CiAgICAgICAgLy9mb3IgYWRpbnBsYXkgd2UgZG9udCBkaXN0aW5ndXNoIGJldHdlZW4gaGlkaW5nIGFuZCBkZXN0cm95aW5nCiAgICAgICAgZGVzdHJveUFkKGFkRWxlbWVudElkKTsKCiAgICAgICAgLy9pZiB3ZSB3ZXJlIGhpZGluZyB5b3Ugd291bGQgbmVlZCB0byByZXNldCB0aGUgY3VyclNob3duQWRFbGVtZW50CiAgICAgICAgLy9jdXJyU2hvd25BZEVsZW1lbnRJZCA9IG51bGw7CiAgICB9Cn0KCmZ1bmN0aW9uIGRlc3Ryb3lBZChhZEVsZW1lbnRJZCkKewogICAgY29uc3QgYWQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhZEVsZW1lbnRJZCk7CgogICAgaWYoYWQgIT0gbnVsbCkKICAgIHsKICAgICAgICBhZC5zdHlsZS5kaXNwbGF5ID0gIm5vbmUiOwogICAgICAgIC8vYWQuaW5uZXJIVE1MID0gIiI7CiAgICAgICAgYWlwdGFnLmNtZC5kaXNwbGF5LnB1c2goZnVuY3Rpb24oKQogICAgICAgIHsKICAgICAgICAgICAgYWlwRGlzcGxheVRhZy5kZXN0cm95KGFkRWxlbWVudElkKTsKICAgICAgICB9KTsKICAgIH0KCiAgICBjb25zdCBpbmRleFRvUmVtb3ZlID0gY3VyclNob3duQWRFbGVtZW50SWRzLmluZGV4T2YoYWRFbGVtZW50SWQpOwoKICAgIGlmKGluZGV4VG9SZW1vdmUgPj0gMCkKICAgIHsKICAgICAgICBjdXJyU2hvd25BZEVsZW1lbnRJZHMuc3BsaWNlKGluZGV4VG9SZW1vdmUsIDEpOwogICAgfQp9CgpmdW5jdGlvbiByZXF1ZXN0TG9hZGluZ0FkKCkKewogICAgcmVxdWVzdEFkKGFkVGFnTG9hZGluZ0Jhbm5lciwgbG9hZGluZ0Jhbm5lclNob3duVGltZXN0YW1wKTsKfQoKZnVuY3Rpb24gaGlkZUxvYWRpbmdBZCgpCnsKICAgIGhpZGVBZChhZFRhZ0xvYWRpbmdCYW5uZXIpOwp9CgpmdW5jdGlvbiByZXF1ZXN0TWFpbk1lbnVBZCgpCnsKICAgIHJlcXVlc3RBZChhZFRhZ01haW5NZW51QmFubmVyLCBtYWluTWVudUJhbm5lclNob3duVGltZXN0YW1wKTsKfQoKZnVuY3Rpb24gaGlkZU1haW5NZW51QWQoKQp7CiAgICBoaWRlQWQoYWRUYWdNYWluTWVudUJhbm5lcik7Cn0KCmZ1bmN0aW9uIHJlcXVlc3RXaW5DZXJlbW9ueUFkKCkKewogICAgcmVxdWVzdEFkKGFkVGFnV2luQ2VyZW1vbnlCYW5uZXIsIHdpbkNlcmVtb255QmFubmVyU2hvd25UaW1lc3RhbXApOwp9CgpmdW5jdGlvbiBoaWRlV2luQ2VyZW1vbnlBZCgpCnsKICAgIGhpZGVBZChhZFRhZ1dpbkNlcmVtb255QmFubmVyKTsKfQoKZnVuY3Rpb24gcmVxdWVzdFNwZWN0YXRlQWQoKQp7CiAgICByZXF1ZXN0QWQoYWRUYWdTcGVjdGF0ZUJhbm5lciwgc3BlY3RhdGVCYW5uZXJTaG93blRpbWVzdGFtcCk7Cn0KCmZ1bmN0aW9uIGhpZGVTcGVjdGF0ZUFkKCkKewogICAgaGlkZUFkKGFkVGFnU3BlY3RhdGVCYW5uZXIpOwp9CgpmdW5jdGlvbiByZXF1ZXN0RGVhdGhBZCgpCnsKICAgIGlmKGlzTW9iaWxlKCkpCiAgICB7CiAgICAgICAgcmVxdWVzdEFkKGFkVGFnRGVhdGhCYW5uZXJNb2JpbGUsIGRlYXRoQmFubmVyU2hvd25UaW1lc3RhbXApOwogICAgfQogICAgZWxzZQogICAgewogICAgICAgIHJlcXVlc3RBZChhZFRhZ0RlYXRoQmFubmVyV2ViLCBkZWF0aEJhbm5lclNob3duVGltZXN0YW1wKTsKICAgIH0KfQoKZnVuY3Rpb24gaGlkZURlYXRoQWQoKQp7CiAgICBoaWRlQWQoYWRUYWdEZWF0aEJhbm5lck1vYmlsZSk7CiAgICBoaWRlQWQoYWRUYWdEZWF0aEJhbm5lcldlYik7Cn0KCmZ1bmN0aW9uIHJlcXVlc3RPZmZDYW52YXNBZChhZFJlc0FycmF5VG9IaWRlLCBhZFRhZ0lkVG9TaG93KQp7CiAgICBoaWRlT2ZmQ2FudmFzQWRzKGFkUmVzQXJyYXlUb0hpZGUpOwoKICAgIGN1cnJTaG93bkFkRWxlbWVudElkcy5wdXNoKGFkVGFnSWRUb1Nob3cpOwoKICAgIGFpcHRhZy5jbWQuZGlzcGxheS5wdXNoKGZ1bmN0aW9uKCkKICAgIHsKICAgICAgICBhaXBEaXNwbGF5VGFnLmRpc3BsYXkoYWRUYWdJZFRvU2hvdyk7CiAgICAgICAgc2hvd0FkKGFkVGFnSWRUb1Nob3cpOwogICAgfSk7Cn0KCmZ1bmN0aW9uIGhpZGVPZmZDYW52YXNBZHMoYWRSZXNBcnJheSkKewogICAgYWRSZXNBcnJheS5mb3JFYWNoKGFkUmVzID0+IHsKICAgICAgICBkZXN0cm95QWQoYWRSZXMuYWRJZCk7CiAgICB9KTsKfQo=";
+        document.body.appendChild(adinplayDisplayScript);
+    }
+    
+    if(videoAdProvider === AdProviderAdinplay)
+    {
+        var adinplayVideoScript = document.createElement("script");
+        adinplayVideoScript.src = "data:@file/javascript;base64,J3VzZSBzdHJpY3QnOwoKbGV0IGFpcFJld2FyZGVkQWRBdmFpbGFibGUgPSBmYWxzZTsKCmZ1bmN0aW9uIGFpcFZpZGVvUGxheWVySW5pdGlhbGlzZWQoKQp7CiAgICByZXR1cm4gKHR5cGVvZiBhaXB0YWcuYWRwbGF5ZXIgIT09ICd1bmRlZmluZWQnKTsKfQoKZnVuY3Rpb24gc2hvd0ludGVyc3RpdGlhbChhdWRpb09uLCBpbnRlcnN0aXRpYWxUeXBlLCBpbnRlcnN0aXRpYWxOYW1lKQp7CiAgICBpZiAoIWlzVmlkZW9BZFBsYXlpbmcgJiYgZmlyZWJhc2UuYXV0aCgpLmN1cnJlbnRVc2VyICE9IG51bGwpCiAgICB7CiAgICAgICAgLy9jaGVjayBpZiB0aGUgYWRzbGliIGlzIGxvYWRlZCBjb3JyZWN0bHkgb3IgYmxvY2tlZCBieSBhZGJsb2NrZXJzIGV0Yy4KICAgICAgICBpZiAoYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpKQogICAgICAgIHsKICAgICAgICAgICAgaXNWaWRlb0FkUGxheWluZyA9IHRydWU7CgogICAgICAgICAgICBpbnRlcnN0aXRpYWxTdGFydChmYWxzZSk7CgogICAgICAgICAgICBhaXB0YWcuY21kLnBsYXllci5wdXNoKGZ1bmN0aW9uKCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgYWlwdGFnLmFkcGxheWVyLnN0YXJ0UHJlUm9sbCgpOwogICAgICAgICAgICB9KTsKICAgICAgICB9CiAgICAgICAgZWxzZQogICAgICAgIHsKICAgICAgICAgICAgLy9BZGxpYiBkaWRudCBsb2FkIHRoaXMgY291bGQgYmUgZHVlIHRvIGFuIGFkYmxvY2tlciwgdGltZW91dCBldGMuCiAgICAgICAgICAgIC8vUGxlYXNlIGFkZCB5b3VyIHNjcmlwdCBoZXJlIHRoYXQgc3RhcnRzIHRoZSBjb250ZW50LCB0aGlzIHVzdWFsbHkgaXMgdGhlIHNhbWUgc2NyaXB0IGFzIGFkZGVkIGluIEFJUF9DT01QTEVURS4KICAgICAgICAgICAgY29uc29sZS5sb2coIkFkIENvdWxkIG5vdCBiZSBsb2FkZWQsIGxvYWQgeW91ciBjb250ZW50IGhlcmUiKTsKCiAgICAgICAgICAgIGlzVmlkZW9BZFBsYXlpbmcgPSBmYWxzZTsKCiAgICAgICAgICAgIGludGVyc3RpdGlhbEVycm9yKGZhbHNlKTsKICAgICAgICB9CiAgICB9Cn0KCmZ1bmN0aW9uIG9uSW50ZXJzdGl0aWFsQ29tcGxldGUoZXZ0KQp7CiAgICAvKioqKioqKioqKioqKioqKioqKgogICAgICoqKioqIFdBUk5JTkcgKioqKioKICAgICAqKioqKioqKioqKioqKioqKioqCiAgICAgUGxlYXNlIGRvIG5vdCByZW1vdmUgdGhlIFBSRVJPTExfRUxFTQogICAgIGZyb20gdGhlIHBhZ2UsIGl0IHdpbGwgYmUgaGlkZGVuIGF1dG9tYXRpY2x5LgogICAgICovCiAgICBjb25zb2xlLmxvZygib25JbnRlcnN0aXRpYWxDb21wbGV0ZTogIiArIGV2dCk7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGlmKGV2dCA9PT0gInZpZGVvLWFkLWNvbXBsZXRlZCIpCiAgICB7CiAgICAgICAgaW50ZXJzdGl0aWFsQ29tcGxldGUoZmFsc2UpOwogICAgfQogICAgZWxzZSBpZihldnQgPT09ICJ2aWRlby1hZC1za2lwcGVkIikKICAgIHsKICAgICAgICBpbnRlcnN0aXRpYWxTa2lwcGVkKGZhbHNlKTsKICAgIH0KICAgIGVsc2UKICAgIHsKICAgICAgICBpbnRlcnN0aXRpYWxFcnJvcihmYWxzZSk7CiAgICB9Cn0KCmZ1bmN0aW9uIHRyeUluaXRSZXdhcmRlZEludGVyc3RpdGlhbChhdWRpb09uKQp7CiAgICBpZighd2luZG93LmFkYmxvY2tEZXRlY3RlZCkKICAgIHsKICAgICAgICBpZihhaXBWaWRlb1BsYXllckluaXRpYWxpc2VkKCkpCiAgICAgICAgewogICAgICAgICAgICBpbml0UmV3YXJkZWRJbnRlcnN0aXRpYWwoKTsKICAgICAgICB9CiAgICAgICAgZWxzZQogICAgICAgIHsKICAgICAgICAgICAgLy9wb2xsIHVudGlsIHZpZGVvIHBsYXllciBpcyByZWFkeQogICAgICAgICAgICBjb25zdCBjaGVja1ZpZGVvUGxheWVySW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCgoKSA9PiB7CiAgICAgICAgICAgICAgICAvL3BsYXllciBpc250IHJlYWR5ID0+IGRvIG5vdGhpbmcKICAgICAgICAgICAgICAgIGlmICghYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpKQogICAgICAgICAgICAgICAgICAgIHJldHVybjsKCiAgICAgICAgICAgICAgICAvL3BsYXllciBpcyByZWFkeSA9PiBzdG9wIHBvbGxpbmcgYW5kIHNlbmQgbWVzc2FnZSB0byB1bml0eQogICAgICAgICAgICAgICAgY2xlYXJJbnRlcnZhbChjaGVja1ZpZGVvUGxheWVySW50ZXJ2YWwpOwogICAgICAgICAgICAgICAgaW5pdFJld2FyZGVkSW50ZXJzdGl0aWFsKCk7CiAgICAgICAgICAgIH0sIDEwMDApOwogICAgICAgIH0KICAgIH0KfQoKZnVuY3Rpb24gaW5pdFJld2FyZGVkSW50ZXJzdGl0aWFsKCkKewogICAgaWYoIWFpcFJld2FyZGVkQWRBdmFpbGFibGUpCiAgICB7CiAgICAgICAgLy9JdCdzIGltcG9ydGFudCB0aGUgRXZlbnRMaXN0ZW5lciByZXdhcmRlZFNsb3RSZWFkeSBpcyBhZGRlZCBvbmx5IG9uY2UuCiAgICAgICAgaWYoYWlwQVBJdGFnLnJld2FyZGVkU2xvdEV2ZW50TGlzdGVuZXIgIT09IHRydWUpCiAgICAgICAgewogICAgICAgICAgICBhaXBBUEl0YWcucmV3YXJkZWRTbG90RXZlbnRMaXN0ZW5lciA9IHRydWU7CiAgICAKICAgICAgICAgICAgYWlwdGFnLmV2ZW50cy5hZGRFdmVudExpc3RlbmVyKCJyZXdhcmRlZFNsb3RSZWFkeSIsIGZ1bmN0aW9uIChlKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpZihlLmRldGFpbC5pc0VtcHR5ICE9PSB0cnVlKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIC8vcmV3YXJkZWQgYWQgaXMgcmVhZHkgdG8gc2hvdwogICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCJyZXdhcmRlZCBhZCBpcyByZWFkeSB0byBzaG93Iik7CiAgICAgICAgICAgICAgICAgICAgYWlwUmV3YXJkZWRBZEF2YWlsYWJsZSA9IHRydWU7CiAgICAgICAgICAgICAgICAgICAgd2luZG93LnVuaXR5R2FtZS5TZW5kTWVzc2FnZSh1bml0eUZpcmViYXNlR2FtZU9qYmVjdE5hbWUsICJSZXdhcmRlZEludGVyc3RpdGlhbEF2YWlsYWJsZSIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZWxzZQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIC8vVGhlcmUgaXMgbm8gcmV3YXJkZWQgYWQgYXZhaWxhYmxlCiAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coInJld2FyZGVkIGFkIG5vdCBhdmFpbGFibGUiKTsKICAgICAgICAgICAgICAgICAgICBhaXBSZXdhcmRlZEFkQXZhaWxhYmxlID0gZmFsc2U7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sIGZhbHNlKTsKICAgICAgICB9CiAgICAKICAgICAgICAvL3NldCB0aGUgcHJlbG9hZCBmbGFnIHRvIHRydWUgdG8gdXNlIHByZWxvYWRpbmcgb2YgdGhlIHJld2FyZGVkIGFkCiAgICAgICAgYWlwdGFnLmNtZC5wbGF5ZXIucHVzaChmdW5jdGlvbigpIHsgYWlwdGFnLmFkcGxheWVyLnN0YXJ0UmV3YXJkZWRBZCh7cHJlbG9hZDogdHJ1ZSwgc2hvd0xvYWRpbmc6IGZhbHNlfSk7IH0pOwogICAgfQogICAgZWxzZQogICAgewogICAgICAgIC8vcmV3YXJkZWQgYWQgYWxyZWFkeSBwcmVsb2FkZWQKICAgICAgICB3aW5kb3cudW5pdHlHYW1lLlNlbmRNZXNzYWdlKHVuaXR5RmlyZWJhc2VHYW1lT2piZWN0TmFtZSwgIlJld2FyZGVkSW50ZXJzdGl0aWFsQXZhaWxhYmxlIik7CiAgICB9Cn0KCmZ1bmN0aW9uIHRyeVNob3dSZXdhcmRlZEludGVyc3RpdGlhbChhdWRpb09uKQp7CiAgICBpZighYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpIHx8ICFhaXBSZXdhcmRlZEFkQXZhaWxhYmxlKQogICAgewogICAgICAgIGludGVyc3RpdGlhbE5vRmlsbCh0cnVlKTsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgaWYgKCFpc1ZpZGVvQWRQbGF5aW5nICYmIGZpcmViYXNlLmF1dGgoKS5jdXJyZW50VXNlciAhPSBudWxsKQogICAgewogICAgICAgIGlzVmlkZW9BZFBsYXlpbmcgPSB0cnVlOwoKICAgICAgICBpbnRlcnN0aXRpYWxTdGFydCh0cnVlKTsKCiAgICAgICAgYWlwdGFnLmFkcGxheWVyLnNob3dSZXdhcmRlZEFkKCk7CgogICAgICAgIGFpcFJld2FyZGVkQWRBdmFpbGFibGUgPSBmYWxzZTsKCiAgICAgICAgLy8gYWlwdGFnLmNtZC5wbGF5ZXIucHVzaChmdW5jdGlvbigpIAogICAgICAgIC8vIHsgCiAgICAgICAgLy8gICAgCiAgICAgICAgLy8gICAgIGFpcHRhZy5hZHBsYXllci5zdGFydFJld2FyZGVkQWQoKTsgCiAgICAgICAgLy8gfSk7CiAgICB9Cn0KCmZ1bmN0aW9uIG9uUmV3YXJkZWRJbnRlcnN0aXRpYWxHcmFudGVkKCkKewogICAgY29uc29sZS5sb2coIlJld2FyZCBHcmFudGVkIik7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGludGVyc3RpdGlhbENvbXBsZXRlKHRydWUpOwp9CgpmdW5jdGlvbiBvblJld2FyZGVkSW50ZXJzdGl0aWFsQ29tcGxldGUoZXZ0KQp7CiAgICAvL2V2dCBjYW4gYmU6IHRpbWVvdXQsIGVtcHR5IG9yIGNsb3NlZAogICAgY29uc29sZS5sb2coIlJld2FyZGVkIEFkIENvbXBsZXRlZDogIiArIGV2dCk7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGlmKGV2dCA9PT0gImNsb3NlZCIpCiAgICB7CiAgICAgICAgLy9za2lwcGVkIGJ5IHRoZSB1c2VyCiAgICAgICAgaW50ZXJzdGl0aWFsU2tpcHBlZCh0cnVlKTsKICAgIH0KICAgIGVsc2UKICAgIHsKICAgICAgICAvL3RpbWVvdXQgb3IgZW1wdHkKICAgICAgICBpbnRlcnN0aXRpYWxOb0ZpbGwodHJ1ZSk7CiAgICB9Cn0K";
+        document.body.appendChild(adinplayVideoScript);
+    }
+}
+
+
+if(isGoogleH5GamesEnabled())
+{
+    var googleH5GamesVideoScript = document.createElement("script");
+    googleH5GamesVideoScript.src = "scripts/ads-google-h5-games-video.js";
+    document.body.appendChild(googleH5GamesVideoScript);
+}
+</script><script src="data:@file/javascript;base64,J3VzZSBzdHJpY3QnOwoKLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vCi8vYWQgdGFncwpjb25zdCBhZFRhZ0xvYWRpbmdCYW5uZXIgPSAic21hc2hrYXJ0cy1pb18zMDB4NjAwXzIiOwpjb25zdCBhZFRhZ01haW5NZW51QmFubmVyID0gInNtYXNoa2FydHMtaW9fMzAweDI1MCI7CmNvbnN0IGFkVGFnV2luQ2VyZW1vbnlCYW5uZXIgPSAic21hc2hrYXJ0cy1pb18zMDB4MjUwXzIiOwpjb25zdCBhZFRhZ1NwZWN0YXRlQmFubmVyID0gInNtYXNoa2FydHMtaW9fMzAweDI1MF8zIjsKY29uc3QgYWRUYWdEZWF0aEJhbm5lcldlYiA9ICJzbWFzaGthcnRzLWlvXzcyOHg5MC1uZXciOwpjb25zdCBhZFRhZ0RlYXRoQmFubmVyTW9iaWxlID0gInNtYXNoa2FydHMtaW9fMzIweDEwMCI7Cgp2YXIgY3VyclNob3duQWRFbGVtZW50SWRzID0gW107CgpmdW5jdGlvbiBoYXNBZENvbnRlbnQoYWRFbGVtZW50SWQpCnsKICAgIGNvbnN0IGFkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYWRFbGVtZW50SWQpOwoKICAgIHJldHVybiAoYWQgIT0gbnVsbCAmJiBhZC5pbm5lckhUTUwpOwp9CgpmdW5jdGlvbiBzaG93QWQoYWRFbGVtZW50SWQpCnsKICAgIGNvbnN0IGFkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYWRFbGVtZW50SWQpOwoKICAgIGlmKGFkICE9IG51bGwpCiAgICB7CiAgICAgICAgYWQuc3R5bGUuZGlzcGxheSA9ICJibG9jayI7CiAgICB9Cn0KCmZ1bmN0aW9uIHJlcXVlc3RBZChhZEVsZW1lbnRJZCwgYWRTaG93blRpbWVzdGFtcCkKewogICAgaWYoY3VyclNob3duQWRFbGVtZW50SWRzLmluY2x1ZGVzKGFkRWxlbWVudElkKSkKICAgICAgICByZXR1cm47CgogICAgaWYoRGF0ZS5ub3coKSA+PSAoYWRTaG93blRpbWVzdGFtcC52YWwgKyBiYW5uZXJNaW5SZWZyZXNoRGVsYXlNaWxsaXNlY3MpIHx8ICFoYXNBZENvbnRlbnQoYWRFbGVtZW50SWQpKQogICAgewogICAgICAgIGFkU2hvd25UaW1lc3RhbXAudmFsID0gRGF0ZS5ub3coKTsKCiAgICAgICAgZGVzdHJveUFkKGFkRWxlbWVudElkKTsKCiAgICAgICAgY3VyclNob3duQWRFbGVtZW50SWRzLnB1c2goYWRFbGVtZW50SWQpOwoKICAgICAgICBhaXB0YWcuY21kLmRpc3BsYXkucHVzaChmdW5jdGlvbigpCiAgICAgICAgewogICAgICAgICAgICBhaXBEaXNwbGF5VGFnLmRpc3BsYXkoYWRFbGVtZW50SWQpOwogICAgICAgICAgICBzaG93QWQoYWRFbGVtZW50SWQpOwogICAgICAgIH0pOwogICAgfQp9CgpmdW5jdGlvbiBoaWRlQWQoYWRFbGVtZW50SWQpCnsKICAgIGlmKGN1cnJTaG93bkFkRWxlbWVudElkcy5pbmNsdWRlcyhhZEVsZW1lbnRJZCkpCiAgICB7CiAgICAgICAgLy9mb3IgYWRpbnBsYXkgd2UgZG9udCBkaXN0aW5ndXNoIGJldHdlZW4gaGlkaW5nIGFuZCBkZXN0cm95aW5nCiAgICAgICAgZGVzdHJveUFkKGFkRWxlbWVudElkKTsKCiAgICAgICAgLy9pZiB3ZSB3ZXJlIGhpZGluZyB5b3Ugd291bGQgbmVlZCB0byByZXNldCB0aGUgY3VyclNob3duQWRFbGVtZW50CiAgICAgICAgLy9jdXJyU2hvd25BZEVsZW1lbnRJZCA9IG51bGw7CiAgICB9Cn0KCmZ1bmN0aW9uIGRlc3Ryb3lBZChhZEVsZW1lbnRJZCkKewogICAgY29uc3QgYWQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhZEVsZW1lbnRJZCk7CgogICAgaWYoYWQgIT0gbnVsbCkKICAgIHsKICAgICAgICBhZC5zdHlsZS5kaXNwbGF5ID0gIm5vbmUiOwogICAgICAgIC8vYWQuaW5uZXJIVE1MID0gIiI7CiAgICAgICAgYWlwdGFnLmNtZC5kaXNwbGF5LnB1c2goZnVuY3Rpb24oKQogICAgICAgIHsKICAgICAgICAgICAgYWlwRGlzcGxheVRhZy5kZXN0cm95KGFkRWxlbWVudElkKTsKICAgICAgICB9KTsKICAgIH0KCiAgICBjb25zdCBpbmRleFRvUmVtb3ZlID0gY3VyclNob3duQWRFbGVtZW50SWRzLmluZGV4T2YoYWRFbGVtZW50SWQpOwoKICAgIGlmKGluZGV4VG9SZW1vdmUgPj0gMCkKICAgIHsKICAgICAgICBjdXJyU2hvd25BZEVsZW1lbnRJZHMuc3BsaWNlKGluZGV4VG9SZW1vdmUsIDEpOwogICAgfQp9CgpmdW5jdGlvbiByZXF1ZXN0TG9hZGluZ0FkKCkKewogICAgcmVxdWVzdEFkKGFkVGFnTG9hZGluZ0Jhbm5lciwgbG9hZGluZ0Jhbm5lclNob3duVGltZXN0YW1wKTsKfQoKZnVuY3Rpb24gaGlkZUxvYWRpbmdBZCgpCnsKICAgIGhpZGVBZChhZFRhZ0xvYWRpbmdCYW5uZXIpOwp9CgpmdW5jdGlvbiByZXF1ZXN0TWFpbk1lbnVBZCgpCnsKICAgIHJlcXVlc3RBZChhZFRhZ01haW5NZW51QmFubmVyLCBtYWluTWVudUJhbm5lclNob3duVGltZXN0YW1wKTsKfQoKZnVuY3Rpb24gaGlkZU1haW5NZW51QWQoKQp7CiAgICBoaWRlQWQoYWRUYWdNYWluTWVudUJhbm5lcik7Cn0KCmZ1bmN0aW9uIHJlcXVlc3RXaW5DZXJlbW9ueUFkKCkKewogICAgcmVxdWVzdEFkKGFkVGFnV2luQ2VyZW1vbnlCYW5uZXIsIHdpbkNlcmVtb255QmFubmVyU2hvd25UaW1lc3RhbXApOwp9CgpmdW5jdGlvbiBoaWRlV2luQ2VyZW1vbnlBZCgpCnsKICAgIGhpZGVBZChhZFRhZ1dpbkNlcmVtb255QmFubmVyKTsKfQoKZnVuY3Rpb24gcmVxdWVzdFNwZWN0YXRlQWQoKQp7CiAgICByZXF1ZXN0QWQoYWRUYWdTcGVjdGF0ZUJhbm5lciwgc3BlY3RhdGVCYW5uZXJTaG93blRpbWVzdGFtcCk7Cn0KCmZ1bmN0aW9uIGhpZGVTcGVjdGF0ZUFkKCkKewogICAgaGlkZUFkKGFkVGFnU3BlY3RhdGVCYW5uZXIpOwp9CgpmdW5jdGlvbiByZXF1ZXN0RGVhdGhBZCgpCnsKICAgIGlmKGlzTW9iaWxlKCkpCiAgICB7CiAgICAgICAgcmVxdWVzdEFkKGFkVGFnRGVhdGhCYW5uZXJNb2JpbGUsIGRlYXRoQmFubmVyU2hvd25UaW1lc3RhbXApOwogICAgfQogICAgZWxzZQogICAgewogICAgICAgIHJlcXVlc3RBZChhZFRhZ0RlYXRoQmFubmVyV2ViLCBkZWF0aEJhbm5lclNob3duVGltZXN0YW1wKTsKICAgIH0KfQoKZnVuY3Rpb24gaGlkZURlYXRoQWQoKQp7CiAgICBoaWRlQWQoYWRUYWdEZWF0aEJhbm5lck1vYmlsZSk7CiAgICBoaWRlQWQoYWRUYWdEZWF0aEJhbm5lcldlYik7Cn0KCmZ1bmN0aW9uIHJlcXVlc3RPZmZDYW52YXNBZChhZFJlc0FycmF5VG9IaWRlLCBhZFRhZ0lkVG9TaG93KQp7CiAgICBoaWRlT2ZmQ2FudmFzQWRzKGFkUmVzQXJyYXlUb0hpZGUpOwoKICAgIGN1cnJTaG93bkFkRWxlbWVudElkcy5wdXNoKGFkVGFnSWRUb1Nob3cpOwoKICAgIGFpcHRhZy5jbWQuZGlzcGxheS5wdXNoKGZ1bmN0aW9uKCkKICAgIHsKICAgICAgICBhaXBEaXNwbGF5VGFnLmRpc3BsYXkoYWRUYWdJZFRvU2hvdyk7CiAgICAgICAgc2hvd0FkKGFkVGFnSWRUb1Nob3cpOwogICAgfSk7Cn0KCmZ1bmN0aW9uIGhpZGVPZmZDYW52YXNBZHMoYWRSZXNBcnJheSkKewogICAgYWRSZXNBcnJheS5mb3JFYWNoKGFkUmVzID0+IHsKICAgICAgICBkZXN0cm95QWQoYWRSZXMuYWRJZCk7CiAgICB9KTsKfQo="></script><script src="data:@file/javascript;base64,J3VzZSBzdHJpY3QnOwoKbGV0IGFpcFJld2FyZGVkQWRBdmFpbGFibGUgPSBmYWxzZTsKCmZ1bmN0aW9uIGFpcFZpZGVvUGxheWVySW5pdGlhbGlzZWQoKQp7CiAgICByZXR1cm4gKHR5cGVvZiBhaXB0YWcuYWRwbGF5ZXIgIT09ICd1bmRlZmluZWQnKTsKfQoKZnVuY3Rpb24gc2hvd0ludGVyc3RpdGlhbChhdWRpb09uLCBpbnRlcnN0aXRpYWxUeXBlLCBpbnRlcnN0aXRpYWxOYW1lKQp7CiAgICBpZiAoIWlzVmlkZW9BZFBsYXlpbmcgJiYgZmlyZWJhc2UuYXV0aCgpLmN1cnJlbnRVc2VyICE9IG51bGwpCiAgICB7CiAgICAgICAgLy9jaGVjayBpZiB0aGUgYWRzbGliIGlzIGxvYWRlZCBjb3JyZWN0bHkgb3IgYmxvY2tlZCBieSBhZGJsb2NrZXJzIGV0Yy4KICAgICAgICBpZiAoYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpKQogICAgICAgIHsKICAgICAgICAgICAgaXNWaWRlb0FkUGxheWluZyA9IHRydWU7CgogICAgICAgICAgICBpbnRlcnN0aXRpYWxTdGFydChmYWxzZSk7CgogICAgICAgICAgICBhaXB0YWcuY21kLnBsYXllci5wdXNoKGZ1bmN0aW9uKCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgYWlwdGFnLmFkcGxheWVyLnN0YXJ0UHJlUm9sbCgpOwogICAgICAgICAgICB9KTsKICAgICAgICB9CiAgICAgICAgZWxzZQogICAgICAgIHsKICAgICAgICAgICAgLy9BZGxpYiBkaWRudCBsb2FkIHRoaXMgY291bGQgYmUgZHVlIHRvIGFuIGFkYmxvY2tlciwgdGltZW91dCBldGMuCiAgICAgICAgICAgIC8vUGxlYXNlIGFkZCB5b3VyIHNjcmlwdCBoZXJlIHRoYXQgc3RhcnRzIHRoZSBjb250ZW50LCB0aGlzIHVzdWFsbHkgaXMgdGhlIHNhbWUgc2NyaXB0IGFzIGFkZGVkIGluIEFJUF9DT01QTEVURS4KICAgICAgICAgICAgY29uc29sZS5sb2coIkFkIENvdWxkIG5vdCBiZSBsb2FkZWQsIGxvYWQgeW91ciBjb250ZW50IGhlcmUiKTsKCiAgICAgICAgICAgIGlzVmlkZW9BZFBsYXlpbmcgPSBmYWxzZTsKCiAgICAgICAgICAgIGludGVyc3RpdGlhbEVycm9yKGZhbHNlKTsKICAgICAgICB9CiAgICB9Cn0KCmZ1bmN0aW9uIG9uSW50ZXJzdGl0aWFsQ29tcGxldGUoZXZ0KQp7CiAgICAvKioqKioqKioqKioqKioqKioqKgogICAgICoqKioqIFdBUk5JTkcgKioqKioKICAgICAqKioqKioqKioqKioqKioqKioqCiAgICAgUGxlYXNlIGRvIG5vdCByZW1vdmUgdGhlIFBSRVJPTExfRUxFTQogICAgIGZyb20gdGhlIHBhZ2UsIGl0IHdpbGwgYmUgaGlkZGVuIGF1dG9tYXRpY2x5LgogICAgICovCiAgICBjb25zb2xlLmxvZygib25JbnRlcnN0aXRpYWxDb21wbGV0ZTogIiArIGV2dCk7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGlmKGV2dCA9PT0gInZpZGVvLWFkLWNvbXBsZXRlZCIpCiAgICB7CiAgICAgICAgaW50ZXJzdGl0aWFsQ29tcGxldGUoZmFsc2UpOwogICAgfQogICAgZWxzZSBpZihldnQgPT09ICJ2aWRlby1hZC1za2lwcGVkIikKICAgIHsKICAgICAgICBpbnRlcnN0aXRpYWxTa2lwcGVkKGZhbHNlKTsKICAgIH0KICAgIGVsc2UKICAgIHsKICAgICAgICBpbnRlcnN0aXRpYWxFcnJvcihmYWxzZSk7CiAgICB9Cn0KCmZ1bmN0aW9uIHRyeUluaXRSZXdhcmRlZEludGVyc3RpdGlhbChhdWRpb09uKQp7CiAgICBpZighd2luZG93LmFkYmxvY2tEZXRlY3RlZCkKICAgIHsKICAgICAgICBpZihhaXBWaWRlb1BsYXllckluaXRpYWxpc2VkKCkpCiAgICAgICAgewogICAgICAgICAgICBpbml0UmV3YXJkZWRJbnRlcnN0aXRpYWwoKTsKICAgICAgICB9CiAgICAgICAgZWxzZQogICAgICAgIHsKICAgICAgICAgICAgLy9wb2xsIHVudGlsIHZpZGVvIHBsYXllciBpcyByZWFkeQogICAgICAgICAgICBjb25zdCBjaGVja1ZpZGVvUGxheWVySW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCgoKSA9PiB7CiAgICAgICAgICAgICAgICAvL3BsYXllciBpc250IHJlYWR5ID0+IGRvIG5vdGhpbmcKICAgICAgICAgICAgICAgIGlmICghYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpKQogICAgICAgICAgICAgICAgICAgIHJldHVybjsKCiAgICAgICAgICAgICAgICAvL3BsYXllciBpcyByZWFkeSA9PiBzdG9wIHBvbGxpbmcgYW5kIHNlbmQgbWVzc2FnZSB0byB1bml0eQogICAgICAgICAgICAgICAgY2xlYXJJbnRlcnZhbChjaGVja1ZpZGVvUGxheWVySW50ZXJ2YWwpOwogICAgICAgICAgICAgICAgaW5pdFJld2FyZGVkSW50ZXJzdGl0aWFsKCk7CiAgICAgICAgICAgIH0sIDEwMDApOwogICAgICAgIH0KICAgIH0KfQoKZnVuY3Rpb24gaW5pdFJld2FyZGVkSW50ZXJzdGl0aWFsKCkKewogICAgaWYoIWFpcFJld2FyZGVkQWRBdmFpbGFibGUpCiAgICB7CiAgICAgICAgLy9JdCdzIGltcG9ydGFudCB0aGUgRXZlbnRMaXN0ZW5lciByZXdhcmRlZFNsb3RSZWFkeSBpcyBhZGRlZCBvbmx5IG9uY2UuCiAgICAgICAgaWYoYWlwQVBJdGFnLnJld2FyZGVkU2xvdEV2ZW50TGlzdGVuZXIgIT09IHRydWUpCiAgICAgICAgewogICAgICAgICAgICBhaXBBUEl0YWcucmV3YXJkZWRTbG90RXZlbnRMaXN0ZW5lciA9IHRydWU7CiAgICAKICAgICAgICAgICAgYWlwdGFnLmV2ZW50cy5hZGRFdmVudExpc3RlbmVyKCJyZXdhcmRlZFNsb3RSZWFkeSIsIGZ1bmN0aW9uIChlKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpZihlLmRldGFpbC5pc0VtcHR5ICE9PSB0cnVlKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIC8vcmV3YXJkZWQgYWQgaXMgcmVhZHkgdG8gc2hvdwogICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCJyZXdhcmRlZCBhZCBpcyByZWFkeSB0byBzaG93Iik7CiAgICAgICAgICAgICAgICAgICAgYWlwUmV3YXJkZWRBZEF2YWlsYWJsZSA9IHRydWU7CiAgICAgICAgICAgICAgICAgICAgd2luZG93LnVuaXR5R2FtZS5TZW5kTWVzc2FnZSh1bml0eUZpcmViYXNlR2FtZU9qYmVjdE5hbWUsICJSZXdhcmRlZEludGVyc3RpdGlhbEF2YWlsYWJsZSIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZWxzZQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIC8vVGhlcmUgaXMgbm8gcmV3YXJkZWQgYWQgYXZhaWxhYmxlCiAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coInJld2FyZGVkIGFkIG5vdCBhdmFpbGFibGUiKTsKICAgICAgICAgICAgICAgICAgICBhaXBSZXdhcmRlZEFkQXZhaWxhYmxlID0gZmFsc2U7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sIGZhbHNlKTsKICAgICAgICB9CiAgICAKICAgICAgICAvL3NldCB0aGUgcHJlbG9hZCBmbGFnIHRvIHRydWUgdG8gdXNlIHByZWxvYWRpbmcgb2YgdGhlIHJld2FyZGVkIGFkCiAgICAgICAgYWlwdGFnLmNtZC5wbGF5ZXIucHVzaChmdW5jdGlvbigpIHsgYWlwdGFnLmFkcGxheWVyLnN0YXJ0UmV3YXJkZWRBZCh7cHJlbG9hZDogdHJ1ZSwgc2hvd0xvYWRpbmc6IGZhbHNlfSk7IH0pOwogICAgfQogICAgZWxzZQogICAgewogICAgICAgIC8vcmV3YXJkZWQgYWQgYWxyZWFkeSBwcmVsb2FkZWQKICAgICAgICB3aW5kb3cudW5pdHlHYW1lLlNlbmRNZXNzYWdlKHVuaXR5RmlyZWJhc2VHYW1lT2piZWN0TmFtZSwgIlJld2FyZGVkSW50ZXJzdGl0aWFsQXZhaWxhYmxlIik7CiAgICB9Cn0KCmZ1bmN0aW9uIHRyeVNob3dSZXdhcmRlZEludGVyc3RpdGlhbChhdWRpb09uKQp7CiAgICBpZighYWlwVmlkZW9QbGF5ZXJJbml0aWFsaXNlZCgpIHx8ICFhaXBSZXdhcmRlZEFkQXZhaWxhYmxlKQogICAgewogICAgICAgIGludGVyc3RpdGlhbE5vRmlsbCh0cnVlKTsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgaWYgKCFpc1ZpZGVvQWRQbGF5aW5nICYmIGZpcmViYXNlLmF1dGgoKS5jdXJyZW50VXNlciAhPSBudWxsKQogICAgewogICAgICAgIGlzVmlkZW9BZFBsYXlpbmcgPSB0cnVlOwoKICAgICAgICBpbnRlcnN0aXRpYWxTdGFydCh0cnVlKTsKCiAgICAgICAgYWlwdGFnLmFkcGxheWVyLnNob3dSZXdhcmRlZEFkKCk7CgogICAgICAgIGFpcFJld2FyZGVkQWRBdmFpbGFibGUgPSBmYWxzZTsKCiAgICAgICAgLy8gYWlwdGFnLmNtZC5wbGF5ZXIucHVzaChmdW5jdGlvbigpIAogICAgICAgIC8vIHsgCiAgICAgICAgLy8gICAgCiAgICAgICAgLy8gICAgIGFpcHRhZy5hZHBsYXllci5zdGFydFJld2FyZGVkQWQoKTsgCiAgICAgICAgLy8gfSk7CiAgICB9Cn0KCmZ1bmN0aW9uIG9uUmV3YXJkZWRJbnRlcnN0aXRpYWxHcmFudGVkKCkKewogICAgY29uc29sZS5sb2coIlJld2FyZCBHcmFudGVkIik7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGludGVyc3RpdGlhbENvbXBsZXRlKHRydWUpOwp9CgpmdW5jdGlvbiBvblJld2FyZGVkSW50ZXJzdGl0aWFsQ29tcGxldGUoZXZ0KQp7CiAgICAvL2V2dCBjYW4gYmU6IHRpbWVvdXQsIGVtcHR5IG9yIGNsb3NlZAogICAgY29uc29sZS5sb2coIlJld2FyZGVkIEFkIENvbXBsZXRlZDogIiArIGV2dCk7CgogICAgaXNWaWRlb0FkUGxheWluZyA9IGZhbHNlOwoKICAgIGlmKGV2dCA9PT0gImNsb3NlZCIpCiAgICB7CiAgICAgICAgLy9za2lwcGVkIGJ5IHRoZSB1c2VyCiAgICAgICAgaW50ZXJzdGl0aWFsU2tpcHBlZCh0cnVlKTsKICAgIH0KICAgIGVsc2UKICAgIHsKICAgICAgICAvL3RpbWVvdXQgb3IgZW1wdHkKICAgICAgICBpbnRlcnN0aXRpYWxOb0ZpbGwodHJ1ZSk7CiAgICB9Cn0K"></script>
+<script>
+	
+	if ('serviceWorker' in navigator)
+	{
+		navigator.serviceWorker.register('service-worker2.js');
+	}
+
+	const firebaseConfig = {
+    apiKey: "AIzaSyAdY2qq9083amKDS0R8tn2tjIKQB8mocco",
+    authDomain: "webgltest-17af1.firebaseapp.com",
+    databaseURL: "https://webgltest-17af1.firebaseio.com",
+    projectId: "webgltest-17af1",
+    messagingSenderId: "480659433590",
+    appId: "1:480659433590:web:a01ad1599e963843a0d757",
+    measurementId: "G-1W23DRFHK9"
+};
+
+	
+	
+	firebase.initializeApp(firebaseConfig);
+
+	
+
+	analytics = firebase.analytics();
+	gtag('config', 'G-1W23DRFHK9', {'cookie_flags': 'samesite=none;secure'}); 
+	
+	firebaseSetScreen("loading_start");
+	firebaseLogEvent("loading_page_start");
+
+	updateAdBlockDetected();
+	updateLoadingAdBanner();
+	
+	var timerStart = Date.now();
+	var sentGameInstanceStartEvent = false;
+
+	
+	var dataFile = "/ef411f9202ce85260af7a3275b825aa8.data.br";
+	var mobileDataFile = "/39e3e431ad42c683480161e7227862bb.data.br";
+	
+	
+	if(!mobileDataFile.includes("MOBILE_DATA_FILENAME"))
+	{
+		var c = document.createElement("canvas");
+		var gl = c.getContext("webgl");
+		var gl2 = c.getContext("webgl2");
+		if ((gl && gl.getExtension('WEBGL_compressed_texture_astc')) || (gl2 && gl2.getExtension('WEBGL_compressed_texutre_astc'))) 
+		{
+			dataFile = mobileDataFile;
+		}
+	}
+
+
+	const buildUrl = "https://smashkartsgc.b-cdn.net/Build2020New";
+
+	const loaderUrl = buildUrl + "/76f034cff49013ce85bd6945ebf32347.loader.js";
+	const config = {
+		dataUrl: buildUrl + dataFile,
+		frameworkUrl: buildUrl + "/550673fe170b6ae0e0973d8b766bf88c.framework.js.br",
+		codeUrl: buildUrl + "/c19b54fc4d4d40f42a81488cd8477af5.wasm.br",
+		
+		
+		
+		
+		
+		
+		streamingAssetsUrl: "https://googleusercontent.b-cdn.net/StreamingAssets",
+		companyName: "TallTeam",
+		productName: "Smash Karts",
+		productVersion: "2.3.2",
+	};
+
+	var mainContainer = document.querySelector("#mainContainer");
+	var gameContainer = document.querySelector("#gameContainer");
+	var canvas = document.querySelector("#gameCanvas");
+	var loadingBar = document.querySelector("#loader");
+	var progressBarFull = document.querySelector("#loader .progress .full");
+	var rotateLandscape = document.querySelector("#rotate-landscape");
+
+	var btmAdContainer = document.getElementById("btmContainer");
+	var btmAdPlaceholder = document.getElementById("btmAdPlaceholder");
+	var btmAdResText = document.getElementById("btmAdResText");
+
+	var rightAdContainer = document.getElementById("rightContainer");
+	var rightAdPlaceholder = document.getElementById("rightAdPlaceholder");
+	var rightAdResText = document.getElementById("rightAdResText");
+
+	if (isMobile())
+	{
+		mainContainer.className = "unity-mobile";
+
+		
+		
+		
+		
+		
+	}
+	else
+	{
+		rotateLandscape.id = "rotateLandscapeOff";
+		rotateLandscape.style.display = "none";
+	}
+	const progress = document.querySelector("#loader .progress");
+	progress.style.display = "block";
+	progressBarFull.style.width = "0%";
+
+	var script = document.createElement("script");
+	script.src = loaderUrl;
+
+	var progressCreateUnityInstance = 0;
+	var progressPostCreateUnityInstance = 0;
+	var updateProgressInterval = setInterval(updateProgress, 100);
+
+	var gameInstance;
+	script.onload = () =>
+	{
+		createUnityInstance(canvas, config, (progress) =>
+		{
+			progressCreateUnityInstance = 100 * progress;
+			setProgressWidth();
+		}).then((unityInstance) =>
+		{
+			if (isMobile()) document.body.style.background = "#000000";
+			loadingBar.style.display = "none";
+			window.unityGame = unityInstance;
+			gameInstance = unityInstance;
+
+			if (updateProgressInterval) clearInterval(updateProgressInterval);
+
+			var lt = Date.now() - timerStart;
+			firebaseLogEventWithParam("loading_page_complete", "time", lt);
+			setV(lt);
+
+			onUnityLoadComplete();
+		}).catch((message) =>
+		{
+			alert("TT UnityLoader Error" + message);
+		});
+	};
+	document.body.appendChild(script);
+
+	function onUnityLoadComplete()
+	{
+		
+		window.unityGame.SendMessage(unityFirebaseGameOjbectName, "SetDisplayAdProvider", displayAdProvider);
+		window.unityGame.SendMessage(unityFirebaseGameOjbectName, "SetVideoAdProvider", videoAdProvider);
+		
+		trySendAdBlockDetectedMessage();
+	}
+
+	function updateProgress()
+	{
+		if (progressCreateUnityInstance > 85)
+		{
+			progressPostCreateUnityInstance += 1;
+			setProgressWidth();
+		}
+	}
+
+	function setProgressWidth()
+	{
+		if (progressCreateUnityInstance == 100.0)
+		{
+			progressBarFull.style.width = "100%";
+		}
+		else
+		{
+			var percent;
+			if (isMobile())
+			{
+				percent = progressCreateUnityInstance * 0.6 + (progressPostCreateUnityInstance * 0.5 * 0.2 + progressCreateUnityInstance * 0.5 * 0.2 * 0.05);
+				percent = Math.min(percent, 90);
+			}
+			else
+			{
+				percent = progressCreateUnityInstance * 0.9 + progressPostCreateUnityInstance * 0.1;
+				percent = Math.min(percent, 95);
+			}
+			progressBarFull.style.width = percent + "%";
+		}
+	}
+
+	function setAdinPlaySubIdForABTest(val)
+	{
+		
+		aiptag.subid = val;
+	}
+
+	function onLoad()
+	{
+		updateGameCanvasSize();
+	}
+
+	function onResize()
+	{
+		updateGameCanvasSize();
+	}
+
+	function updateGameCanvasSize()
+	{
+		
+		var borderWidth = displayingRightAd() ? offCanvasBorderSize : 0;
+		var borderHeight = displayingBtmAd() ?  offCanvasBorderSize : 0;
+
+		
+		var mainContainerStyle = getComputedStyle(mainContainer);
+		var mainContainerPadLeft = parseInt(mainContainerStyle.getPropertyValue("padding-left"));
+		var mainContainerPadRight = parseInt(mainContainerStyle.getPropertyValue("padding-right"));
+		var mainContainerPadTop = parseInt(mainContainerStyle.getPropertyValue("padding-top"));
+		var mainContainerPadBtm = parseInt(mainContainerStyle.getPropertyValue("padding-bottom"));
+
+		canvas.style.width = window.innerWidth - borderWidth - mainContainerPadLeft - mainContainerPadRight - rightAdContainer.getBoundingClientRect().width + "px";
+		canvas.style.height = window.innerHeight - borderHeight - mainContainerPadTop - mainContainerPadBtm - btmAdContainer.getBoundingClientRect().height + "px";
+	}
+
+	window.addEventListener("load", onLoad);
+	window.addEventListener("resize", onResize);
+
+</script><div id="AdBanner" class="adLeaderboard,adBanner,leaderboard_ad" style="display: block; background-color: transparent; height: 10px; width: 10px; position: fixed; bottom: -100px; left: -100px;">&nbsp;</div><script src="https://smashkartsgc.b-cdn.net/Build2020New/76f034cff49013ce85bd6945ebf32347.loader.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/st39/sdk@main/api.js"></script>
+
+<div id="sklocalscriptbait" style="display: none;"></div><div id="button" class="imgb imgb_vis" style="position: fixed; top: 10%; left: -100px; z-index: 10; display: none;"><a target="_blank" href="https://sites.google.com/view/classroom6x/" title="More Unblocked Games 6x"><img src="https://lh4.googleusercontent.com/lUEWrXMVEr4AdjKISyJahDRJ61bwfvHdpeYm86Djn5U8oCm9dI60NGXSBqad9HUvzTXgqlkosA_hWV-VuXPjzrkGvh3_kNSgYk8ySWzXnDpbBCBiooyBbU8oBy3YBZMDkW8RcRVmDuC0raoeqZBm8kBlqs6c5mdfkJeN2aE68lXS_lcOZ5_F7lIuM6qLVg" width="100" height="30" style="cursor:pointer;" alt="More of best Classroom 6x Unblocked Games"></a></div><script src="https://smashkartsgc.b-cdn.net/Build2020New/550673fe170b6ae0e0973d8b766bf88c.framework.js.br"></script></body></html>
