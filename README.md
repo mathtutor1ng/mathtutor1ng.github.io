@@ -10,6 +10,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added ARC
 - Added Vex 3, 4, and 5
 - Added Granny
+- Added New Logo
 
 May 24, 2025
 ---
