@@ -9,6 +9,7 @@ This is the changelog of the website in order from newest to oldest.
 - Changed homepage title from, "Neurvy Games" to, "Neruvy Games"
 - Added ARC
 - Added Vex 3, 4, and 5
+- Added Granny
 
 May 24, 2025
 ---
