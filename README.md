@@ -16,6 +16,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added Smash Karts
 - Added Time Shooter 3: S.W.A.T.
 - Added Run 3
+- Added Poly Track
 
 May 24, 2025
 ---
