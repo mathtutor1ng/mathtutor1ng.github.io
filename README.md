@@ -2,6 +2,12 @@
 
 This is the changelog of the website in order from newest to oldest.
 
+**October 25, 2025**
+---
+- Added Survival Race
+- Fixed Survival Race from open A Dance of Fire and Ice
+- Changed homepage title from, "Neurvy Games" to, "Neruvy Games"
+
 May 24, 2025
 ---
 - Fixed Minecraft from opening Drive Mad instead of the game
