@@ -15,6 +15,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added Snow Rider
 - Added Smash Karts
 - Added Time Shooter 3: S.W.A.T.
+- Added Run 3
 
 May 24, 2025
 ---
