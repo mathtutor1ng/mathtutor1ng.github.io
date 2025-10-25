@@ -14,6 +14,7 @@ This is the changelog of the website in order from newest to oldest.
 - Added R.E.P.O.
 - Added Snow Rider
 - Added Smash Karts
+- Added Time Shooter 3: S.W.A.T.
 
 May 24, 2025
 ---
