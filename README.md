@@ -2,6 +2,10 @@
 
 This is the changelog of the website in order from newest to oldest.
 
+**October 27, 2025**
+---
+- Added YouTube Playables
+
 **October 25, 2025**
 ---
 - Added Survival Race
