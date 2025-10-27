@@ -1,0 +1,62 @@
+
+tutorial_killer_whale.png
+size: 1833, 912
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1385, 908
+  orig: 1385, 908
+  offset: 0, 0
+  index: -1
+background_tile
+  rotate: false
+  xy: 1425, 203
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+ice_hole
+  rotate: true
+  xy: 1389, 150
+  size: 195, 34
+  orig: 195, 34
+  offset: 0, 0
+  index: -1
+killer_whale
+  rotate: true
+  xy: 1389, 377
+  size: 533, 442
+  orig: 539, 448
+  offset: 3, 3
+  index: -1
+line
+  rotate: false
+  xy: 1425, 282
+  size: 40, 63
+  orig: 44, 67
+  offset: 2, 2
+  index: -1
+line_bend
+  rotate: true
+  xy: 1425, 217
+  size: 63, 35
+  orig: 67, 39
+  offset: 2, 2
+  index: -1
+line_tile
+  rotate: false
+  xy: 1389, 347
+  size: 211, 28
+  orig: 211, 28
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: true
+  xy: 1602, 165
+  size: 210, 131
+  orig: 215, 136
+  offset: 3, 2
+  index: -1

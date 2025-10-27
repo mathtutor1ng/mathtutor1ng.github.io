@@ -1,0 +1,48 @@
+
+board_violet.png
+size: 126, 108
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+board_violet
+  rotate: false
+  xy: 2, 2
+  size: 116, 57
+  orig: 116, 57
+  offset: 0, 0
+  index: -1
+leaderboard_shadow
+  rotate: false
+  xy: 2, 99
+  size: 34, 7
+  orig: 34, 7
+  offset: 0, 0
+  index: -1
+pillar_board_violet
+  rotate: true
+  xy: 63, 85
+  size: 21, 51
+  orig: 21, 51
+  offset: 0, 0
+  index: -1
+snow_upper_violet
+  rotate: false
+  xy: 2, 61
+  size: 122, 22
+  orig: 122, 22
+  offset: 0, 0
+  index: -1
+snowball_little
+  rotate: true
+  xy: 38, 99
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: -1
+snowball_medium
+  rotate: true
+  xy: 48, 96
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,125 @@
+
+seal_moron.png
+size: 1792, 532
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+belly
+  rotate: false
+  xy: 1554, 296
+  size: 236, 234
+  orig: 236, 234
+  offset: 0, 0
+  index: -1
+body_fish_whole
+  rotate: false
+  xy: 2, 7
+  size: 213, 103
+  orig: 216, 107
+  offset: 1, 2
+  index: -1
+body_lying
+  rotate: false
+  xy: 2, 112
+  size: 778, 418
+  orig: 778, 418
+  offset: 0, 0
+  index: -1
+body_sit
+  rotate: false
+  xy: 1212, 142
+  size: 340, 388
+  orig: 340, 388
+  offset: 0, 0
+  index: -1
+elbow
+  rotate: true
+  xy: 1460, 2
+  size: 138, 168
+  orig: 141, 170
+  offset: 2, 1
+  index: -1
+eye
+  rotate: false
+  xy: 561, 14
+  size: 96, 96
+  orig: 98, 98
+  offset: 1, 1
+  index: -1
+eye_solid
+  rotate: false
+  xy: 833, 48
+  size: 60, 60
+  orig: 64, 64
+  offset: 2, 2
+  index: -1
+eyelid
+  rotate: true
+  xy: 1742, 186
+  size: 108, 46
+  orig: 108, 46
+  offset: 0, 0
+  index: -1
+fin_fish
+  rotate: false
+  xy: 659, 36
+  size: 102, 74
+  orig: 104, 76
+  offset: 1, 1
+  index: -1
+fin_up
+  rotate: false
+  xy: 217, 22
+  size: 188, 88
+  orig: 190, 90
+  offset: 1, 1
+  index: -1
+hand
+  rotate: true
+  xy: 1630, 10
+  size: 160, 133
+  orig: 163, 135
+  offset: 2, 1
+  index: -1
+head
+  rotate: false
+  xy: 782, 110
+  size: 428, 420
+  orig: 430, 422
+  offset: 1, 1
+  index: -1
+mouth
+  rotate: true
+  xy: 407, 6
+  size: 104, 152
+  orig: 106, 154
+  offset: 1, 1
+  index: -1
+muzzle
+  rotate: false
+  xy: 1554, 172
+  size: 186, 122
+  orig: 188, 124
+  offset: 1, 1
+  index: -1
+nose
+  rotate: false
+  xy: 895, 70
+  size: 60, 38
+  orig: 62, 40
+  offset: 1, 1
+  index: -1
+pupil
+  rotate: false
+  xy: 763, 40
+  size: 68, 68
+  orig: 70, 70
+  offset: 1, 1
+  index: -1
+tail
+  rotate: false
+  xy: 1212, 2
+  size: 246, 138
+  orig: 248, 140
+  offset: 1, 1
+  index: -1

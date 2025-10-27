@@ -1,0 +1,48 @@
+
+ice_floe.png
+size: 1240, 828
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+ice_archer
+  rotate: true
+  xy: 2, 80
+  size: 746, 617
+  orig: 750, 622
+  offset: 2, 3
+  index: -1
+ice_archer_crack
+  rotate: true
+  xy: 621, 80
+  size: 746, 617
+  orig: 750, 622
+  offset: 2, 3
+  index: -1
+ice_archer_eye
+  rotate: false
+  xy: 1151, 28
+  size: 18, 18
+  orig: 22, 22
+  offset: 2, 2
+  index: -1
+ice_archer_eyebrow
+  rotate: true
+  xy: 1151, 48
+  size: 30, 12
+  orig: 34, 16
+  offset: 2, 2
+  index: -1
+ice_archer_glow
+  rotate: true
+  xy: 2, 2
+  size: 76, 667
+  orig: 78, 668
+  offset: 1, 1
+  index: -1
+ice_archer_snow
+  rotate: false
+  xy: 671, 13
+  size: 478, 65
+  orig: 482, 70
+  offset: 2, 3
+  index: -1

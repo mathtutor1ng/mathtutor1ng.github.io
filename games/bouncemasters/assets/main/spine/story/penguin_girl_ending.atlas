@@ -1,0 +1,153 @@
+
+penguin_girl_ending.png
+size: 1477, 404
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+boobs_front
+  rotate: false
+  xy: 1335, 311
+  size: 91, 91
+  orig: 93, 93
+  offset: 1, 1
+  index: -1
+girl_beak_close
+  rotate: true
+  xy: 1415, 232
+  size: 71, 54
+  orig: 73, 56
+  offset: 1, 1
+  index: -1
+girl_beak_kiss
+  rotate: true
+  xy: 1362, 56
+  size: 71, 66
+  orig: 74, 68
+  offset: 2, 1
+  index: -1
+girl_beak_kiss_under
+  rotate: true
+  xy: 1418, 166
+  size: 64, 42
+  orig: 66, 46
+  offset: 1, 2
+  index: -1
+girl_beak_kiss_upper
+  rotate: false
+  xy: 791, 2
+  size: 64, 38
+  orig: 66, 40
+  offset: 1, 1
+  index: -1
+girl_body
+  rotate: true
+  xy: 865, 141
+  size: 261, 405
+  orig: 261, 405
+  offset: 0, 0
+  index: -1
+girl_eye
+  rotate: false
+  xy: 1286, 53
+  size: 74, 74
+  orig: 76, 76
+  offset: 1, 1
+  index: -1
+girl_eye_close
+  rotate: true
+  xy: 1335, 209
+  size: 100, 78
+  orig: 100, 78
+  offset: 0, 0
+  index: -1
+girl_eyelid_bottom
+  rotate: true
+  xy: 1246, 62
+  size: 77, 38
+  orig: 77, 38
+  offset: 0, 0
+  index: -1
+girl_eyelid_up
+  rotate: true
+  xy: 1428, 305
+  size: 97, 47
+  orig: 97, 47
+  offset: 0, 0
+  index: -1
+girl_flover
+  rotate: false
+  xy: 1335, 129
+  size: 81, 78
+  orig: 83, 80
+  offset: 1, 1
+  index: -1
+girl_foot_back
+  rotate: false
+  xy: 450, 10
+  size: 115, 30
+  orig: 117, 32
+  offset: 1, 1
+  index: -1
+girl_foot_front
+  rotate: true
+  xy: 1214, 24
+  size: 115, 30
+  orig: 117, 32
+  offset: 1, 1
+  index: -1
+girl_hand
+  rotate: false
+  xy: 1272, 174
+  size: 61, 228
+  orig: 61, 228
+  offset: 0, 0
+  index: -1
+girl_leg_back
+  rotate: true
+  xy: 567, 15
+  size: 25, 110
+  orig: 27, 112
+  offset: 1, 1
+  index: -1
+girl_leg_front
+  rotate: true
+  xy: 679, 15
+  size: 25, 110
+  orig: 27, 112
+  offset: 1, 1
+  index: -1
+girl_pupil
+  rotate: false
+  xy: 1272, 144
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+girl_shadow
+  rotate: false
+  xy: 1362, 11
+  size: 57, 43
+  orig: 57, 43
+  offset: 0, 0
+  index: -1
+girl_skirt
+  rotate: false
+  xy: 865, 4
+  size: 347, 135
+  orig: 349, 137
+  offset: 1, 1
+  index: -1
+savanna_bush_back
+  rotate: false
+  xy: 2, 6
+  size: 446, 396
+  orig: 450, 402
+  offset: 4, 4
+  index: -1
+savanna_bush_front
+  rotate: false
+  xy: 450, 42
+  size: 413, 360
+  orig: 417, 360
+  offset: 3, 0
+  index: -1

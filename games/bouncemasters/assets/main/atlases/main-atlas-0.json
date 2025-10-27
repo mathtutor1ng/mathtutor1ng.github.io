@@ -1,0 +1,1887 @@
+{
+  "frames": {
+    "announcer/announcer_new_league": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 834,
+        "h": 299
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 834,
+        "h": 299
+      },
+      "sourceSize": {
+        "w": 838,
+        "h": 304
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_high_score": {
+      "frame": {
+        "x": 2,
+        "y": 305,
+        "w": 658,
+        "h": 300
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 658,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 662,
+        "h": 304
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_amazing_kick": {
+      "frame": {
+        "x": 2,
+        "y": 609,
+        "w": 605,
+        "h": 298
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 605,
+        "h": 298
+      },
+      "sourceSize": {
+        "w": 610,
+        "h": 302
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_1": {
+      "frame": {
+        "x": 840,
+        "y": 2,
+        "w": 568,
+        "h": 216
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 568,
+        "h": 216
+      },
+      "sourceSize": {
+        "w": 572,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_chest_gold": {
+      "frame": {
+        "x": 664,
+        "y": 574,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_gems_pack_big": {
+      "frame": {
+        "x": 2,
+        "y": 911,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_gems_pack_medium": {
+      "frame": {
+        "x": 1008,
+        "y": 574,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_gems_small": {
+      "frame": {
+        "x": 1060,
+        "y": 2,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_stars_pack_big": {
+      "frame": {
+        "x": 2,
+        "y": 1255,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_stars_pack_medium": {
+      "frame": {
+        "x": 358,
+        "y": 930,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gold_stars_small": {
+      "frame": {
+        "x": 702,
+        "y": 930,
+        "w": 340,
+        "h": 352
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 6,
+        "w": 340,
+        "h": 352
+      },
+      "sourceSize": {
+        "w": 364,
+        "h": 364
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_not_bad": {
+      "frame": {
+        "x": 1046,
+        "y": 930,
+        "w": 622,
+        "h": 175
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 622,
+        "h": 175
+      },
+      "sourceSize": {
+        "w": 626,
+        "h": 180
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_6": {
+      "frame": {
+        "x": 1225,
+        "y": 930,
+        "w": 516,
+        "h": 164
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 516,
+        "h": 164
+      },
+      "sourceSize": {
+        "w": 520,
+        "h": 168
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_skydiver": {
+      "frame": {
+        "x": 358,
+        "y": 1286,
+        "w": 587,
+        "h": 143
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 587,
+        "h": 143
+      },
+      "sourceSize": {
+        "w": 592,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_3": {
+      "frame": {
+        "x": 1060,
+        "y": 358,
+        "w": 492,
+        "h": 168
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 492,
+        "h": 168
+      },
+      "sourceSize": {
+        "w": 496,
+        "h": 172
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/christmas_tree_2": {
+      "frame": {
+        "x": 1393,
+        "y": 530,
+        "w": 176,
+        "h": 404
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 176,
+        "h": 404
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 408
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_ouch": {
+      "frame": {
+        "x": 1393,
+        "y": 938,
+        "w": 408,
+        "h": 173
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 408,
+        "h": 173
+      },
+      "sourceSize": {
+        "w": 414,
+        "h": 180
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_shine_0": {
+      "frame": {
+        "x": 1556,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/fx_shine_medium_1": {
+      "frame": {
+        "x": 1556,
+        "y": 262,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/christmas_tree_1": {
+      "frame": {
+        "x": 1393,
+        "y": 1350,
+        "w": 176,
+        "h": 368
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 176,
+        "h": 368
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 372
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_cool": {
+      "frame": {
+        "x": 1570,
+        "y": 938,
+        "w": 369,
+        "h": 175
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 369,
+        "h": 175
+      },
+      "sourceSize": {
+        "w": 374,
+        "h": 180
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_combo": {
+      "frame": {
+        "x": 358,
+        "y": 1433,
+        "w": 445,
+        "h": 139
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 445,
+        "h": 139
+      },
+      "sourceSize": {
+        "w": 450,
+        "h": 144
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_star_2": {
+      "frame": {
+        "x": 1573,
+        "y": 522,
+        "w": 250,
+        "h": 244
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 6,
+        "w": 250,
+        "h": 244
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/christmas_tree_4": {
+      "frame": {
+        "x": 1225,
+        "y": 1530,
+        "w": 176,
+        "h": 344
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 176,
+        "h": 344
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 348
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_2": {
+      "frame": {
+        "x": 807,
+        "y": 1556,
+        "w": 372,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 372,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 376,
+        "h": 152
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_blue_4": {
+      "frame": {
+        "x": 2,
+        "y": 1599,
+        "w": 559,
+        "h": 97
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 559,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 564,
+        "h": 102
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/christmas_tree_3": {
+      "frame": {
+        "x": 565,
+        "y": 1576,
+        "w": 164,
+        "h": 332
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 164,
+        "h": 332
+      },
+      "sourceSize": {
+        "w": 168,
+        "h": 336
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_4": {
+      "frame": {
+        "x": 1573,
+        "y": 1530,
+        "w": 136,
+        "h": 376
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 136,
+        "h": 376
+      },
+      "sourceSize": {
+        "w": 140,
+        "h": 380
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_1": {
+      "frame": {
+        "x": 733,
+        "y": 1708,
+        "w": 132,
+        "h": 384
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 132,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 136,
+        "h": 388
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_ray": {
+      "frame": {
+        "x": 1121,
+        "y": 1710,
+        "w": 205,
+        "h": 236
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 11,
+        "w": 205,
+        "h": 236
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_x6": {
+      "frame": {
+        "x": 2,
+        "y": 1700,
+        "w": 241,
+        "h": 197
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 241,
+        "h": 197
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 202
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_x5": {
+      "frame": {
+        "x": 247,
+        "y": 1700,
+        "w": 239,
+        "h": 197
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 2,
+        "w": 239,
+        "h": 197
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 202
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_x4": {
+      "frame": {
+        "x": 1816,
+        "y": 2,
+        "w": 239,
+        "h": 194
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 4,
+        "w": 239,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 202
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_x3": {
+      "frame": {
+        "x": 1816,
+        "y": 245,
+        "w": 238,
+        "h": 194
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 238,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 202
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snowman_part-4": {
+      "frame": {
+        "x": 1713,
+        "y": 1530,
+        "w": 210,
+        "h": 218
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 1,
+        "w": 210,
+        "h": 218
+      },
+      "sourceSize": {
+        "w": 223,
+        "h": 223
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_firtree-2": {
+      "frame": {
+        "x": 1713,
+        "y": 1752,
+        "w": 244,
+        "h": 186
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 244,
+        "h": 186
+      },
+      "sourceSize": {
+        "w": 258,
+        "h": 194
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/announcer_x2": {
+      "frame": {
+        "x": 1361,
+        "y": 1710,
+        "w": 224,
+        "h": 194
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 224,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 244,
+        "h": 202
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_5": {
+      "frame": {
+        "x": 1573,
+        "y": 770,
+        "w": 364,
+        "h": 116
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 364,
+        "h": 116
+      },
+      "sourceSize": {
+        "w": 368,
+        "h": 120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/icon_lock": {
+      "frame": {
+        "x": 1827,
+        "y": 487,
+        "w": 188,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 188,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 188,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snow_tree-3": {
+      "frame": {
+        "x": 1749,
+        "y": 890,
+        "w": 233,
+        "h": 173
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 233,
+        "h": 173
+      },
+      "sourceSize": {
+        "w": 237,
+        "h": 179
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/clouds_4": {
+      "frame": {
+        "x": 1927,
+        "y": 1067,
+        "w": 386,
+        "h": 102
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 386,
+        "h": 102
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 106
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snowman_part-1": {
+      "frame": {
+        "x": 664,
+        "y": 305,
+        "w": 166,
+        "h": 221
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 10,
+        "w": 166,
+        "h": 221
+      },
+      "sourceSize": {
+        "w": 190,
+        "h": 241
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_blue_3": {
+      "frame": {
+        "x": 733,
+        "y": 1844,
+        "w": 381,
+        "h": 95
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 381,
+        "h": 95
+      },
+      "sourceSize": {
+        "w": 386,
+        "h": 100
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_6": {
+      "frame": {
+        "x": 1404,
+        "y": 2,
+        "w": 108,
+        "h": 336
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 108,
+        "h": 336
+      },
+      "sourceSize": {
+        "w": 112,
+        "h": 340
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_white_1": {
+      "frame": {
+        "x": 1961,
+        "y": 1457,
+        "w": 510,
+        "h": 69
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 510,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 514,
+        "h": 74
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/igloo": {
+      "frame": {
+        "x": 1749,
+        "y": 1067,
+        "w": 233,
+        "h": 140
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 233,
+        "h": 140
+      },
+      "sourceSize": {
+        "w": 238,
+        "h": 144
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_white_3": {
+      "frame": {
+        "x": 1118,
+        "y": 1938,
+        "w": 382,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 382,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 386,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_1": {
+      "frame": {
+        "x": 2,
+        "y": 1901,
+        "w": 246,
+        "h": 115
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 246,
+        "h": 115
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_x": {
+      "frame": {
+        "x": 1765,
+        "y": 1304,
+        "w": 141,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 3,
+        "w": 141,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 144,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_5": {
+      "frame": {
+        "x": 949,
+        "y": 1286,
+        "w": 92,
+        "h": 252
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 92,
+        "h": 252
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_blue_2": {
+      "frame": {
+        "x": 1504,
+        "y": 1942,
+        "w": 307,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 307,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 78
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snow_tree-2": {
+      "frame": {
+        "x": 252,
+        "y": 1901,
+        "w": 206,
+        "h": 111
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 2,
+        "w": 206,
+        "h": 111
+      },
+      "sourceSize": {
+        "w": 212,
+        "h": 118
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_2": {
+      "frame": {
+        "x": 462,
+        "y": 1912,
+        "w": 87,
+        "h": 228
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 87,
+        "h": 228
+      },
+      "sourceSize": {
+        "w": 91,
+        "h": 232
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_blue_1": {
+      "frame": {
+        "x": 694,
+        "y": 1943,
+        "w": 357,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 357,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 58
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_icicle_part-0": {
+      "frame": {
+        "x": 807,
+        "y": 1433,
+        "w": 119,
+        "h": 125
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 67,
+        "y": 64,
+        "w": 119,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/circle_80_1": {
+      "frame": {
+        "x": 1941,
+        "y": 711,
+        "w": 160,
+        "h": 80
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_5": {
+      "frame": {
+        "x": 490,
+        "y": 1700,
+        "w": 201,
+        "h": 56
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 201,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 206,
+        "h": 60
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "shadow": {
+      "frame": {
+        "x": 611,
+        "y": 609,
+        "w": 226,
+        "h": 48
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 226,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 230,
+        "h": 52
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_4": {
+      "frame": {
+        "x": 1225,
+        "y": 1450,
+        "w": 152,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 152,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 156,
+        "h": 58
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_dust_back": {
+      "frame": {
+        "x": 733,
+        "y": 1576,
+        "w": 121,
+        "h": 63
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 1,
+        "w": 121,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_6": {
+      "frame": {
+        "x": 1815,
+        "y": 1942,
+        "w": 140,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 140,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 144,
+        "h": 58
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_middle_3": {
+      "frame": {
+        "x": 1183,
+        "y": 1556,
+        "w": 133,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 133,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 138,
+        "h": 42
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_particle_long_2": {
+      "frame": {
+        "x": 664,
+        "y": 530,
+        "w": 40,
+        "h": 126
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 1,
+        "w": 40,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_particle_long": {
+      "frame": {
+        "x": 1573,
+        "y": 890,
+        "w": 128,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 38
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_middle_5": {
+      "frame": {
+        "x": 1827,
+        "y": 711,
+        "w": 108,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 108,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 112,
+        "h": 48
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_2": {
+      "frame": {
+        "x": 1765,
+        "y": 1502,
+        "w": 192,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 192,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 26
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_middle_2": {
+      "frame": {
+        "x": 1986,
+        "y": 875,
+        "w": 105,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 105,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 110,
+        "h": 44
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_star_1": {
+      "frame": {
+        "x": 1055,
+        "y": 1943,
+        "w": 59,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 59,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_3": {
+      "frame": {
+        "x": 1559,
+        "y": 1910,
+        "w": 104,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 104,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 108,
+        "h": 26
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_music_1": {
+      "frame": {
+        "x": 611,
+        "y": 839,
+        "w": 48,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 8,
+        "w": 48,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_dust_small_0": {
+      "frame": {
+        "x": 1959,
+        "y": 1971,
+        "w": 50,
+        "h": 41
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 12,
+        "w": 50,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_dust_small_1": {
+      "frame": {
+        "x": 1986,
+        "y": 984,
+        "w": 53,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 53,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_music_0": {
+      "frame": {
+        "x": 611,
+        "y": 890,
+        "w": 32,
+        "h": 48
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 8,
+        "w": 32,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/point": {
+      "frame": {
+        "x": 794,
+        "y": 530,
+        "w": 38,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 2,
+        "w": 38,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 44
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_middle_1": {
+      "frame": {
+        "x": 1815,
+        "y": 2000,
+        "w": 70,
+        "h": 16
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 70,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 74,
+        "h": 20
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_music_2": {
+      "frame": {
+        "x": 1570,
+        "y": 1311,
+        "w": 21,
+        "h": 48
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 8,
+        "w": 21,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_star_1_32": {
+      "frame": {
+        "x": 1705,
+        "y": 890,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 31,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/daily_gift_arrow": {
+      "frame": {
+        "x": 694,
+        "y": 1912,
+        "w": 22,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 5,
+        "w": 22,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 28,
+        "h": 44
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "main-atlas-0.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2032,
+      "h": 2018
+    },
+    "scale": 1
+  }
+}

@@ -1,0 +1,41 @@
+
+board_pointer.png
+size: 279, 201
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+boar_red
+  rotate: false
+  xy: 2, 44
+  size: 260, 155
+  orig: 262, 157
+  offset: 1, 1
+  index: -1
+bulb
+  rotate: false
+  xy: 264, 118
+  size: 13, 13
+  orig: 15, 15
+  offset: 1, 1
+  index: -1
+bulb_arrow
+  rotate: true
+  xy: 228, 12
+  size: 30, 44
+  orig: 32, 46
+  offset: 1, 1
+  index: -1
+leaderboard_shadow
+  rotate: true
+  xy: 264, 133
+  size: 66, 11
+  orig: 68, 13
+  offset: 1, 1
+  index: -1
+wooden_stick
+  rotate: true
+  xy: 2, 2
+  size: 40, 224
+  orig: 42, 226
+  offset: 1, 1
+  index: -1

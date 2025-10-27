@@ -1,0 +1,951 @@
+
+bear.png
+size: 1921, 840
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+baseball_bat
+  rotate: false
+  xy: 169, 292
+  size: 43, 263
+  orig: 44, 264
+  offset: 0, 0
+  index: -1
+baseball_bat_small
+  rotate: true
+  xy: 1433, 285
+  size: 42, 188
+  orig: 44, 190
+  offset: 1, 1
+  index: -1
+bat_fish
+  rotate: true
+  xy: 904, 616
+  size: 80, 266
+  orig: 82, 268
+  offset: 1, 1
+  index: -1
+bat_fish_part
+  rotate: true
+  xy: 968, 38
+  size: 80, 157
+  orig: 82, 159
+  offset: 1, 1
+  index: -1
+bat_flamingo
+  rotate: false
+  xy: 155, 9
+  size: 111, 275
+  orig: 113, 277
+  offset: 1, 1
+  index: -1
+bat_flamingo_part
+  rotate: false
+  xy: 1248, 199
+  size: 111, 170
+  orig: 113, 172
+  offset: 1, 1
+  index: -1
+bat_ice_cream
+  rotate: true
+  xy: 1172, 607
+  size: 82, 270
+  orig: 85, 273
+  offset: 1, 2
+  index: -1
+bat_ice_cream_part
+  rotate: false
+  xy: 545, 82
+  size: 82, 209
+  orig: 85, 212
+  offset: 1, 2
+  index: -1
+bat_mailbox
+  rotate: true
+  xy: 1444, 561
+  size: 137, 256
+  orig: 137, 256
+  offset: 0, 0
+  index: -1
+bat_mailbox_part
+  rotate: false
+  xy: 968, 120
+  size: 135, 162
+  orig: 137, 164
+  offset: 1, 1
+  index: -1
+bat_pan
+  rotate: true
+  xy: 332, 559
+  size: 148, 266
+  orig: 148, 266
+  offset: 0, 0
+  index: -1
+bat_pan_part
+  rotate: false
+  xy: 1105, 196
+  size: 141, 173
+  orig: 143, 175
+  offset: 1, 1
+  index: -1
+bat_shovel
+  rotate: true
+  xy: 630, 623
+  size: 86, 272
+  orig: 86, 272
+  offset: 0, 0
+  index: -1
+bat_shovel_part
+  rotate: true
+  xy: 1623, 238
+  size: 84, 188
+  orig: 86, 190
+  offset: 1, 1
+  index: -1
+bat_thorns
+  rotate: true
+  xy: 630, 711
+  size: 127, 276
+  orig: 127, 276
+  offset: 0, 0
+  index: -1
+bat_thorns_small
+  rotate: true
+  xy: 1166, 371
+  size: 125, 200
+  orig: 127, 202
+  offset: 1, 1
+  index: -1
+bat_zombie
+  rotate: false
+  xy: 268, 51
+  size: 122, 240
+  orig: 122, 240
+  offset: 0, 0
+  index: -1
+bat_zombie_small
+  rotate: true
+  xy: 770, 63
+  size: 85, 196
+  orig: 87, 198
+  offset: 1, 1
+  index: -1
+belly
+  rotate: false
+  xy: 1094, 425
+  size: 70, 69
+  orig: 72, 71
+  offset: 1, 1
+  index: -1
+bike
+  rotate: true
+  xy: 545, 2
+  size: 78, 124
+  orig: 78, 125
+  offset: 0, 1
+  index: -1
+bike_element_button
+  rotate: false
+  xy: 21, 2
+  size: 10, 10
+  orig: 12, 12
+  offset: 1, 1
+  index: -1
+bike_element_five
+  rotate: false
+  xy: 1563, 2
+  size: 25, 37
+  orig: 25, 37
+  offset: 0, 0
+  index: -1
+bike_element_red
+  rotate: true
+  xy: 600, 627
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+bike_element_strips
+  rotate: true
+  xy: 1105, 164
+  size: 30, 20
+  orig: 30, 20
+  offset: 0, 0
+  index: -1
+bike_element_yellow
+  rotate: false
+  xy: 171, 557
+  size: 32, 11
+  orig: 32, 11
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 1127, 33
+  size: 161, 152
+  orig: 161, 152
+  offset: 0, 0
+  index: -1
+candy
+  rotate: true
+  xy: 908, 698
+  size: 140, 265
+  orig: 142, 267
+  offset: 1, 1
+  index: -1
+candy_part
+  rotate: true
+  xy: 571, 293
+  size: 140, 203
+  orig: 142, 205
+  offset: 1, 1
+  index: -1
+chin_slip
+  rotate: false
+  xy: 592, 435
+  size: 12, 10
+  orig: 14, 12
+  offset: 1, 1
+  index: -1
+cucumber
+  rotate: true
+  xy: 592, 447
+  size: 95, 288
+  orig: 97, 290
+  offset: 1, 1
+  index: -1
+cucumber_eye
+  rotate: false
+  xy: 1494, 2
+  size: 37, 37
+  orig: 39, 39
+  offset: 1, 1
+  index: -1
+cucumber_eyebrow
+  rotate: false
+  xy: 1132, 10
+  size: 51, 21
+  orig: 53, 23
+  offset: 1, 1
+  index: -1
+cucumber_mouth
+  rotate: false
+  xy: 776, 284
+  size: 55, 29
+  orig: 57, 31
+  offset: 1, 1
+  index: -1
+cucumber_part
+  rotate: true
+  xy: 1420, 197
+  size: 86, 159
+  orig: 88, 161
+  offset: 1, 1
+  index: -1
+cucumber_pupil
+  rotate: false
+  xy: 1897, 167
+  size: 13, 13
+  orig: 15, 15
+  offset: 1, 1
+  index: -1
+ear
+  rotate: true
+  xy: 1789, 31
+  size: 25, 44
+  orig: 27, 46
+  offset: 1, 1
+  index: -1
+eiffel_tower
+  rotate: false
+  xy: 2, 557
+  size: 167, 281
+  orig: 169, 283
+  offset: 1, 1
+  index: -1
+eiffel_tower_part
+  rotate: true
+  xy: 1698, 439
+  size: 109, 210
+  orig: 111, 212
+  offset: 1, 1
+  index: -1
+elbow
+  rotate: true
+  xy: 1623, 179
+  size: 57, 98
+  orig: 57, 98
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 715, 8
+  size: 16, 16
+  orig: 18, 18
+  offset: 1, 1
+  index: -1
+eye_close
+  rotate: false
+  xy: 2, 2
+  size: 17, 10
+  orig: 19, 12
+  offset: 1, 1
+  index: -1
+eye_fish_back
+  rotate: false
+  xy: 1835, 28
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+eye_fish_front
+  rotate: false
+  xy: 352, 9
+  size: 35, 40
+  orig: 37, 42
+  offset: 1, 1
+  index: -1
+eyebrow
+  rotate: true
+  xy: 1433, 584
+  size: 21, 9
+  orig: 23, 11
+  offset: 1, 1
+  index: -1
+eyelid
+  rotate: true
+  xy: 1856, 58
+  size: 16, 6
+  orig: 18, 8
+  offset: 1, 1
+  index: -1
+eyes_back
+  rotate: false
+  xy: 671, 2
+  size: 42, 22
+  orig: 42, 22
+  offset: 0, 0
+  index: -1
+fist_back
+  rotate: false
+  xy: 1797, 167
+  size: 98, 58
+  orig: 100, 60
+  offset: 1, 1
+  index: -1
+fist_front
+  rotate: true
+  xy: 1562, 97
+  size: 98, 57
+  orig: 100, 59
+  offset: 1, 1
+  index: -1
+fist_inner_side
+  rotate: false
+  xy: 1813, 227
+  size: 103, 50
+  orig: 105, 52
+  offset: 1, 1
+  index: -1
+foot_bottom
+  rotate: true
+  xy: 1047, 2
+  size: 34, 26
+  orig: 34, 26
+  offset: 0, 0
+  index: -1
+foot_up
+  rotate: false
+  xy: 1185, 5
+  size: 34, 26
+  orig: 34, 26
+  offset: 0, 0
+  index: -1
+guitar
+  rotate: true
+  xy: 1166, 498
+  size: 107, 265
+  orig: 109, 267
+  offset: 1, 1
+  index: -1
+guitar_part
+  rotate: true
+  xy: 882, 389
+  size: 105, 210
+  orig: 107, 212
+  offset: 1, 1
+  index: -1
+hair
+  rotate: true
+  xy: 927, 31
+  size: 30, 39
+  orig: 32, 41
+  offset: 1, 1
+  index: -1
+hammer
+  rotate: true
+  xy: 1433, 444
+  size: 115, 263
+  orig: 115, 263
+  offset: 0, 0
+  index: -1
+hammer_small
+  rotate: true
+  xy: 1635, 324
+  size: 113, 186
+  orig: 115, 188
+  offset: 1, 1
+  index: -1
+hammer_thor
+  rotate: false
+  xy: 214, 305
+  size: 115, 263
+  orig: 115, 263
+  offset: 0, 0
+  index: -1
+hammer_thor_part
+  rotate: true
+  xy: 1433, 329
+  size: 113, 200
+  orig: 115, 202
+  offset: 1, 1
+  index: -1
+hand
+  rotate: false
+  xy: 1581, 211
+  size: 40, 72
+  orig: 42, 74
+  offset: 1, 1
+  index: -1
+hand_finger
+  rotate: false
+  xy: 1456, 27
+  size: 16, 16
+  orig: 18, 18
+  offset: 1, 1
+  index: -1
+hand_half
+  rotate: false
+  xy: 927, 3
+  size: 36, 26
+  orig: 38, 28
+  offset: 1, 1
+  index: -1
+head
+  rotate: false
+  xy: 776, 315
+  size: 104, 130
+  orig: 106, 132
+  offset: 1, 1
+  index: -1
+hook
+  rotate: true
+  xy: 332, 709
+  size: 129, 296
+  orig: 131, 298
+  offset: 1, 1
+  index: -1
+hook_part
+  rotate: true
+  xy: 1702, 550
+  size: 129, 214
+  orig: 131, 215
+  offset: 1, 0
+  index: -1
+ice_cream
+  rotate: true
+  xy: 1754, 58
+  size: 50, 53
+  orig: 52, 55
+  offset: 1, 1
+  index: -1
+ice_cream_damaged
+  rotate: false
+  xy: 268, 4
+  size: 82, 45
+  orig: 84, 47
+  offset: 1, 1
+  index: -1
+ice_cream_waffle
+  rotate: true
+  xy: 1692, 72
+  size: 42, 60
+  orig: 44, 62
+  offset: 1, 1
+  index: -1
+icon_shit
+  rotate: true
+  xy: 1809, 58
+  size: 50, 45
+  orig: 52, 47
+  offset: 1, 1
+  index: -1
+kitty
+  rotate: false
+  xy: 2, 286
+  size: 165, 269
+  orig: 167, 271
+  offset: 1, 1
+  index: -1
+kitty_eye
+  rotate: false
+  xy: 1747, 16
+  size: 40, 40
+  orig: 42, 42
+  offset: 1, 1
+  index: -1
+kitty_eyelid
+  rotate: true
+  xy: 754, 67
+  size: 32, 14
+  orig: 34, 16
+  offset: 1, 1
+  index: -1
+kitty_part
+  rotate: false
+  xy: 1281, 15
+  size: 107, 182
+  orig: 107, 183
+  offset: 0, 0
+  index: -1
+kitty_pupil
+  rotate: false
+  xy: 629, 82
+  size: 17, 17
+  orig: 19, 19
+  offset: 1, 1
+  index: -1
+meat
+  rotate: true
+  xy: 1175, 691
+  size: 147, 265
+  orig: 147, 265
+  offset: 0, 0
+  index: -1
+meat_small
+  rotate: true
+  xy: 770, 150
+  size: 132, 196
+  orig: 134, 197
+  offset: 1, 0
+  index: -1
+mouth_angry
+  rotate: false
+  xy: 1627, 2
+  size: 49, 8
+  orig: 51, 10
+  offset: 1, 1
+  index: -1
+mouth_close
+  rotate: false
+  xy: 1581, 197
+  size: 34, 12
+  orig: 36, 14
+  offset: 1, 1
+  index: -1
+mouth_craftiness
+  rotate: false
+  xy: 1390, 22
+  size: 64, 21
+  orig: 66, 23
+  offset: 1, 1
+  index: -1
+mouth_craftiness_three quarters
+  rotate: true
+  xy: 1693, 122
+  size: 55, 23
+  orig: 57, 25
+  offset: 1, 1
+  index: -1
+mouth_evil
+  rotate: false
+  xy: 1390, 2
+  size: 55, 18
+  orig: 57, 20
+  offset: 1, 1
+  index: -1
+mouth_joyfulness
+  rotate: false
+  xy: 968, 2
+  size: 45, 34
+  orig: 47, 36
+  offset: 1, 1
+  index: -1
+mouth_lick
+  rotate: true
+  xy: 1015, 2
+  size: 34, 30
+  orig: 36, 32
+  offset: 1, 1
+  index: -1
+mouth_lose
+  rotate: false
+  xy: 1533, 2
+  size: 28, 37
+  orig: 30, 39
+  offset: 1, 1
+  index: -1
+mouth_pleasure
+  rotate: false
+  xy: 1693, 2
+  size: 62, 12
+  orig: 64, 14
+  offset: 1, 1
+  index: -1
+mouth_sad
+  rotate: true
+  xy: 1893, 115
+  size: 50, 26
+  orig: 52, 28
+  offset: 1, 1
+  index: -1
+mouth_sadness
+  rotate: true
+  xy: 1865, 51
+  size: 23, 26
+  orig: 25, 28
+  offset: 1, 1
+  index: -1
+mouth_slip
+  rotate: false
+  xy: 833, 284
+  size: 46, 29
+  orig: 48, 31
+  offset: 1, 1
+  index: -1
+mouth_smile
+  rotate: true
+  xy: 1893, 63
+  size: 50, 26
+  orig: 50, 26
+  offset: 0, 0
+  index: -1
+mouth_snuffy
+  rotate: true
+  xy: 1897, 182
+  size: 43, 16
+  orig: 45, 18
+  offset: 1, 1
+  index: -1
+mouth_surprised
+  rotate: false
+  xy: 1420, 296
+  size: 11, 14
+  orig: 13, 16
+  offset: 1, 1
+  index: -1
+mouth_whish
+  rotate: false
+  xy: 1221, 6
+  size: 34, 25
+  orig: 36, 27
+  offset: 1, 1
+  index: -1
+mouth_whish_hole
+  rotate: true
+  xy: 1105, 146
+  size: 16, 20
+  orig: 18, 22
+  offset: 1, 1
+  index: -1
+nose
+  rotate: false
+  xy: 1474, 31
+  size: 18, 12
+  orig: 20, 14
+  offset: 1, 1
+  index: -1
+oscar
+  rotate: true
+  xy: 1442, 700
+  size: 138, 260
+  orig: 140, 262
+  offset: 1, 1
+  index: -1
+oscar_part
+  rotate: false
+  xy: 1390, 45
+  size: 124, 150
+  orig: 125, 151
+  offset: 1, 0
+  index: -1
+plunger
+  rotate: true
+  xy: 331, 435
+  size: 122, 259
+  orig: 122, 259
+  offset: 0, 0
+  index: -1
+plunger_small
+  rotate: true
+  xy: 882, 284
+  size: 103, 206
+  orig: 105, 208
+  offset: 1, 1
+  index: -1
+poop
+  rotate: false
+  xy: 671, 26
+  size: 81, 73
+  orig: 83, 75
+  offset: 1, 1
+  index: -1
+pupil
+  rotate: false
+  xy: 214, 292
+  size: 11, 11
+  orig: 13, 13
+  offset: 1, 1
+  index: -1
+puppybutthole
+  rotate: true
+  xy: 600, 544
+  size: 77, 290
+  orig: 79, 292
+  offset: 1, 1
+  index: -1
+puppybutthole_eye
+  rotate: false
+  xy: 1856, 76
+  size: 33, 33
+  orig: 35, 35
+  offset: 1, 1
+  index: -1
+puppybutthole_mouth
+  rotate: false
+  xy: 1075, 2
+  size: 55, 29
+  orig: 57, 31
+  offset: 1, 1
+  index: -1
+puppybutthole_part
+  rotate: false
+  xy: 1368, 312
+  size: 63, 184
+  orig: 65, 185
+  offset: 1, 0
+  index: -1
+puppybutthole_pupil
+  rotate: false
+  xy: 1257, 16
+  size: 15, 15
+  orig: 17, 17
+  offset: 1, 1
+  index: -1
+shin
+  rotate: true
+  xy: 1447, 2
+  size: 18, 45
+  orig: 20, 47
+  offset: 1, 1
+  index: -1
+shoulder
+  rotate: false
+  xy: 1361, 199
+  size: 57, 111
+  orig: 57, 111
+  offset: 0, 0
+  index: -1
+shout_angry
+  rotate: false
+  xy: 1723, 170
+  size: 72, 66
+  orig: 74, 68
+  offset: 1, 1
+  index: -1
+shout_craftiness
+  rotate: false
+  xy: 1621, 122
+  size: 70, 55
+  orig: 72, 57
+  offset: 1, 1
+  index: -1
+shout_craftiness_three quarters
+  rotate: false
+  xy: 1627, 12
+  size: 64, 52
+  orig: 66, 54
+  offset: 1, 1
+  index: -1
+shout_default
+  rotate: false
+  xy: 754, 2
+  size: 59, 59
+  orig: 61, 61
+  offset: 1, 1
+  index: -1
+shout_evil
+  rotate: false
+  xy: 1562, 41
+  size: 63, 54
+  orig: 65, 56
+  offset: 1, 1
+  index: -1
+shout_joyfulness
+  rotate: false
+  xy: 1627, 66
+  size: 63, 54
+  orig: 65, 56
+  offset: 1, 1
+  index: -1
+shout_lick
+  rotate: false
+  xy: 1693, 16
+  size: 52, 54
+  orig: 54, 56
+  offset: 1, 1
+  index: -1
+shout_pleasure
+  rotate: false
+  xy: 1094, 373
+  size: 70, 50
+  orig: 72, 52
+  offset: 1, 1
+  index: -1
+shout_sadness
+  rotate: false
+  xy: 872, 2
+  size: 53, 59
+  orig: 55, 61
+  offset: 1, 1
+  index: -1
+shout_slip
+  rotate: true
+  xy: 815, 2
+  size: 59, 55
+  orig: 61, 57
+  offset: 1, 1
+  index: -1
+shout_snuffy
+  rotate: false
+  xy: 1836, 111
+  size: 55, 54
+  orig: 57, 56
+  offset: 1, 1
+  index: -1
+shout_surprised
+  rotate: true
+  xy: 1718, 116
+  size: 52, 57
+  orig: 54, 59
+  offset: 1, 1
+  index: -1
+shout_whish
+  rotate: true
+  xy: 1777, 110
+  size: 55, 57
+  orig: 57, 59
+  offset: 1, 1
+  index: -1
+skin_placeholder
+  rotate: false
+  xy: 1172, 695
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+snowdrift_bat
+  rotate: true
+  xy: 1516, 41
+  size: 154, 44
+  orig: 154, 44
+  offset: 0, 0
+  index: -1
+snowdrift_bat_long
+  rotate: false
+  xy: 392, 9
+  size: 151, 85
+  orig: 151, 85
+  offset: 0, 0
+  index: -1
+strip
+  rotate: true
+  xy: 1132, 2
+  size: 6, 34
+  orig: 6, 34
+  offset: 0, 0
+  index: -1
+super_arm
+  rotate: true
+  xy: 892, 496
+  size: 118, 272
+  orig: 120, 274
+  offset: 1, 1
+  index: -1
+super_arm_part
+  rotate: false
+  xy: 1823, 279
+  size: 96, 158
+  orig: 98, 159
+  offset: 1, 0
+  index: -1
+sword
+  rotate: false
+  xy: 2, 14
+  size: 151, 270
+  orig: 153, 272
+  offset: 1, 1
+  index: -1
+sword_part
+  rotate: false
+  xy: 392, 96
+  size: 151, 195
+  orig: 153, 197
+  offset: 1, 1
+  index: -1
+thigh
+  rotate: false
+  xy: 600, 652
+  size: 28, 55
+  orig: 30, 57
+  offset: 1, 1
+  index: -1
+tongue
+  rotate: false
+  xy: 1757, 2
+  size: 48, 12
+  orig: 49, 12
+  offset: 0, 0
+  index: -1
+tongue_pleasure
+  rotate: false
+  xy: 648, 82
+  size: 16, 17
+  orig: 16, 18
+  offset: 0, 0
+  index: -1
+unicorn
+  rotate: true
+  xy: 331, 293
+  size: 140, 238
+  orig: 142, 240
+  offset: 1, 1
+  index: -1
+unicorn_eye
+  rotate: false
+  xy: 1590, 4
+  size: 35, 35
+  orig: 37, 37
+  offset: 1, 1
+  index: -1
+unicorn_part
+  rotate: false
+  xy: 629, 101
+  size: 139, 190
+  orig: 141, 192
+  offset: 1, 1
+  index: -1
+wood_hammer
+  rotate: false
+  xy: 171, 570
+  size: 159, 268
+  orig: 159, 268
+  offset: 0, 0
+  index: -1
+wood_hammer_small
+  rotate: true
+  xy: 1704, 681
+  size: 157, 209
+  orig: 159, 211
+  offset: 1, 1
+  index: -1

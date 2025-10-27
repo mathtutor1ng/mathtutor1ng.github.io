@@ -1,0 +1,195 @@
+
+penguin_perks.png
+size: 560, 1030
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+beak
+  rotate: false
+  xy: 209, 418
+  size: 67, 35
+  orig: 72, 40
+  offset: 2, 3
+  index: -1
+beak_open
+  rotate: true
+  xy: 209, 367
+  size: 49, 65
+  orig: 54, 70
+  offset: 2, 3
+  index: -1
+beak_smile
+  rotate: false
+  xy: 331, 2
+  size: 113, 37
+  orig: 118, 42
+  offset: 2, 3
+  index: -1
+belly
+  rotate: false
+  xy: 62, 92
+  size: 162, 172
+  orig: 162, 172
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 266
+  size: 205, 187
+  orig: 210, 192
+  offset: 2, 3
+  index: -1
+coins_front_left
+  rotate: false
+  xy: 2, 606
+  size: 277, 190
+  orig: 281, 194
+  offset: 2, 2
+  index: -1
+coins_front_right
+  rotate: false
+  xy: 2, 798
+  size: 285, 230
+  orig: 289, 234
+  offset: 2, 2
+  index: -1
+elbow
+  rotate: false
+  xy: 209, 267
+  size: 58, 98
+  orig: 62, 102
+  offset: 2, 2
+  index: -1
+eye_close
+  rotate: false
+  xy: 159, 3
+  size: 50, 26
+  orig: 54, 30
+  offset: 2, 2
+  index: -1
+eye_violet
+  rotate: false
+  xy: 2, 18
+  size: 62, 62
+  orig: 66, 66
+  offset: 2, 2
+  index: -1
+eye_white
+  rotate: false
+  xy: 367, 45
+  size: 52, 52
+  orig: 56, 56
+  offset: 2, 2
+  index: -1
+eyebrow
+  rotate: true
+  xy: 263, 492
+  size: 40, 12
+  orig: 44, 16
+  offset: 2, 2
+  index: -1
+eyelid
+  rotate: true
+  xy: 331, 41
+  size: 56, 34
+  orig: 58, 36
+  offset: 1, 1
+  index: -1
+foot_l
+  rotate: false
+  xy: 66, 2
+  size: 91, 27
+  orig: 96, 32
+  offset: 2, 3
+  index: -1
+glove
+  rotate: false
+  xy: 226, 99
+  size: 158, 166
+  orig: 162, 170
+  offset: 2, 2
+  index: -1
+glove_goat
+  rotate: true
+  xy: 396, 221
+  size: 156, 162
+  orig: 160, 166
+  offset: 2, 2
+  index: -1
+hand
+  rotate: true
+  xy: 209, 32
+  size: 58, 120
+  orig: 62, 124
+  offset: 2, 2
+  index: -1
+head
+  rotate: true
+  xy: 2, 455
+  size: 149, 259
+  orig: 154, 264
+  offset: 2, 3
+  index: -1
+horns_left
+  rotate: false
+  xy: 386, 107
+  size: 144, 112
+  orig: 148, 116
+  offset: 2, 2
+  index: -1
+leg_l
+  rotate: false
+  xy: 263, 534
+  size: 24, 70
+  orig: 24, 70
+  offset: 0, 0
+  index: -1
+pupil
+  rotate: false
+  xy: 211, 4
+  size: 26, 26
+  orig: 30, 30
+  offset: 2, 2
+  index: -1
+scarf_back
+  rotate: true
+  xy: 66, 31
+  size: 59, 141
+  orig: 60, 144
+  offset: 0, 2
+  index: -1
+scarf_front
+  rotate: true
+  xy: 2, 82
+  size: 182, 58
+  orig: 182, 58
+  offset: 0, 0
+  index: -1
+shadow_coins
+  rotate: true
+  xy: 289, 379
+  size: 649, 261
+  orig: 654, 265
+  offset: 2, 2
+  index: -1
+shoulder
+  rotate: false
+  xy: 276, 275
+  size: 58, 102
+  orig: 62, 106
+  offset: 2, 2
+  index: -1
+shoulder_default
+  rotate: false
+  xy: 336, 275
+  size: 58, 102
+  orig: 62, 106
+  offset: 2, 2
+  index: -1
+tongue
+  rotate: false
+  xy: 421, 63
+  size: 36, 42
+  orig: 38, 46
+  offset: 1, 2
+  index: -1

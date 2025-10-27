@@ -1,0 +1,34 @@
+
+gem.png
+size: 1282, 263
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+gem_frame_01
+  rotate: false
+  xy: 2, 2
+  size: 318, 259
+  orig: 328, 268
+  offset: 5, 5
+  index: -1
+gem_frame_02
+  rotate: false
+  xy: 322, 2
+  size: 318, 259
+  orig: 328, 268
+  offset: 5, 5
+  index: -1
+gem_frame_03
+  rotate: false
+  xy: 642, 2
+  size: 318, 259
+  orig: 328, 268
+  offset: 5, 5
+  index: -1
+gem_frame_04
+  rotate: false
+  xy: 962, 2
+  size: 318, 259
+  orig: 328, 268
+  offset: 5, 5
+  index: -1

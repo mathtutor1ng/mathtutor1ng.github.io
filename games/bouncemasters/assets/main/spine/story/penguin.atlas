@@ -1,0 +1,132 @@
+
+penguin.png
+size: 1067, 523
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+boy_beak_close
+  rotate: true
+  xy: 996, 60
+  size: 90, 68
+  orig: 92, 70
+  offset: 1, 1
+  index: -1
+boy_beak_open
+  rotate: false
+  xy: 913, 113
+  size: 81, 121
+  orig: 83, 123
+  offset: 1, 1
+  index: -1
+boy_body
+  rotate: false
+  xy: 2, 13
+  size: 335, 508
+  orig: 335, 508
+  offset: 0, 0
+  index: -1
+boy_eye
+  rotate: false
+  xy: 784, 71
+  size: 92, 92
+  orig: 94, 94
+  offset: 1, 1
+  index: -1
+boy_eyebrow
+  rotate: false
+  xy: 339, 2
+  size: 75, 19
+  orig: 77, 21
+  offset: 1, 1
+  index: -1
+boy_eyelid_bottom
+  rotate: false
+  xy: 935, 3
+  size: 91, 35
+  orig: 95, 35
+  offset: 2, 0
+  index: -1
+boy_eyelid_up
+  rotate: true
+  xy: 1017, 152
+  size: 95, 48
+  orig: 95, 50
+  offset: 0, 1
+  index: -1
+boy_foot
+  rotate: true
+  xy: 784, 165
+  size: 106, 127
+  orig: 108, 129
+  offset: 1, 1
+  index: -1
+boy_foot_back
+  rotate: true
+  xy: 1017, 386
+  size: 135, 37
+  orig: 137, 39
+  offset: 1, 1
+  index: -1
+boy_foot_front
+  rotate: true
+  xy: 1017, 249
+  size: 135, 37
+  orig: 137, 39
+  offset: 1, 1
+  index: -1
+boy_hand
+  rotate: false
+  xy: 940, 236
+  size: 75, 285
+  orig: 75, 285
+  offset: 0, 0
+  index: -1
+boy_leg_back
+  rotate: false
+  xy: 878, 79
+  size: 26, 84
+  orig: 28, 86
+  offset: 1, 1
+  index: -1
+boy_leg_front
+  rotate: true
+  xy: 906, 85
+  size: 26, 84
+  orig: 28, 86
+  offset: 1, 1
+  index: -1
+boy_pupil
+  rotate: false
+  xy: 1028, 23
+  size: 35, 35
+  orig: 37, 37
+  offset: 1, 1
+  index: -1
+boy_pupil_heart
+  rotate: true
+  xy: 878, 9
+  size: 68, 55
+  orig: 70, 57
+  offset: 1, 1
+  index: -1
+boy_shadow
+  rotate: false
+  xy: 935, 40
+  size: 52, 43
+  orig: 52, 43
+  offset: 0, 0
+  index: -1
+tube
+  rotate: false
+  xy: 339, 273
+  size: 599, 248
+  orig: 601, 250
+  offset: 1, 1
+  index: -1
+tube_three_quarter
+  rotate: false
+  xy: 339, 23
+  size: 443, 248
+  orig: 445, 250
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,76 @@
+
+tutorial_walrus.png
+size: 1824, 912
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1385, 908
+  orig: 1385, 908
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 1622, 138
+  size: 200, 236
+  orig: 204, 240
+  offset: 2, 2
+  index: -1
+line
+  rotate: false
+  xy: 1781, 847
+  size: 40, 63
+  orig: 44, 67
+  offset: 2, 2
+  index: -1
+line_bend
+  rotate: false
+  xy: 1678, 663
+  size: 63, 35
+  orig: 67, 39
+  offset: 2, 2
+  index: -1
+line_tile
+  rotate: true
+  xy: 1648, 487
+  size: 211, 28
+  orig: 211, 28
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: true
+  xy: 1648, 700
+  size: 210, 131
+  orig: 215, 136
+  offset: 3, 2
+  index: -1
+seal
+  rotate: false
+  xy: 1389, 131
+  size: 231, 243
+  orig: 235, 247
+  offset: 2, 2
+  index: -1
+swipe_circle_01
+  rotate: false
+  xy: 1515, 46
+  size: 83, 83
+  orig: 85, 85
+  offset: 1, 1
+  index: -1
+swipe_circle_02
+  rotate: false
+  xy: 1389, 5
+  size: 124, 124
+  orig: 126, 126
+  offset: 1, 1
+  index: -1
+walrus
+  rotate: true
+  xy: 1389, 376
+  size: 534, 257
+  orig: 538, 261
+  offset: 2, 2
+  index: -1

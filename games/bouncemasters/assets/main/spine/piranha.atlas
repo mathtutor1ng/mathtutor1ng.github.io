@@ -1,0 +1,90 @@
+
+piranha.png
+size: 253, 273
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 130
+  size: 141, 160
+  orig: 146, 164
+  offset: 2, 2
+  index: -1
+eye_blue
+  rotate: false
+  xy: 96, 64
+  size: 64, 64
+  orig: 68, 68
+  offset: 2, 2
+  index: -1
+eye_yellow
+  rotate: false
+  xy: 130, 6
+  size: 56, 56
+  orig: 60, 60
+  offset: 2, 2
+  index: -1
+eyelid
+  rotate: true
+  xy: 96, 2
+  size: 60, 32
+  orig: 62, 34
+  offset: 1, 1
+  index: -1
+fin
+  rotate: true
+  xy: 188, 74
+  size: 29, 62
+  orig: 34, 66
+  offset: 2, 2
+  index: -1
+jaw_lower
+  rotate: false
+  xy: 164, 204
+  size: 87, 67
+  orig: 92, 72
+  offset: 2, 3
+  index: -1
+jaw_upper
+  rotate: true
+  xy: 164, 105
+  size: 97, 83
+  orig: 102, 88
+  offset: 2, 3
+  index: -1
+lip_lower
+  rotate: true
+  xy: 65, 22
+  size: 106, 29
+  orig: 110, 34
+  offset: 2, 3
+  index: -1
+lip_upper
+  rotate: true
+  xy: 34, 16
+  size: 112, 29
+  orig: 116, 34
+  offset: 2, 3
+  index: -1
+pupil
+  rotate: false
+  xy: 2, 106
+  size: 22, 22
+  orig: 26, 26
+  offset: 2, 2
+  index: -1
+tail
+  rotate: false
+  xy: 188, 3
+  size: 55, 69
+  orig: 60, 74
+  offset: 2, 3
+  index: -1
+teeth
+  rotate: true
+  xy: 2, 7
+  size: 96, 30
+  orig: 100, 34
+  offset: 2, 2
+  index: -1

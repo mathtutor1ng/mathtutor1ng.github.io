@@ -1,0 +1,1575 @@
+{
+  "frames": {
+    "upgrade-menu/icon_ability_rulette": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 194,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 194,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/icon_max_speed_rulette": {
+      "frame": {
+        "x": 200,
+        "y": 2,
+        "w": 194,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 194,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/icon_rebound_rulette": {
+      "frame": {
+        "x": 2,
+        "y": 200,
+        "w": 194,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 194,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/icon_strength_rulette": {
+      "frame": {
+        "x": 200,
+        "y": 200,
+        "w": 194,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 194,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree": {
+      "frame": {
+        "x": 398,
+        "y": 2,
+        "w": 205,
+        "h": 177
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 205,
+        "h": 177
+      },
+      "sourceSize": {
+        "w": 210,
+        "h": 182
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_chest": {
+      "frame": {
+        "x": 2,
+        "y": 398,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_chest_locked": {
+      "frame": {
+        "x": 198,
+        "y": 398,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_big": {
+      "frame": {
+        "x": 394,
+        "y": 398,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_big_locked": {
+      "frame": {
+        "x": 579,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_medium": {
+      "frame": {
+        "x": 579,
+        "y": 198,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_medium_locked": {
+      "frame": {
+        "x": 2,
+        "y": 588,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_small": {
+      "frame": {
+        "x": 198,
+        "y": 588,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_gems_pack_small_locked": {
+      "frame": {
+        "x": 394,
+        "y": 588,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_big": {
+      "frame": {
+        "x": 590,
+        "y": 394,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_big_locked": {
+      "frame": {
+        "x": 769,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_medium": {
+      "frame": {
+        "x": 769,
+        "y": 198,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_medium_locked": {
+      "frame": {
+        "x": 590,
+        "y": 590,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_small": {
+      "frame": {
+        "x": 2,
+        "y": 778,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/icon_stars_pack_small_locked": {
+      "frame": {
+        "x": 198,
+        "y": 778,
+        "w": 186,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 2,
+        "w": 186,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 196,
+        "h": 196
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_firtree-3": {
+      "frame": {
+        "x": 394,
+        "y": 786,
+        "w": 198,
+        "h": 178
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 7,
+        "w": 198,
+        "h": 178
+      },
+      "sourceSize": {
+        "w": 209,
+        "h": 194
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snowman_part-3": {
+      "frame": {
+        "x": 959,
+        "y": 2,
+        "w": 182,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 5,
+        "w": 182,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 197,
+        "h": 203
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_firtree-1": {
+      "frame": {
+        "x": 596,
+        "y": 786,
+        "w": 186,
+        "h": 162
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 186,
+        "h": 162
+      },
+      "sourceSize": {
+        "w": 190,
+        "h": 170
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/igloo_1": {
+      "frame": {
+        "x": 780,
+        "y": 394,
+        "w": 232,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 232,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 236,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snowman_part-2": {
+      "frame": {
+        "x": 398,
+        "y": 211,
+        "w": 164,
+        "h": 168
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 11,
+        "w": 164,
+        "h": 168
+      },
+      "sourceSize": {
+        "w": 190,
+        "h": 190
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_7": {
+      "frame": {
+        "x": 959,
+        "y": 198,
+        "w": 176,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 176,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 152
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/circle_80": {
+      "frame": {
+        "x": 780,
+        "y": 522,
+        "w": 160,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 160
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_8": {
+      "frame": {
+        "x": 1016,
+        "y": 350,
+        "w": 124,
+        "h": 196
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 124,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_icicle_part-3": {
+      "frame": {
+        "x": 944,
+        "y": 550,
+        "w": 187,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 64,
+        "w": 187,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/btn_upgrades_blue": {
+      "frame": {
+        "x": 944,
+        "y": 682,
+        "w": 164,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 164,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 168,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/btn_upgrades_orange": {
+      "frame": {
+        "x": 786,
+        "y": 686,
+        "w": 164,
+        "h": 144
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 164,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 168,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_2": {
+      "frame": {
+        "x": 934,
+        "y": 830,
+        "w": 120,
+        "h": 196
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 120,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_5": {
+      "frame": {
+        "x": 786,
+        "y": 854,
+        "w": 120,
+        "h": 196
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 120,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_0": {
+      "frame": {
+        "x": 910,
+        "y": 954,
+        "w": 120,
+        "h": 195
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 3,
+        "w": 120,
+        "h": 195
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_3": {
+      "frame": {
+        "x": 2,
+        "y": 968,
+        "w": 118,
+        "h": 196
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 2,
+        "w": 118,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_6": {
+      "frame": {
+        "x": 202,
+        "y": 968,
+        "w": 118,
+        "h": 196
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 2,
+        "w": 118,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_9": {
+      "frame": {
+        "x": 402,
+        "y": 968,
+        "w": 118,
+        "h": 195
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 2,
+        "w": 118,
+        "h": 195
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snow_tree-0": {
+      "frame": {
+        "x": 601,
+        "y": 952,
+        "w": 162,
+        "h": 137
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 8,
+        "w": 162,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 175,
+        "h": 154
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_4": {
+      "frame": {
+        "x": 767,
+        "y": 1078,
+        "w": 112,
+        "h": 196
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 112,
+        "h": 196
+      },
+      "sourceSize": {
+        "w": 116,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_7": {
+      "frame": {
+        "x": 2,
+        "y": 1090,
+        "w": 105,
+        "h": 197
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 105,
+        "h": 197
+      },
+      "sourceSize": {
+        "w": 108,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "announcer/digits_1": {
+      "frame": {
+        "x": 203,
+        "y": 1090,
+        "w": 101,
+        "h": 195
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 2,
+        "w": 101,
+        "h": 195
+      },
+      "sourceSize": {
+        "w": 104,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/tree_3": {
+      "frame": {
+        "x": 402,
+        "y": 1093,
+        "w": 80,
+        "h": 228
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 228
+      },
+      "sourceSize": {
+        "w": 84,
+        "h": 232
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_icicle_part-2": {
+      "frame": {
+        "x": 967,
+        "y": 1078,
+        "w": 137,
+        "h": 131
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 62,
+        "w": 137,
+        "h": 131
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/igloo_2": {
+      "frame": {
+        "x": 1109,
+        "y": 954,
+        "w": 188,
+        "h": 92
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 188,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_coil_1": {
+      "frame": {
+        "x": 634,
+        "y": 1093,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_coil_3": {
+      "frame": {
+        "x": 1108,
+        "y": 1146,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_icicle_part-1": {
+      "frame": {
+        "x": 766,
+        "y": 1194,
+        "w": 149,
+        "h": 106
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 74,
+        "w": 149,
+        "h": 106
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/swipe_circle_02": {
+      "frame": {
+        "x": 1112,
+        "y": 682,
+        "w": 124,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 1,
+        "w": 124,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 126,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_gems-2": {
+      "frame": {
+        "x": 919,
+        "y": 1213,
+        "w": 121,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 4,
+        "w": 121,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_firtree-0": {
+      "frame": {
+        "x": 1134,
+        "y": 810,
+        "w": 99,
+        "h": 131
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 99,
+        "h": 131
+      },
+      "sourceSize": {
+        "w": 104,
+        "h": 138
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_coin": {
+      "frame": {
+        "x": 402,
+        "y": 1177,
+        "w": 110,
+        "h": 115
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 110,
+        "h": 115
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/snowdrift_white_2": {
+      "frame": {
+        "x": 516,
+        "y": 1225,
+        "w": 221,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 221,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 226,
+        "h": 60
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_gems-1": {
+      "frame": {
+        "x": 1135,
+        "y": 550,
+        "w": 123,
+        "h": 100
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 14,
+        "w": 123,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_front_7": {
+      "frame": {
+        "x": 516,
+        "y": 1285,
+        "w": 224,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 224,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 228,
+        "h": 56
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_snow_tree-1": {
+      "frame": {
+        "x": 1139,
+        "y": 198,
+        "w": 103,
+        "h": 75
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 9,
+        "w": 103,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 118,
+        "h": 94
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "daily-gift/arrow": {
+      "frame": {
+        "x": 1044,
+        "y": 1278,
+        "w": 86,
+        "h": 83
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 86,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 86,
+        "h": 83
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/icon_check": {
+      "frame": {
+        "x": 1134,
+        "y": 1278,
+        "w": 67,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 67,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 76
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_feather": {
+      "frame": {
+        "x": 744,
+        "y": 1304,
+        "w": 81,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 16,
+        "w": 81,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 88,
+        "h": 88
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/coin_btn_locked": {
+      "frame": {
+        "x": 1145,
+        "y": 2,
+        "w": 63,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 3,
+        "w": 63,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 68,
+        "h": 72
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_particle_0": {
+      "frame": {
+        "x": 1145,
+        "y": 72,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_particle_1": {
+      "frame": {
+        "x": 1144,
+        "y": 305,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "effects/FX_particle_2": {
+      "frame": {
+        "x": 1144,
+        "y": 373,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BackgroundSnowArctic/decals_ground_middle_4": {
+      "frame": {
+        "x": 1145,
+        "y": 140,
+        "w": 89,
+        "h": 41
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 89,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 94,
+        "h": 46
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/alert": {
+      "frame": {
+        "x": 1044,
+        "y": 1213,
+        "w": 55,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 55,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "common/CrossWhite": {
+      "frame": {
+        "x": 829,
+        "y": 1304,
+        "w": 46,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 46,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "upgrade-menu/circle_80": {
+      "frame": {
+        "x": 780,
+        "y": 522,
+        "w": 160,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 160
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "main-atlas-1.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1238,
+      "h": 1363
+    },
+    "scale": 1
+  }
+}

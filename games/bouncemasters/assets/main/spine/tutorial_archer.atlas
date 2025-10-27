@@ -1,0 +1,55 @@
+
+tutorial_archer.png
+size: 1847, 912
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+archer
+  rotate: true
+  xy: 1389, 326
+  size: 584, 456
+  orig: 588, 460
+  offset: 2, 2
+  index: -1
+background
+  rotate: false
+  xy: 2, 2
+  size: 1385, 908
+  orig: 1385, 908
+  offset: 0, 0
+  index: -1
+cross
+  rotate: false
+  xy: 1389, 55
+  size: 136, 136
+  orig: 140, 140
+  offset: 2, 2
+  index: -1
+line
+  rotate: true
+  xy: 1389, 13
+  size: 40, 63
+  orig: 44, 67
+  offset: 2, 2
+  index: -1
+line_bend
+  rotate: false
+  xy: 1527, 156
+  size: 63, 35
+  orig: 67, 39
+  offset: 2, 2
+  index: -1
+line_tile
+  rotate: false
+  xy: 1601, 296
+  size: 211, 28
+  orig: 211, 28
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: false
+  xy: 1389, 193
+  size: 210, 131
+  orig: 215, 136
+  offset: 3, 2
+  index: -1

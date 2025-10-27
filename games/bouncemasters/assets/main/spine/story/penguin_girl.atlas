@@ -1,0 +1,125 @@
+
+penguin_girl.png
+size: 1555, 748
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+boobs_front
+  rotate: false
+  xy: 1460, 518
+  size: 91, 91
+  orig: 93, 93
+  offset: 1, 1
+  index: -1
+girl_beak_close
+  rotate: false
+  xy: 1460, 266
+  size: 71, 54
+  orig: 73, 56
+  offset: 1, 1
+  index: -1
+girl_body
+  rotate: false
+  xy: 1197, 204
+  size: 261, 405
+  orig: 261, 405
+  offset: 0, 0
+  index: -1
+girl_eye
+  rotate: false
+  xy: 1460, 322
+  size: 74, 74
+  orig: 76, 76
+  offset: 1, 1
+  index: -1
+girl_eyelid_bottom
+  rotate: false
+  xy: 1460, 398
+  size: 77, 38
+  orig: 77, 38
+  offset: 0, 0
+  index: -1
+girl_eyelid_up
+  rotate: true
+  xy: 1398, 60
+  size: 97, 47
+  orig: 97, 47
+  offset: 0, 0
+  index: -1
+girl_flover
+  rotate: false
+  xy: 1460, 438
+  size: 81, 78
+  orig: 83, 80
+  offset: 1, 1
+  index: -1
+girl_foot_back
+  rotate: true
+  xy: 1523, 149
+  size: 115, 30
+  orig: 117, 32
+  offset: 1, 1
+  index: -1
+girl_foot_front
+  rotate: true
+  xy: 1523, 32
+  size: 115, 30
+  orig: 117, 32
+  offset: 1, 1
+  index: -1
+girl_hand
+  rotate: false
+  xy: 1460, 36
+  size: 61, 228
+  orig: 61, 228
+  offset: 0, 0
+  index: -1
+girl_leg_back
+  rotate: false
+  xy: 1371, 92
+  size: 25, 110
+  orig: 27, 112
+  offset: 1, 1
+  index: -1
+girl_leg_front
+  rotate: true
+  xy: 1401, 5
+  size: 25, 110
+  orig: 27, 112
+  offset: 1, 1
+  index: -1
+girl_pupil
+  rotate: false
+  xy: 1371, 2
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+girl_shadow
+  rotate: false
+  xy: 1401, 159
+  size: 57, 43
+  orig: 57, 43
+  offset: 0, 0
+  index: -1
+girl_skirt
+  rotate: false
+  xy: 1197, 611
+  size: 347, 135
+  orig: 349, 137
+  offset: 1, 1
+  index: -1
+glass
+  rotate: true
+  xy: 1197, 12
+  size: 190, 172
+  orig: 192, 174
+  offset: 1, 1
+  index: -1
+gray_frame
+  rotate: false
+  xy: 2, 6
+  size: 1193, 740
+  orig: 1193, 740
+  offset: 0, 0
+  index: -1

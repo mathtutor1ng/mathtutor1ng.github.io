@@ -1,0 +1,104 @@
+
+fir_tree.png
+size: 1552, 918
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+foliage_bottom
+  rotate: true
+  xy: 2, 290
+  size: 626, 571
+  orig: 626, 571
+  offset: 0, 0
+  index: -1
+foliage_middle
+  rotate: false
+  xy: 575, 330
+  size: 472, 484
+  orig: 472, 484
+  offset: 0, 0
+  index: -1
+foliage_top
+  rotate: false
+  xy: 1197, 422
+  size: 350, 392
+  orig: 350, 392
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 400, 2
+  size: 226, 48
+  orig: 230, 52
+  offset: 2, 2
+  index: -1
+snow_bottom
+  rotate: false
+  xy: 628, 5
+  size: 567, 323
+  orig: 567, 323
+  offset: 0, 0
+  index: -1
+snow_bottom_part
+  rotate: false
+  xy: 1197, 7
+  size: 103, 75
+  orig: 106, 79
+  offset: 1, 2
+  index: -1
+snow_large
+  rotate: true
+  xy: 400, 52
+  size: 236, 193
+  orig: 240, 198
+  offset: 2, 3
+  index: -1
+snow_long
+  rotate: true
+  xy: 1049, 704
+  size: 110, 146
+  orig: 114, 150
+  offset: 2, 2
+  index: -1
+snow_medium
+  rotate: false
+  xy: 1049, 331
+  size: 108, 89
+  orig: 112, 93
+  offset: 2, 2
+  index: -1
+snow_middle
+  rotate: false
+  xy: 2, 37
+  size: 396, 251
+  orig: 400, 255
+  offset: 2, 2
+  index: -1
+snow_middle_part
+  rotate: true
+  xy: 1049, 540
+  size: 162, 137
+  orig: 166, 140
+  offset: 2, 2
+  index: -1
+snow_small
+  rotate: true
+  xy: 1302, 9
+  size: 73, 65
+  orig: 77, 69
+  offset: 2, 2
+  index: -1
+snow_top
+  rotate: false
+  xy: 1197, 84
+  size: 345, 336
+  orig: 345, 336
+  offset: 0, 0
+  index: -1
+trunk
+  rotate: true
+  xy: 628, 816
+  size: 100, 922
+  orig: 100, 922
+  offset: 0, 0
+  index: -1

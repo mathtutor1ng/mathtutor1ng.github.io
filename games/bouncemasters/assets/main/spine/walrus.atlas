@@ -1,0 +1,118 @@
+
+walrus.png
+size: 598, 1014
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+body_mad
+  rotate: true
+  xy: 2, 296
+  size: 716, 392
+  orig: 716, 392
+  offset: 0, 0
+  index: -1
+elbow_mad
+  rotate: true
+  xy: 398, 134
+  size: 192, 100
+  orig: 196, 104
+  offset: 2, 2
+  index: -1
+eye_close
+  rotate: false
+  xy: 518, 333
+  size: 47, 29
+  orig: 48, 30
+  offset: 0, 1
+  index: -1
+eye_mad
+  rotate: false
+  xy: 518, 364
+  size: 72, 72
+  orig: 76, 76
+  offset: 2, 2
+  index: -1
+eyebrow_mad
+  rotate: false
+  xy: 398, 100
+  size: 76, 32
+  orig: 80, 36
+  offset: 2, 2
+  index: -1
+eyes_back
+  rotate: true
+  xy: 525, 449
+  size: 189, 62
+  orig: 194, 66
+  offset: 2, 2
+  index: -1
+frida_leg_down
+  rotate: false
+  xy: 296, 4
+  size: 160, 64
+  orig: 164, 68
+  offset: 2, 2
+  index: -1
+frida_leg_top
+  rotate: true
+  xy: 500, 47
+  size: 109, 96
+  orig: 113, 100
+  offset: 2, 2
+  index: -1
+frida_tail
+  rotate: true
+  xy: 500, 158
+  size: 168, 96
+  orig: 168, 96
+  offset: 0, 0
+  index: -1
+head_mad
+  rotate: false
+  xy: 2, 2
+  size: 292, 292
+  orig: 296, 296
+  offset: 2, 2
+  index: -1
+mouth_mad
+  rotate: false
+  xy: 396, 328
+  size: 120, 108
+  orig: 124, 112
+  offset: 2, 2
+  index: -1
+nose
+  rotate: false
+  xy: 398, 73
+  size: 47, 25
+  orig: 48, 26
+  offset: 0, 1
+  index: -1
+pupil_large_mad
+  rotate: false
+  xy: 458, 9
+  size: 36, 36
+  orig: 40, 40
+  offset: 2, 2
+  index: -1
+shoulder_mad
+  rotate: false
+  xy: 296, 70
+  size: 100, 224
+  orig: 104, 228
+  offset: 2, 2
+  index: -1
+snout_front_mad
+  rotate: true
+  xy: 396, 438
+  size: 200, 127
+  orig: 204, 131
+  offset: 2, 2
+  index: -1
+tail
+  rotate: true
+  xy: 396, 640
+  size: 372, 199
+  orig: 372, 200
+  offset: 0, 1
+  index: -1

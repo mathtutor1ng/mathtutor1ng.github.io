@@ -1,0 +1,69 @@
+
+background_ending.png
+size: 1125, 831
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+savanna_decal_ground
+  rotate: true
+  xy: 1079, 414
+  size: 47, 17
+  orig: 47, 17
+  offset: 0, 0
+  index: -1
+savanna_ground_back
+  rotate: false
+  xy: 2, 657
+  size: 1113, 172
+  orig: 1113, 172
+  offset: 0, 0
+  index: -1
+savanna_ground_middle
+  rotate: false
+  xy: 2, 463
+  size: 1106, 192
+  orig: 1106, 194
+  offset: 0, 0
+  index: -1
+savanna_ground_tile
+  rotate: false
+  xy: 1117, 823
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+savanna_mountains
+  rotate: false
+  xy: 2, 317
+  size: 1075, 144
+  orig: 1075, 158
+  offset: 0, 0
+  index: -1
+savanna_sky
+  rotate: false
+  xy: 2, 60
+  size: 757, 255
+  orig: 757, 255
+  offset: 0, 0
+  index: -1
+yellow_bush_l
+  rotate: false
+  xy: 887, 223
+  size: 113, 92
+  orig: 115, 95
+  offset: 1, 2
+  index: -1
+yellow_bush_m
+  rotate: false
+  xy: 761, 2
+  size: 151, 117
+  orig: 153, 119
+  offset: 1, 1
+  index: -1
+yellow_bush_r
+  rotate: true
+  xy: 761, 121
+  size: 194, 124
+  orig: 196, 126
+  offset: 1, 1
+  index: -1

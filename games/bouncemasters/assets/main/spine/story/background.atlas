@@ -1,0 +1,118 @@
+
+background.png
+size: 1838, 773
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+decal_ground
+  rotate: false
+  xy: 1079, 385
+  size: 36, 18
+  orig: 36, 18
+  offset: 0, 0
+  index: -1
+ground_back
+  rotate: false
+  xy: 1110, 624
+  size: 717, 147
+  orig: 717, 150
+  offset: 0, 0
+  index: -1
+ground_medium
+  rotate: false
+  xy: 1079, 116
+  size: 757, 254
+  orig: 757, 255
+  offset: 0, 0
+  index: -1
+savanna_decal_ground
+  rotate: true
+  xy: 957, 116
+  size: 47, 17
+  orig: 47, 17
+  offset: 0, 0
+  index: -1
+savanna_ground_back
+  rotate: false
+  xy: 2, 405
+  size: 1113, 172
+  orig: 1113, 172
+  offset: 0, 0
+  index: -1
+savanna_ground_middle
+  rotate: false
+  xy: 2, 579
+  size: 1106, 192
+  orig: 1106, 194
+  offset: 0, 0
+  index: -1
+savanna_ground_tile
+  rotate: false
+  xy: 1829, 765
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+savanna_mountains
+  rotate: false
+  xy: 2, 259
+  size: 1075, 144
+  orig: 1075, 158
+  offset: 0, 0
+  index: -1
+savanna_sky
+  rotate: false
+  xy: 2, 2
+  size: 757, 255
+  orig: 757, 255
+  offset: 0, 0
+  index: -1
+sky
+  rotate: false
+  xy: 1117, 372
+  size: 699, 250
+  orig: 699, 250
+  offset: 0, 0
+  index: -1
+snow_tile
+  rotate: false
+  xy: 1818, 616
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+snowdrift_white_l
+  rotate: false
+  xy: 914, 50
+  size: 471, 64
+  orig: 473, 66
+  offset: 1, 1
+  index: -1
+snowdrift_white_r
+  rotate: false
+  xy: 1387, 34
+  size: 405, 80
+  orig: 407, 82
+  offset: 1, 1
+  index: -1
+yellow_bush_l
+  rotate: false
+  xy: 957, 165
+  size: 113, 92
+  orig: 115, 95
+  offset: 1, 2
+  index: -1
+yellow_bush_m
+  rotate: false
+  xy: 761, 14
+  size: 151, 117
+  orig: 153, 119
+  offset: 1, 1
+  index: -1
+yellow_bush_r
+  rotate: false
+  xy: 761, 133
+  size: 194, 124
+  orig: 196, 126
+  offset: 1, 1
+  index: -1

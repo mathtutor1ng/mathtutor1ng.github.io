@@ -1,0 +1,118 @@
+
+walrus_frida.png
+size: 979, 520
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+eye_mad
+  rotate: false
+  xy: 870, 25
+  size: 72, 72
+  orig: 76, 76
+  offset: 2, 2
+  index: -1
+eyebrow_mad
+  rotate: false
+  xy: 586, 2
+  size: 76, 32
+  orig: 80, 36
+  offset: 2, 2
+  index: -1
+frida_body
+  rotate: false
+  xy: 2, 146
+  size: 708, 372
+  orig: 708, 372
+  offset: 0, 0
+  index: -1
+frida_elbow
+  rotate: true
+  xy: 221, 11
+  size: 133, 197
+  orig: 137, 201
+  offset: 2, 2
+  index: -1
+frida_eye_close
+  rotate: true
+  xy: 944, 47
+  size: 50, 26
+  orig: 54, 30
+  offset: 2, 2
+  index: -1
+frida_head
+  rotate: true
+  xy: 712, 210
+  size: 308, 240
+  orig: 312, 244
+  offset: 2, 2
+  index: -1
+frida_leg_down
+  rotate: false
+  xy: 708, 47
+  size: 160, 64
+  orig: 164, 68
+  offset: 2, 2
+  index: -1
+frida_leg_top
+  rotate: true
+  xy: 881, 99
+  size: 109, 96
+  orig: 113, 100
+  offset: 2, 2
+  index: -1
+frida_mouth_zzz_small
+  rotate: false
+  xy: 664, 2
+  size: 40, 32
+  orig: 44, 36
+  offset: 2, 2
+  index: -1
+frida_mustache
+  rotate: true
+  xy: 954, 470
+  size: 48, 12
+  orig: 52, 16
+  offset: 2, 2
+  index: -1
+frida_nose
+  rotate: false
+  xy: 708, 17
+  size: 48, 28
+  orig: 52, 32
+  offset: 2, 2
+  index: -1
+frida_shoulder
+  rotate: true
+  xy: 2, 8
+  size: 136, 217
+  orig: 140, 221
+  offset: 2, 2
+  index: -1
+frida_snout
+  rotate: false
+  xy: 420, 4
+  size: 164, 140
+  orig: 168, 144
+  offset: 2, 2
+  index: -1
+frida_tail
+  rotate: false
+  xy: 712, 113
+  size: 167, 95
+  orig: 168, 96
+  offset: 0, 0
+  index: -1
+mouth_mad
+  rotate: false
+  xy: 586, 36
+  size: 120, 108
+  orig: 124, 112
+  offset: 2, 2
+  index: -1
+pupil_large_mad
+  rotate: false
+  xy: 758, 9
+  size: 36, 36
+  orig: 40, 40
+  offset: 2, 2
+  index: -1

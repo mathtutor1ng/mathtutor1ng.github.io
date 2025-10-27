@@ -1,0 +1,146 @@
+
+penguin_ninja_fat.png
+size: 149, 141
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+beak
+  rotate: false
+  xy: 32, 2
+  size: 29, 19
+  orig: 31, 21
+  offset: 1, 1
+  index: -1
+beak_close
+  rotate: true
+  xy: 108, 23
+  size: 19, 15
+  orig: 21, 17
+  offset: 1, 1
+  index: -1
+beak_close_front
+  rotate: true
+  xy: 110, 3
+  size: 18, 15
+  orig: 20, 17
+  offset: 1, 1
+  index: -1
+beak_closed
+  rotate: true
+  xy: 125, 34
+  size: 18, 14
+  orig: 20, 16
+  offset: 1, 1
+  index: -1
+beak_open
+  rotate: false
+  xy: 84, 54
+  size: 21, 24
+  orig: 23, 26
+  offset: 1, 1
+  index: -1
+beak_open_down
+  rotate: true
+  xy: 63, 2
+  size: 19, 21
+  orig: 21, 23
+  offset: 1, 1
+  index: -1
+beak_open_up
+  rotate: true
+  xy: 85, 23
+  size: 19, 21
+  orig: 21, 23
+  offset: 1, 1
+  index: -1
+beak_whish
+  rotate: true
+  xy: 127, 14
+  size: 18, 10
+  orig: 20, 12
+  offset: 1, 1
+  index: -1
+belly_front
+  rotate: false
+  xy: 84, 80
+  size: 57, 59
+  orig: 57, 59
+  offset: 0, 0
+  index: -1
+body_front
+  rotate: false
+  xy: 2, 39
+  size: 80, 100
+  orig: 80, 100
+  offset: 0, 0
+  index: -1
+elbow
+  rotate: true
+  xy: 107, 64
+  size: 14, 28
+  orig: 16, 30
+  offset: 1, 1
+  index: -1
+eye
+  rotate: false
+  xy: 2, 9
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+eye_close
+  rotate: false
+  xy: 127, 2
+  size: 17, 10
+  orig: 19, 12
+  offset: 1, 1
+  index: -1
+eyelid
+  rotate: true
+  xy: 137, 59
+  size: 19, 10
+  orig: 19, 11
+  offset: 0, 1
+  index: -1
+foot
+  rotate: false
+  xy: 84, 44
+  size: 25, 8
+  orig: 27, 10
+  offset: 1, 1
+  index: -1
+hand
+  rotate: true
+  xy: 86, 7
+  size: 14, 22
+  orig: 16, 24
+  offset: 1, 1
+  index: -1
+leg
+  rotate: false
+  xy: 2, 2
+  size: 16, 5
+  orig: 18, 7
+  offset: 1, 1
+  index: -1
+mask_cloth_fat
+  rotate: true
+  xy: 107, 54
+  size: 8, 25
+  orig: 10, 27
+  offset: 1, 1
+  index: -1
+mask_fat
+  rotate: false
+  xy: 32, 23
+  size: 51, 14
+  orig: 53, 16
+  offset: 1, 1
+  index: -1
+pupil
+  rotate: false
+  xy: 111, 44
+  size: 8, 8
+  orig: 10, 10
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,132 @@
+
+penguin_ending.png
+size: 871, 343
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+boy_beak_close
+  rotate: true
+  xy: 799, 251
+  size: 90, 68
+  orig: 92, 70
+  offset: 1, 1
+  index: -1
+boy_beak_open
+  rotate: false
+  xy: 641, 143
+  size: 81, 121
+  orig: 83, 123
+  offset: 1, 1
+  index: -1
+boy_beak_open_front
+  rotate: false
+  xy: 551, 58
+  size: 84, 98
+  orig: 86, 100
+  offset: 1, 1
+  index: -1
+boy_beak_smile
+  rotate: false
+  xy: 731, 62
+  size: 84, 91
+  orig: 86, 96
+  offset: 1, 4
+  index: -1
+boy_body
+  rotate: true
+  xy: 2, 6
+  size: 335, 508
+  orig: 335, 508
+  offset: 0, 0
+  index: -1
+boy_eye
+  rotate: false
+  xy: 637, 49
+  size: 92, 92
+  orig: 94, 94
+  offset: 1, 1
+  index: -1
+boy_eyebrow
+  rotate: false
+  xy: 794, 191
+  size: 75, 19
+  orig: 77, 21
+  offset: 1, 1
+  index: -1
+boy_eyelid_bottom
+  rotate: false
+  xy: 637, 12
+  size: 91, 35
+  orig: 95, 35
+  offset: 2, 0
+  index: -1
+boy_eyelid_up
+  rotate: false
+  xy: 731, 12
+  size: 95, 48
+  orig: 95, 50
+  offset: 0, 1
+  index: -1
+boy_foot
+  rotate: true
+  xy: 512, 158
+  size: 106, 127
+  orig: 108, 129
+  offset: 1, 1
+  index: -1
+boy_foot_back
+  rotate: true
+  xy: 512, 21
+  size: 135, 37
+  orig: 137, 39
+  offset: 1, 1
+  index: -1
+boy_foot_front
+  rotate: false
+  xy: 724, 212
+  size: 135, 37
+  orig: 137, 39
+  offset: 1, 1
+  index: -1
+boy_hand
+  rotate: true
+  xy: 512, 266
+  size: 75, 285
+  orig: 75, 285
+  offset: 0, 0
+  index: -1
+boy_leg_back
+  rotate: true
+  xy: 551, 30
+  size: 26, 84
+  orig: 28, 86
+  offset: 1, 1
+  index: -1
+boy_leg_front
+  rotate: true
+  xy: 551, 2
+  size: 26, 84
+  orig: 28, 86
+  offset: 1, 1
+  index: -1
+boy_pupil
+  rotate: false
+  xy: 817, 95
+  size: 35, 35
+  orig: 37, 37
+  offset: 1, 1
+  index: -1
+boy_pupil_heart
+  rotate: false
+  xy: 724, 155
+  size: 68, 55
+  orig: 70, 57
+  offset: 1, 1
+  index: -1
+girl_shadow
+  rotate: true
+  xy: 817, 132
+  size: 57, 43
+  orig: 57, 43
+  offset: 0, 0
+  index: -1

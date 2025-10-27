@@ -1,0 +1,111 @@
+#unity-container { position: absolute }
+#unity-container.unity-desktop { width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
+#unity-canvas { background: #0cb9fe; }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('logo_aqupark.png') no-repeat center }
+#unity-progress-bar-empty { 
+  width: 141px; 
+  height: 18px; 
+  margin-top: 10px; 
+  margin-left: 6.5px; 
+  background: url('progress-bar-empty-dark.png') no-repeat center; 
+  margin: auto;
+}
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+/* Remove the default margins for consistency. */
+* {
+  margin: 0;
+}
+
+/* Match the viewport. */
+html, body {
+  width: 100%;
+  height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/* Prevent the canvas from scrolling. */
+canvas {
+  display: block;
+}
+
+  /* Style de la div */
+  #unity-loading-bar {
+    margin: auto;
+    width: 100%;  /* 50% de la largeur de la fenêtre */
+    height: 100%; /* 50% de la hauteur de la fenêtre */
+    background-color: #0cb9fe;
+    /*animation: backgroundImageAnimation 60s infinite; */
+  }
+
+  .unity-preload-1{
+    background-position: center;
+    background-image: url('../assets/logo_aquapark.jpg');
+    background-repeat: no-repeat;
+  }
+
+  .unity-preload-2{
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('../assets/Loader.jpg');
+    background-repeat: no-repeat;
+  }
+
+  /* Définition de l'animation */
+  @keyframes appearAnimation {
+    0% {
+      transform: scale(0.8,0.8);
+    }
+    50% {
+      transform: scale(1.0,1.0);
+    }
+    100% {
+      transform: scale(0.8,0.8);
+    }
+  } 
+
+  #filler{
+    width: 100%;
+    height: 75%;
+  }
+
+  #playBtn{
+    width: 205px;
+    height: 86px;
+    display: none;
+    background-image: url("../assets/play.png");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .btnAppear{
+    animation: appearAnimation 1s infinite;
+  }
+
+  #carroutxt{
+    margin: 100%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow:  -1px -1px 0 black,
+                  1px -1px 0 black,
+                  -1px  1px 0 black,
+                  1px  1px 0 black;
+  }
+
+  /* #unity-canvas { background: rgb(21, 129, 230) } */

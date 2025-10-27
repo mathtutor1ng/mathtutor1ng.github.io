@@ -1,0 +1,167 @@
+
+popup_final.png
+size: 316, 269
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+beak
+  rotate: false
+  xy: 158, 2
+  size: 28, 30
+  orig: 30, 32
+  offset: 1, 1
+  index: -1
+beak_close
+  rotate: false
+  xy: 95, 2
+  size: 30, 21
+  orig: 32, 23
+  offset: 1, 1
+  index: -1
+belly_default
+  rotate: false
+  xy: 2, 4
+  size: 91, 92
+  orig: 91, 92
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 112, 101
+  size: 89, 166
+  orig: 89, 168
+  offset: 0, 1
+  index: -1
+body_girl
+  rotate: false
+  xy: 2, 98
+  size: 108, 169
+  orig: 108, 169
+  offset: 0, 0
+  index: -1
+boob_girl
+  rotate: false
+  xy: 261, 189
+  size: 37, 37
+  orig: 39, 39
+  offset: 1, 1
+  index: -1
+cheek
+  rotate: false
+  xy: 283, 71
+  size: 14, 11
+  orig: 16, 13
+  offset: 1, 1
+  index: -1
+eye
+  rotate: false
+  xy: 188, 3
+  size: 29, 29
+  orig: 31, 31
+  offset: 1, 1
+  index: -1
+eye_close
+  rotate: true
+  xy: 283, 84
+  size: 38, 31
+  orig: 40, 33
+  offset: 1, 1
+  index: -1
+eye_shadow
+  rotate: false
+  xy: 261, 150
+  size: 37, 37
+  orig: 39, 39
+  offset: 1, 1
+  index: -1
+eyebrow
+  rotate: false
+  xy: 219, 2
+  size: 27, 7
+  orig: 29, 9
+  offset: 1, 1
+  index: -1
+eyelash
+  rotate: false
+  xy: 219, 11
+  size: 38, 19
+  orig: 40, 21
+  offset: 1, 1
+  index: -1
+flover
+  rotate: false
+  xy: 261, 228
+  size: 41, 39
+  orig: 43, 41
+  offset: 1, 1
+  index: -1
+foot_l
+  rotate: true
+  xy: 300, 176
+  size: 50, 14
+  orig: 52, 16
+  offset: 1, 1
+  index: -1
+foot_r
+  rotate: true
+  xy: 300, 124
+  size: 50, 14
+  orig: 52, 16
+  offset: 1, 1
+  index: -1
+hand_boy_l
+  rotate: true
+  xy: 158, 34
+  size: 65, 63
+  orig: 65, 63
+  offset: 0, 0
+  index: -1
+hand_boy_r
+  rotate: true
+  xy: 95, 25
+  size: 71, 61
+  orig: 71, 61
+  offset: 0, 0
+  index: -1
+hand_girl_r
+  rotate: false
+  xy: 223, 58
+  size: 58, 64
+  orig: 59, 64
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: true
+  xy: 223, 45
+  size: 11, 48
+  orig: 13, 50
+  offset: 1, 1
+  index: -1
+leg_r
+  rotate: true
+  xy: 223, 32
+  size: 11, 48
+  orig: 13, 50
+  offset: 1, 1
+  index: -1
+pupil
+  rotate: false
+  xy: 261, 131
+  size: 16, 17
+  orig: 18, 19
+  offset: 1, 1
+  index: -1
+pupil_heart
+  rotate: true
+  xy: 203, 102
+  size: 20, 17
+  orig: 22, 19
+  offset: 1, 1
+  index: -1
+skirt_girl
+  rotate: true
+  xy: 203, 124
+  size: 143, 56
+  orig: 145, 58
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,34 @@
+
+mushroom_big.png
+size: 305, 660
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+eye_open_red_big
+  rotate: false
+  xy: 267, 160
+  size: 36, 52
+  orig: 40, 56
+  offset: 2, 2
+  index: -1
+grass_mushroom_big
+  rotate: false
+  xy: 2, 2
+  size: 278, 62
+  orig: 278, 62
+  offset: 0, 0
+  index: -1
+hat_mushroom_red_big
+  rotate: true
+  xy: 2, 214
+  size: 444, 292
+  orig: 444, 292
+  offset: 0, 0
+  index: -1
+leg_mushroom_red_big
+  rotate: false
+  xy: 2, 66
+  size: 263, 146
+  orig: 268, 150
+  offset: 2, 2
+  index: -1

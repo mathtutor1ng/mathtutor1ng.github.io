@@ -1,0 +1,20 @@
+
+flag_map.png
+size: 121, 55
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+flag_red_bottom
+  rotate: false
+  xy: 92, 26
+  size: 27, 27
+  orig: 29, 29
+  offset: 1, 1
+  index: -1
+flag_red_top
+  rotate: true
+  xy: 2, 2
+  size: 51, 88
+  orig: 53, 90
+  offset: 1, 1
+  index: -1

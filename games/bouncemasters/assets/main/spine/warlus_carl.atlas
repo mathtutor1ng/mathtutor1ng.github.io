@@ -1,0 +1,139 @@
+
+warlus_carl.png
+size: 1313, 396
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+carl_body
+  rotate: false
+  xy: 2, 2
+  size: 676, 392
+  orig: 676, 392
+  offset: 0, 0
+  index: -1
+carl_butt_hole
+  rotate: false
+  xy: 957, 2
+  size: 47, 47
+  orig: 51, 51
+  offset: 2, 2
+  index: -1
+carl_elbow
+  rotate: false
+  xy: 1068, 197
+  size: 133, 197
+  orig: 137, 201
+  offset: 2, 2
+  index: -1
+carl_eye_close
+  rotate: false
+  xy: 957, 81
+  size: 50, 26
+  orig: 54, 30
+  offset: 2, 2
+  index: -1
+carl_eyebrow
+  rotate: false
+  xy: 1188, 10
+  size: 63, 23
+  orig: 68, 28
+  offset: 2, 3
+  index: -1
+carl_eyes_back
+  rotate: true
+  xy: 1228, 114
+  size: 158, 72
+  orig: 162, 76
+  offset: 2, 2
+  index: -1
+carl_head
+  rotate: true
+  xy: 680, 106
+  size: 288, 248
+  orig: 292, 252
+  offset: 2, 2
+  index: -1
+carl_leg_down
+  rotate: true
+  xy: 1162, 35
+  size: 160, 64
+  orig: 164, 68
+  offset: 2, 2
+  index: -1
+carl_leg_top
+  rotate: false
+  xy: 680, 8
+  size: 109, 96
+  orig: 113, 100
+  offset: 2, 2
+  index: -1
+carl_mouth
+  rotate: true
+  xy: 930, 109
+  size: 66, 88
+  orig: 70, 92
+  offset: 2, 2
+  index: -1
+carl_mouth_zzz_small
+  rotate: false
+  xy: 1228, 36
+  size: 40, 32
+  orig: 44, 36
+  offset: 2, 2
+  index: -1
+carl_mustache
+  rotate: false
+  xy: 1068, 183
+  size: 48, 12
+  orig: 52, 16
+  offset: 2, 2
+  index: -1
+carl_nose
+  rotate: false
+  xy: 957, 51
+  size: 48, 28
+  orig: 52, 32
+  offset: 2, 2
+  index: -1
+carl_pupil
+  rotate: false
+  xy: 1162, 9
+  size: 24, 24
+  orig: 28, 28
+  offset: 2, 2
+  index: -1
+carl_shoulder
+  rotate: false
+  xy: 930, 177
+  size: 136, 217
+  orig: 140, 221
+  offset: 2, 2
+  index: -1
+carl_snout
+  rotate: true
+  xy: 1020, 7
+  size: 168, 140
+  orig: 172, 144
+  offset: 2, 2
+  index: -1
+carl_tail
+  rotate: false
+  xy: 791, 12
+  size: 164, 92
+  orig: 168, 96
+  offset: 2, 2
+  index: -1
+eye
+  rotate: false
+  xy: 1253, 70
+  size: 42, 42
+  orig: 46, 46
+  offset: 2, 2
+  index: -1
+mouth_mad
+  rotate: true
+  xy: 1203, 274
+  size: 120, 108
+  orig: 124, 112
+  offset: 2, 2
+  index: -1

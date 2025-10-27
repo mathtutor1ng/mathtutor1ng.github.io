@@ -1,0 +1,55 @@
+
+chest_ingame.png
+size: 294, 956
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+chest_sm_red_closed
+  rotate: true
+  xy: 2, 276
+  size: 284, 226
+  orig: 288, 230
+  offset: 2, 2
+  index: -1
+chest_sm_red_open_back
+  rotate: true
+  xy: 2, 4
+  size: 270, 139
+  orig: 288, 140
+  offset: 9, 1
+  index: -1
+chest_sm_red_open_front
+  rotate: true
+  xy: 144, 670
+  size: 284, 148
+  orig: 288, 152
+  offset: 2, 2
+  index: -1
+chest_sm_red_open_top
+  rotate: true
+  xy: 143, 2
+  size: 272, 111
+  orig: 272, 112
+  offset: 0, 1
+  index: -1
+chest_stuck_shadow
+  rotate: true
+  xy: 256, 114
+  size: 224, 16
+  orig: 228, 20
+  offset: 2, 2
+  index: -1
+chest_stuck_snowdrift
+  rotate: true
+  xy: 230, 340
+  size: 328, 52
+  orig: 332, 56
+  offset: 2, 2
+  index: -1
+chest_stuck_snowmask
+  rotate: true
+  xy: 2, 562
+  size: 392, 140
+  orig: 396, 144
+  offset: 2, 2
+  index: -1

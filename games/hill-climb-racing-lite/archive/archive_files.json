@@ -1,0 +1,67 @@
+{
+    "content": [
+      {
+        "name": "game.projectc",
+        "size": 3941,
+        "pieces": [
+          {
+            "name": "game0.projectc",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "name": "game.arci",
+        "size": 36448,
+        "pieces": [
+          {
+            "name": "game0.arci",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "name": "game.arcd",
+        "size": 6797136,
+        "pieces": [
+          {
+            "name": "game0.arcd",
+            "offset": 0
+          },
+          {
+            "name": "game1.arcd",
+            "offset": 2097152
+          },
+          {
+            "name": "game2.arcd",
+            "offset": 4194304
+          },
+          {
+            "name": "game3.arcd",
+            "offset": 6291456
+          }
+        ]
+      },
+      {
+        "name": "game.dmanifest",
+        "size": 43081,
+        "pieces": [
+          {
+            "name": "game0.dmanifest",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "name": "game.public.der",
+        "size": 162,
+        "pieces": [
+          {
+            "name": "game0.public.der",
+            "offset": 0
+          }
+        ]
+      }
+    ],
+    "total_size": 6880980
+  }

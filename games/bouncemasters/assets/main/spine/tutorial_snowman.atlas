@@ -1,0 +1,62 @@
+
+tutorial_snowman.png
+size: 1817, 919
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 9
+  size: 1385, 908
+  orig: 1385, 908
+  offset: 0, 0
+  index: -1
+line
+  rotate: false
+  xy: 1684, 245
+  size: 40, 63
+  orig: 44, 67
+  offset: 2, 2
+  index: -1
+line_bend
+  rotate: true
+  xy: 1686, 180
+  size: 63, 35
+  orig: 67, 39
+  offset: 2, 2
+  index: -1
+line_tile
+  rotate: true
+  xy: 1726, 97
+  size: 211, 28
+  orig: 211, 28
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: true
+  xy: 1684, 310
+  size: 210, 131
+  orig: 215, 136
+  offset: 3, 2
+  index: -1
+snowball
+  rotate: false
+  xy: 1389, 227
+  size: 293, 293
+  orig: 297, 298
+  offset: 2, 3
+  index: -1
+snowman
+  rotate: true
+  xy: 1389, 522
+  size: 395, 420
+  orig: 399, 424
+  offset: 2, 2
+  index: -1
+stone
+  rotate: false
+  xy: 1389, 2
+  size: 295, 223
+  orig: 299, 227
+  offset: 2, 2
+  index: -1

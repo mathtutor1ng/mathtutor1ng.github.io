@@ -1,0 +1,55 @@
+
+tutorial_elk.png
+size: 1755, 912
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+background
+  rotate: false
+  xy: 2, 2
+  size: 1385, 908
+  orig: 1385, 908
+  offset: 0, 0
+  index: -1
+cross
+  rotate: false
+  xy: 1389, 112
+  size: 136, 136
+  orig: 140, 140
+  offset: 2, 2
+  index: -1
+elk
+  rotate: true
+  xy: 1389, 383
+  size: 527, 364
+  orig: 531, 368
+  offset: 2, 2
+  index: -1
+line
+  rotate: false
+  xy: 1601, 318
+  size: 40, 63
+  orig: 44, 67
+  offset: 2, 2
+  index: -1
+line_bend
+  rotate: false
+  xy: 1389, 45
+  size: 63, 35
+  orig: 67, 39
+  offset: 2, 2
+  index: -1
+line_tile
+  rotate: false
+  xy: 1389, 82
+  size: 211, 28
+  orig: 211, 28
+  offset: 0, 0
+  index: -1
+penguin
+  rotate: false
+  xy: 1389, 250
+  size: 210, 131
+  orig: 215, 136
+  offset: 3, 2
+  index: -1

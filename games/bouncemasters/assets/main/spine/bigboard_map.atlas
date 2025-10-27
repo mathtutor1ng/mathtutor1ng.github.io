@@ -1,0 +1,118 @@
+
+bigboard_map.png
+size: 1259, 78
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+frame_bottom
+  rotate: true
+  xy: 596, 3
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+frame_decal_bottom
+  rotate: true
+  xy: 884, 25
+  size: 20, 14
+  orig: 22, 16
+  offset: 1, 1
+  index: -1
+frame_decal_side
+  rotate: true
+  xy: 914, 37
+  size: 8, 16
+  orig: 10, 18
+  offset: 1, 1
+  index: -1
+frame_decal_top
+  rotate: false
+  xy: 812, 37
+  size: 70, 8
+  orig: 72, 10
+  offset: 1, 1
+  index: -1
+frame_side
+  rotate: true
+  xy: 596, 47
+  size: 29, 338
+  orig: 30, 340
+  offset: 0, 1
+  index: -1
+frame_top
+  rotate: true
+  xy: 616, 3
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+leaderboard_center_part
+  rotate: true
+  xy: 672, 4
+  size: 8, 392
+  orig: 8, 392
+  offset: 0, 0
+  index: -1
+leaderboard_side_left
+  rotate: true
+  xy: 2, 40
+  size: 36, 390
+  orig: 38, 392
+  offset: 1, 1
+  index: -1
+leaderboard_side_right
+  rotate: true
+  xy: 2, 2
+  size: 36, 390
+  orig: 38, 392
+  offset: 1, 1
+  index: -1
+pillar_board_l
+  rotate: true
+  xy: 672, 14
+  size: 31, 68
+  orig: 33, 70
+  offset: 1, 1
+  index: -1
+pillar_board_r
+  rotate: true
+  xy: 742, 14
+  size: 31, 68
+  orig: 33, 70
+  offset: 1, 1
+  index: -1
+rectangle_snow
+  rotate: false
+  xy: 936, 30
+  size: 200, 46
+  orig: 200, 46
+  offset: 0, 0
+  index: -1
+shadow_pillar_dark
+  rotate: true
+  xy: 900, 23
+  size: 22, 12
+  orig: 22, 12
+  offset: 0, 0
+  index: -1
+snow_upper_c
+  rotate: false
+  xy: 596, 11
+  size: 74, 34
+  orig: 76, 36
+  offset: 1, 1
+  index: -1
+snow_upper_l
+  rotate: false
+  xy: 394, 9
+  size: 200, 67
+  orig: 202, 69
+  offset: 1, 1
+  index: -1
+snow_upper_r
+  rotate: false
+  xy: 1138, 31
+  size: 119, 45
+  orig: 121, 47
+  offset: 1, 1
+  index: -1

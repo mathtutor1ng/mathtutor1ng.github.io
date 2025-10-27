@@ -1,0 +1,167 @@
+
+killer_whale.png
+size: 1566, 774
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+body
+  rotate: true
+  xy: 198, 269
+  size: 503, 807
+  orig: 503, 807
+  offset: 0, 0
+  index: -1
+duck
+  rotate: true
+  xy: 86, 63
+  size: 143, 107
+  orig: 148, 112
+  offset: 2, 3
+  index: -1
+eye
+  rotate: false
+  xy: 2, 2
+  size: 40, 40
+  orig: 44, 44
+  offset: 2, 2
+  index: -1
+eye_close
+  rotate: true
+  xy: 198, 221
+  size: 46, 23
+  orig: 50, 28
+  offset: 2, 3
+  index: -1
+eye_mask
+  rotate: false
+  xy: 223, 223
+  size: 44, 44
+  orig: 48, 48
+  offset: 2, 2
+  index: -1
+fin
+  rotate: false
+  xy: 195, 64
+  size: 85, 142
+  orig: 90, 146
+  offset: 2, 2
+  index: -1
+hand
+  rotate: true
+  xy: 1007, 684
+  size: 88, 182
+  orig: 88, 184
+  offset: 0, 1
+  index: -1
+ice_hole_crack
+  rotate: true
+  xy: 86, 208
+  size: 564, 110
+  orig: 568, 114
+  offset: 2, 2
+  index: -1
+ice_mask_l
+  rotate: false
+  xy: 680, 11
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ice_mask_r
+  rotate: false
+  xy: 938, 11
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ice_tile_small
+  rotate: true
+  xy: 2, 44
+  size: 728, 82
+  orig: 728, 84
+  offset: 0, 2
+  index: -1
+ice_white_mask_l
+  rotate: true
+  xy: 292, 3
+  size: 264, 284
+  orig: 264, 284
+  offset: 0, 0
+  index: -1
+ice_white_mask_r
+  rotate: true
+  xy: 1196, 5
+  size: 272, 252
+  orig: 272, 252
+  offset: 0, 0
+  index: -1
+jaw
+  rotate: true
+  xy: 1007, 279
+  size: 326, 397
+  orig: 330, 401
+  offset: 2, 2
+  index: -1
+leg_down
+  rotate: true
+  xy: 1450, 94
+  size: 188, 92
+  orig: 192, 96
+  offset: 2, 2
+  index: -1
+leg_up
+  rotate: true
+  xy: 578, 7
+  size: 260, 100
+  orig: 264, 104
+  offset: 2, 2
+  index: -1
+mask_snow
+  rotate: false
+  xy: 86, 45
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+mouth_back
+  rotate: false
+  xy: 1196, 607
+  size: 349, 165
+  orig: 353, 169
+  offset: 2, 2
+  index: -1
+tail
+  rotate: false
+  xy: 1406, 284
+  size: 114, 86
+  orig: 118, 90
+  offset: 2, 2
+  index: -1
+teeth_down
+  rotate: true
+  xy: 44, 12
+  size: 30, 246
+  orig: 34, 250
+  offset: 2, 2
+  index: -1
+teeth_up
+  rotate: false
+  xy: 1406, 399
+  size: 30, 206
+  orig: 34, 210
+  offset: 2, 2
+  index: -1
+tongue
+  rotate: false
+  xy: 1450, 372
+  size: 114, 233
+  orig: 118, 237
+  offset: 2, 2
+  index: -1
+water_tile
+  rotate: false
+  xy: 104, 45
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1

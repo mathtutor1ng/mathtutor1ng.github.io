@@ -1,0 +1,174 @@
+
+penguin_ninja_elongated.png
+size: 221, 142
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+beak
+  rotate: true
+  xy: 124, 23
+  size: 29, 19
+  orig: 31, 21
+  offset: 1, 1
+  index: -1
+beak_close
+  rotate: true
+  xy: 166, 2
+  size: 19, 15
+  orig: 21, 17
+  offset: 1, 1
+  index: -1
+beak_close_front
+  rotate: true
+  xy: 203, 68
+  size: 18, 15
+  orig: 20, 17
+  offset: 1, 1
+  index: -1
+beak_closed
+  rotate: true
+  xy: 188, 39
+  size: 18, 14
+  orig: 20, 16
+  offset: 1, 1
+  index: -1
+beak_open
+  rotate: false
+  xy: 145, 33
+  size: 21, 24
+  orig: 23, 26
+  offset: 1, 1
+  index: -1
+beak_open_down
+  rotate: true
+  xy: 120, 2
+  size: 19, 21
+  orig: 21, 23
+  offset: 1, 1
+  index: -1
+beak_open_up
+  rotate: true
+  xy: 143, 2
+  size: 19, 21
+  orig: 21, 23
+  offset: 1, 1
+  index: -1
+beak_whish
+  rotate: true
+  xy: 204, 41
+  size: 18, 10
+  orig: 20, 12
+  offset: 1, 1
+  index: -1
+belly_elongated
+  rotate: false
+  xy: 74, 54
+  size: 59, 86
+  orig: 59, 86
+  offset: 0, 0
+  index: -1
+body_cloth_elongated
+  rotate: false
+  xy: 135, 67
+  size: 66, 73
+  orig: 66, 73
+  offset: 0, 0
+  index: -1
+body_elongated
+  rotate: false
+  xy: 2, 3
+  size: 70, 137
+  orig: 70, 137
+  offset: 0, 0
+  index: -1
+elbow
+  rotate: false
+  xy: 203, 112
+  size: 14, 28
+  orig: 16, 30
+  offset: 1, 1
+  index: -1
+eye
+  rotate: false
+  xy: 94, 24
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+eye_close
+  rotate: true
+  xy: 195, 4
+  size: 17, 10
+  orig: 19, 12
+  offset: 1, 1
+  index: -1
+eyelid
+  rotate: true
+  xy: 183, 2
+  size: 19, 10
+  orig: 19, 11
+  offset: 0, 1
+  index: -1
+foot
+  rotate: false
+  xy: 145, 23
+  size: 25, 8
+  orig: 27, 10
+  offset: 1, 1
+  index: -1
+foot_side
+  rotate: true
+  xy: 172, 23
+  size: 8, 23
+  orig: 10, 25
+  offset: 1, 1
+  index: -1
+foot_three_quarter_l
+  rotate: false
+  xy: 168, 33
+  size: 18, 24
+  orig: 20, 26
+  offset: 1, 1
+  index: -1
+foot_top
+  rotate: true
+  xy: 94, 2
+  size: 20, 24
+  orig: 22, 26
+  offset: 1, 1
+  index: -1
+hand
+  rotate: false
+  xy: 203, 88
+  size: 14, 22
+  orig: 16, 24
+  offset: 1, 1
+  index: -1
+leg
+  rotate: false
+  xy: 203, 61
+  size: 16, 5
+  orig: 18, 7
+  offset: 1, 1
+  index: -1
+mask_cloth_elongated
+  rotate: true
+  xy: 135, 59
+  size: 6, 56
+  orig: 6, 56
+  offset: 0, 0
+  index: -1
+mask_elongated
+  rotate: true
+  xy: 74, 2
+  size: 50, 18
+  orig: 52, 20
+  offset: 1, 1
+  index: -1
+pupil
+  rotate: false
+  xy: 204, 31
+  size: 8, 8
+  orig: 10, 10
+  offset: 1, 1
+  index: -1
