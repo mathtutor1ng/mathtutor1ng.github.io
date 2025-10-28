@@ -5,6 +5,10 @@ This is the changelog of the website in order from newest to oldest.
 **October 27, 2025**
 ---
 - Added YouTube Playables
+- Added Basketball Stars
+- Added Getaway Shootout
+- Added Gun Mayhem
+- Fixed Site Icon
 
 **October 25, 2025**
 ---
