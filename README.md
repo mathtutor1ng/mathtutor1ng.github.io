@@ -2,6 +2,11 @@
 
 This is the changelog of the website in order from newest to oldest.
 
+**October 28, 2025**
+---
+- Added ULTRAKILL
+- Fixed Smash Karts
+
 **October 27, 2025**
 ---
 - Added YouTube Playables
