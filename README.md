@@ -6,6 +6,10 @@ This is the changelog of the website in order from newest to oldest.
 ---
 - Added ULTRAKILL
 - Fixed Smash Karts
+- Made Friday Night Funkin' a folder for the game instead of redirecting to another website
+- Fixed R.E.P.O.
+- Made Eaglercraft 1.12.2 a folder for the game instead of redirecting to another website
+- Made A Dance of Fire and Ice a folder for the game instead of redirecting to another website
 
 **October 27, 2025**
 ---
