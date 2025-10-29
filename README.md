@@ -1,6 +1,6 @@
 # Changelog
 
-This is the changelog of the website in order from newest to oldest.
+This is the changelog of mathtutor1ng in order from newest to oldest.
 
 **October 28, 2025**
 ---
