@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
+<html lang="en-us"><head>
     <base href="https://cdn.jsdelivr.net/gh/genizy/web-port@main/repo/">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -30,9 +27,9 @@
 
 <body>
     <div id="loading-text" style="color: black; font-family: cursive; font-size: 48px; text-align: center; margin-top: 20px;">LOADING...</div>
-    <div id="unity-container" class="unity-desktop" hidden>
-        <canvas id="unity-canvas" tabindex="-1"></canvas>
-        <div id="unity-loading-bar">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" tabindex="-1" width="1229" height="820" style="width: 1229px; height: 820px;"></canvas>
+        <div id="unity-loading-bar" style="display: block;">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
                 <div id="unity-progress-bar-full"></div>
@@ -102,7 +99,7 @@
             var loaderUrl = buildUrl + "/NewestBuild.loader.js";
             var config = {
                 dataUrl: dataUrl,
-                frameworkUrl: buildUrl + "/NewestBuild.framework.js.gz",
+                frameworkUrl: buildUrl + "/NewestBuild.framework.js",
                 codeUrl: wasmUrl,
                 streamingAssetsUrl: "StreamingAssets",
                 companyName: "Stupid Game",
@@ -142,6 +139,7 @@
             document.body.appendChild(script);
         });
     </script>
-</body>
 
-</html>
+
+
+<script src="Build/NewestBuild.loader.js"></script></body></html>
