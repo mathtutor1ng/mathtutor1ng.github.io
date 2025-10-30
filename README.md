@@ -10,6 +10,7 @@ This is the changelog of mathtutor1ng in order from newest to oldest.
 - Fixed R.E.P.O.
 - Made Eaglercraft 1.12.2 a folder for the game instead of redirecting to another website
 - Made A Dance of Fire and Ice a folder for the game instead of redirecting to another website
+- Added Math Tutoring cloak AGAIN.
 
 **October 27, 2025**
 ---

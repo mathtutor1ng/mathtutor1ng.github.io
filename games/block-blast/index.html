@@ -1,0 +1,99 @@
+<html lang="en-us"><head>
+    
+    
+      <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202510230101/show_ads_impl_fy2021.js"></script><script>
+         let displayMode = 'browser';
+         let isPwa = false;
+         const mqStandAlone = '(display-mode: fullscreen)';
+         if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
+           displayMode = 'fullscreen';
+           isPwa = true
+         }
+         gtag('event', 'pwa_check', {'pwa': isPwa});
+      </script>
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Math Tutoring</title>
+      <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/genizy/bl/TemplateData/favicon.ico">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/genizy/bl/TemplateData/style.css">
+      <link rel="manifest" href="https://cdn.jsdelivr.net/gh/genizy/bl/manifest.webmanifest">
+   <meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+   <body>
+      <div id="unity-container">
+         <canvas id="unity-canvas" width="1663" height="1106" tabindex="-1" style="cursor: default;"></canvas>
+         <div id="unity-loading-bar" style="display: none;">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+               <div id="unity-progress-bar-full" style="width: 100%;"></div>
+            </div>
+         </div>
+         <div id="unity-warning"> </div>
+      </div>
+      <script>
+         window.addEventListener("load", function () {
+           if ("serviceWorker" in navigator) {
+             navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/genizy/bl/ServiceWorker.js");
+           }
+         });
+         var container = document.querySelector("#unity-container");
+         var canvas = document.querySelector("#unity-canvas");
+         var loadingBar = document.querySelector("#unity-loading-bar");
+         var progressBarFull = document.querySelector("#unity-progress-bar-full");
+         var warningBanner = document.querySelector("#unity-warning");
+         function unityShowBanner(msg, type) {
+           function updateBannerVisibility() {
+             warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+           }
+           var div = document.createElement('div');
+           div.innerHTML = msg;
+           warningBanner.appendChild(div);
+           if (type == 'error') div.style = 'background: red; padding: 10px;';
+           else {
+             if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+             setTimeout(function() {
+               warningBanner.removeChild(div);
+               updateBannerVisibility();
+             }, 5000);
+           }
+           updateBannerVisibility();
+         }
+         
+         var buildUrl = "https://cdn.jsdelivr.net/gh/genizy/bl/Build";
+         var loaderUrl = buildUrl + "/BlockBlast1.1-8.loader.js";
+         var config = {
+           dataUrl: buildUrl + "/BlockBlast1.1-8.data.unityweb",
+           frameworkUrl: buildUrl + "/BlockBlast1.1-8.framework.js.unityweb",
+           codeUrl: buildUrl + "/BlockBlast1.1-8.wasm.unityweb",
+           streamingAssetsUrl: "StreamingAssets",
+           companyName: "reun",
+           productName: "Block Blast Puzzle",
+           productVersion: "1.1",
+           showBanner: unityShowBanner,
+         };
+         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+           var meta = document.createElement('meta');
+           meta.name = 'viewport';
+           meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+           document.getElementsByTagName('head')[0].appendChild(meta);
+         }
+         loadingBar.style.display = "block";
+         var script = document.createElement("script");
+         script.src = loaderUrl;
+         script.onload = () => {
+           createUnityInstance(canvas, config, (progress) => {
+             progressBarFull.style.width = 100 * progress + "%";
+           }).then((unityInstance) => {
+             loadingBar.style.display = "none";
+           }).catch((message) => {
+             alert(message);
+           });
+         };
+         document.body.appendChild(script);
+      </script><script src="https://cdn.jsdelivr.net/gh/genizy/bl/Build/BlockBlast1.1-8.loader.js"></script>
+      <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5221630201042895" crossorigin="anonymous" data-checked-head="true"></script>
+      <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-5221630201042895" data-ad-slot="3988294629" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_1_host" style="border: none; height: 280px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+      <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+   
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins><script src="blob:https://manager.football7080.com/7b7d95a3-97d6-4590-a0c1-ebe4098d9ee4"></script></body></html>
