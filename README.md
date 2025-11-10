@@ -2,6 +2,12 @@
 
 This is the changelog of mathtutor1ng in order from newest to oldest.
 
+**November 10, 2025**
+---
+- Added Five Nights At Freddys 3D
+- Added Clash Royale
+- Cheese Chompers 3D (Requested by @eduardo.turtle1234 on TikTok)
+
 **October 28, 2025**
 ---
 - Added ULTRAKILL

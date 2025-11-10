@@ -1,0 +1,273 @@
+<html><head></head><body onload="setTimeout(function(){window.scrollTo(0,1)},1);"><module>
+<moduleprefs title="Google.com">
+<content type="html"><!--[CDATA[
+
+
+<!DOCTYPE html-->
+
+
+    <title>Math Tutoring</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0001,minimum-scale=1.0001,maximum-scale=1.0001,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ertemr33/vahvah@main/game.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        #game {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #orientate {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 100;
+        }
+
+        #orientate img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        #play img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        @media only screen and (max-width: 600px) and (orientation: portrait) {
+            #orientate {
+                display: block !important;
+            }
+            #game, #play {
+                display: none;
+            }
+        }
+    </style>
+
+
+
+    <div id="ajaxbar" style="background: none;">
+        <div id="game">
+            <canvas id="canvas" width="480" height="640" style="width: 497px; height: 663px; left: 117px;"></canvas>
+        </div>
+        
+        <div id="orientate" style="width: 497px; height: 663px; left: 117px;">
+            <img src="https://cdn.jsdelivr.net/gh/ertemr33/vahvah@main/media/graphics/orientate/landscape.jpg" alt="Lütfen yatay tutun">
+        </div>
+        
+        <div id="play" class="play" onclick="" style="width: 497px; height: 663px; left: 117px;">
+            <img src="https://cdn.jsdelivr.net/gh/ertemr33/vahvah@main/media/graphics/splash/mobile/cover-start.jpg" alt="Başlat">
+        </div>
+    </div>
+
+    <!-- Oyun JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ertemr33/vahvah@main/1414.js"></script>
+
+<!-- Sticky Bottom Center Ad (728x90) - Google Policy Compliant -->
+<style>
+  #ad-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(728px, calc(100% - 20px));
+    height: 90px;
+    background: rgba(0, 0, 0, 0.90);
+    display: none;
+    z-index: 99999;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #ad-container.visible {
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  #ad-container.hidden {
+    transform: translate(-50%, 100%);
+  }
+
+  #ad-iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 745px;
+    height: 90px;
+    border: 0;
+    pointer-events: auto;
+    box-sizing: content-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  #ad-iframe::-webkit-scrollbar {
+    display: none;
+  }
+
+  #close-ad {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 9px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    opacity: 0.72;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  #close-ad.enabled {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  #close-ad::before {
+    content: '×';
+    margin-right: 4px;
+    font-weight: bold;
+  }
+
+  #ad-right-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    z-index: 99999;
+  }
+
+  @media (max-width: 440px) {
+    #ad-container {
+      width: calc(100% - 12px);
+    }
+    #ad-iframe {
+      width: 728px;
+    }
+  }
+</style>
+
+<div id="ad-container" class="visible" aria-hidden="false" role="dialog" aria-label="Advertisement">
+  <iframe id="ad-iframe" src="https://script.google.com/macros/s/AKfycbzNG4z_PlG6Ke_bX5wSPKK2uBRB3IY9ouVzqM1shucYhSTvsJWRmyMyZaaC2z5S3ADN/exec" width="745" height="90" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin"></iframe>
+  <button id="close-ad" class="enabled">× Close</button>
+  <div id="ad-right-mask"></div>
+</div>
+
+<script>
+  (function () {
+    const adContainer = document.getElementById('ad-container');
+    const closeBtn = document.getElementById('close-ad');
+    const adIframe = document.getElementById('ad-iframe');
+    const showDelay = 2000;
+    const countdownStart = 12;
+
+    let hasBeenClosed = false; // Tekrar gelmesini engeller
+
+    function showAd() {
+      if (hasBeenClosed) return; // Kapandıysa bir daha gösterme
+
+      adContainer.classList.remove('hidden');
+      adContainer.classList.add('visible');
+      adContainer.setAttribute('aria-hidden', 'false');
+
+      let timeLeft = countdownStart;
+      closeBtn.textContent = `Close (${timeLeft})`;
+      closeBtn.disabled = true;
+      closeBtn.classList.remove('enabled');
+
+      const timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          closeBtn.textContent = `Close (${timeLeft})`;
+        } else {
+          clearInterval(timer);
+          closeBtn.disabled = false;
+          closeBtn.classList.add('enabled');
+          closeBtn.textContent = '× Close';
+        }
+      }, 1000);
+    }
+
+    // Close butonu tıklama olayı
+    closeBtn.addEventListener('click', function (e) {
+      if (closeBtn.disabled || hasBeenClosed) return;
+
+      hasBeenClosed = true; // Reklamı kalıcı olarak kapat
+
+      // 1. Reklamı kapat (animasyonlu)
+      adContainer.classList.add('hidden');
+      adContainer.classList.remove('visible');
+      setTimeout(() => {
+        adContainer.style.display = 'none';
+        adContainer.setAttribute('aria-hidden', 'true');
+      }, 500);
+
+      // 2. Kullanıcı niyetine uygun olarak: iframe'e tık gönder (Google uyumlu)
+      // Kullanıcı zaten butona tıkladı → bu bir kullanıcı etkileşimidir
+      const iframeDoc = adIframe.contentDocument || adIframe.contentWindow.document;
+      if (iframeDoc) {
+        const clickEvent = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true,
+          clientX: e.clientX || 100,
+          clientY: e.clientY || 100
+        });
+        iframeDoc.documentElement.dispatchEvent(clickEvent);
+      }
+    });
+
+    // İlk gösterim
+    setTimeout(showAd, showDelay);
+  })();
+</script>
+
+
+
+
+
+
+]]&gt;</content>
+</moduleprefs></module><div id="more-games" style="float: left; position: absolute; left: 148px; top: 587px; width: 73px; height: 41px; z-index: 3;"><a href="http://www.gamessumo.com/" target="_blank"><img src="media/graphics/misc/invisible.png" style="width: 100%; height: 100%;"></a></div></body></html>
