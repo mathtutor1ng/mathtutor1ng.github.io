@@ -2,124 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Tutoring</title>
-    <link rel="icon" href="images/mathtutor1ng-initials.png" type="image/png" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .turtle-emoji {
+            font-size: 4rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        .description {
+            font-size: 1.3rem;
+            margin: 30px 0;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .description p:first-child::after {
+            content: ', and listen to music';
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            min-width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .countdown-section {
+            margin-top: 50px;
+            animation: fadeIn 2s ease;
+        }
+
+        .countdown-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 100px;
+        }
+
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <img src="images/mathtutor1ng-initials.png" alt="logo">
-        <h1>mathtutor1ng</h1>
-    </nav>
-
-    <div class="featured">
-        <h1>Popular:</h1>
-        <div class="column">
-          <a href="games/snow-rider/">
-            <img src="images/snow-rider.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/granny/">
-            <img src="images/granny.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to mathtutor1ng</h1>
+            <div class="turtle-emoji">👋</div>
         </div>
-        <div class="row">
-          <a href="games/friday-night-funkin/">
-            <img src="images/fridaynightfunkin.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="games/eaglercraft-1.12.2/">
-            <img src="images/mc.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-            </a>
-        </div>
-        <div class="column">
-          <a href="games/moto-x3m/">
-            <img src="images/moto-x3m.jpg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/survival-race/">
-            <img src="images/survival-race.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        </div>
-    </div>
 
-    <div class="content">
+        <div class="description">
+            <p>Here you can play games, watch movies/shows, and use proxies</p>
+            <p style="margin-top: 10px; font-size: 1.5rem;">Enjoy!</p>
+        </div>
 
-    <hr>
-
-    <div class="search">
-        <input type="text" placeholder="Search..." oninput="">
-        <button><i class="fas fa-search"></i></button>
-    </div>
-
-    <div id="games">
-        <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
-        <a href="games/vex3/"><img src="images/vex3.jpg" alt="vex 3"></a>
-        <a href="games/vex4/"><img src="images/vex4.jpg" alt="vex 4"></a>
-        <a href="games/vex5/"><img src="images/vex5.jpg" alt="vex 5"></a>
-        <a href="games/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
-        <a href="games/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
-        <a href="games/eaglercraft-1.12.2/"><img src="images/mc.png" alt="minecraft"></a>
-        <a href="games/moto-x3m/"><img src="images/moto-x3m.jpg" alt="moto x3m"></a>
-        <a href="games/retro-bowl/"><img src="images/retro-bowl.jpg" alt="retrobowl"></a>
-        <a href="games/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
-        <a href="games/slope/"><img src="images/slope.jpg" alt="slope"></a>
-        <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-        <a href="games/friday-night-funkin/"><img src="images/fridaynightfunkin.png" alt="friday night funkin'"></a>
-        <a href="games/a-dance-of-fire-and-ice/"><img src="images/a-dance-of-fire-and-ice.jpg" alt="a dance of fire and ice"></a>
-        <a href="games/survival-race/"><img src="images/survival-race.png" alt="survival race"></a>
-        <a href="games/ARC/"><img src="images/ARC.png" alt="ARC"></a>
-        <a href="games/granny/"><img src="images/granny.png" alt="granny"></a>
-        <a href="games/repo/"><img src="images/repo.png" alt="repo"></a>
-        <a href="games/snow-rider/"><img src="images/snow-rider.png" alt="snow rider"></a>
-        <a href="games/time-shooter-3-swat/"><img src="images/time-shooter-3-swat.jpg" alt="time shooter 3 swat"></a>
-        <a href="games/run-3/"><img src="images/run-3.png" alt="run 3"></a>
-        <a href="games/poly-track/"><img src="images/poly-track.jpg" alt="poly track"></a>
-        <a href="games/aquapark.io/"><img src="images/aquapark.io.png" alt="aquapark.io"></a>
-        <a href="games/bouncemasters/"><img src="images/bouncemasters.png" alt="bouncemasters"></a>
-        <a href="games/bowmasters/"><img src="images/bowmasters.png" alt="bowmasters"></a>
-        <a href="games/bridge-race/"><img src="images/bridge-race.png" alt="bridge race"></a>'
-        <a href="games/crossy-road/"><img src="images/crossy-road.png" alt="crossy road"></a>
-        <a href="games/hill-climb-racing-lite/"><img src="images/hill-climb-racing-lite.png" alt="hill climb racing lite"></a>
-        <a href="games/getaway-shootout/"><img src="images/getaway-shootout.jpg" alt="getaway shootout"></a>
-        <a href="games/gun-mayhem/"><img src="images/gun-mayhem.jpg" alt="gun mayhem"></a>
-        <a href="games/basketball-stars/"><img src="images/basketball-stars.png" alt="basketball stars"></a>
-        <a href="games/ultrakill/"><img src="images/ultrakill.png" alt="ultrakill"></a>
-        <a href="games/block-blast/"><img src="images/block-blast.png" alt="block blast"></a>
-        <a href="games/cookie-clicker/"><img src="images/cookie-clicker.png" alt="cookie clicker"></a>
-        <a href="games/clash/"><img src="images/clash-royale.jpg" alt="clash royale"></a>
-        <a href="games/cheese-chompers-3d/"><img src="images/cheese-chompers-3d.jpeg" alt="cheese chomeprs 3d"></a>
-        <a href="games/fnaf/"><img src="images/fnaf.jpg" alt="five nights at freddys"></a>
-    </div>
+        <div class="features">
+            <div class="feature-card" onclick="window.location.href='gamespage/index.html'">
+                <div class="feature-icon">🎮</div>
+                <h3>Games</h3>
+            </div>
+            <div class="feature-card" onclick="window.location.href='comingsoon.html'">
+                <div class="feature-icon">🎬</div>
+                <h3>Movies & Shows</h3>
+            </div>
+            <div class="feature-card" onclick="window.location.href='drive.google.com/drive/folders/1kwALE_AwDq5xWVRCekqAAJJVG68dMLQ-?usp=sharing'">
+                <div class="feature-icon">🎵</div>
+                <h3>Music</h3>
+            </div>
+        </div>
 </body>
 </html>
-
-
-<script src="script.js"></script>
-
-
-
-
-
-
