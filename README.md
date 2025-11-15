@@ -2,6 +2,10 @@
 
 This is the changelog of mathtutor1ng in order from newest to oldest.
 
+**November 11, 2025**
+---
+- MASSIVE new design
+
 **November 10, 2025**
 ---
 - Added Five Nights At Freddys 3D

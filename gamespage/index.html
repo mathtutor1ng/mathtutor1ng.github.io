@@ -2,123 +2,290 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Tutoring</title>
-    <link rel="icon" href="images/mathtutor1ng-initials.png" type="image/png" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <title>Game Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .game-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: white;
+        }
+
+        .game-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-title {
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .popular-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <h1>Games</h1>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Game Hub</h1>
+        </header>
 
-    <div class="featured">
-        <h1>Popular:</h1>
-        <div class="column">
-          <a href="games/snow-rider/">
-            <img src="images/snow-rider.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/granny/">
-            <img src="images/granny.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="games/friday-night-funkin/">
-            <img src="images/fridaynightfunkin.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="games/eaglercraft-1.12.2/">
-            <img src="images/mc.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
+        <h2 class="section-title">Popular</h2>
+        <div class="popular-grid">
+            <a href="games/snow-rider/" class="game-card">
+                <div class="game-image">
+                    <img src="images/snow-rider.png" alt="Snow Rider">
+                </div>
+                <div class="game-title">Snow Rider</div>
+            </a>
+            <a href="games/granny/" class="game-card">
+                <div class="game-image">
+                    <img src="images/granny.png" alt="Granny">
+                </div>
+                <div class="game-title">Granny</div>
+            </a>
+            <a href="games/friday-night-funkin/" class="game-card">
+                <div class="game-image">
+                    <img src="images/fridaynightfunkin.png" alt="Friday Night Funkin'">
+                </div>
+                <div class="game-title">Friday Night Funkin'</div>
+            </a>
+            <a href="games/eaglercraft-1.12.2/" class="game-card">
+                <div class="game-image">
+                    <img src="images/mc.png" alt="Minecraft">
+                </div>
+                <div class="game-title">Minecraft</div>
+            </a>
+            <a href="games/moto-x3m/" class="game-card">
+                <div class="game-image">
+                    <img src="images/moto-x3m.jpg" alt="Moto X3M">
+                </div>
+                <div class="game-title">Moto X3M</div>
+            </a>
+            <a href="games/survival-race/" class="game-card">
+                <div class="game-image">
+                    <img src="images/survival-race.png" alt="Survival Race">
+                </div>
+                <div class="game-title">Survival Race</div>
             </a>
         </div>
-        <div class="column">
-          <a href="games/moto-x3m/">
-            <img src="images/moto-x3m.jpg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/survival-race/">
-            <img src="images/survival-race.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
+
+        <hr>
+
+        <div class="games-grid">
+            <a href="games/vex3/" class="game-card">
+                <div class="game-image">
+                    <img src="images/vex3.jpg" alt="Vex 3">
+                </div>
+                <div class="game-title">Vex 3</div>
+            </a>
+            <a href="games/vex4/" class="game-card">
+                <div class="game-image">
+                    <img src="images/vex4.jpg" alt="Vex 4">
+                </div>
+                <div class="game-title">Vex 4</div>
+            </a>
+            <a href="games/vex5/" class="game-card">
+                <div class="game-image">
+                    <img src="images/vex5.jpg" alt="Vex 5">
+                </div>
+                <div class="game-title">Vex 5</div>
+            </a>
+            <a href="games/vex6/" class="game-card">
+                <div class="game-image">
+                    <img src="images/vex6.jpeg" alt="Vex 6">
+                </div>
+                <div class="game-title">Vex 6</div>
+            </a>
+            <a href="games/vex7/" class="game-card">
+                <div class="game-image">
+                    <img src="images/vex7.jpeg" alt="Vex 7">
+                </div>
+                <div class="game-title">Vex 7</div>
+            </a>
+            <a href="games/retro-bowl/" class="game-card">
+                <div class="game-image">
+                    <img src="images/retro-bowl.jpg" alt="Retro Bowl">
+                </div>
+                <div class="game-title">Retro Bowl</div>
+            </a>
+            <a href="games/drive-mad/" class="game-card">
+                <div class="game-image">
+                    <img src="images/drive-mad.jpg" alt="Drive Mad">
+                </div>
+                <div class="game-title">Drive Mad</div>
+            </a>
+            <a href="games/slope/" class="game-card">
+                <div class="game-image">
+                    <img src="images/slope.jpg" alt="Slope">
+                </div>
+                <div class="game-title">Slope</div>
+            </a>
+            <a href="games/a-dance-of-fire-and-ice/" class="game-card">
+                <div class="game-image">
+                    <img src="images/a-dance-of-fire-and-ice.jpg" alt="A Dance of Fire and Ice">
+                </div>
+                <div class="game-title">A Dance of Fire and Ice</div>
+            </a>
+            <a href="games/time-shooter-3-swat/" class="game-card">
+                <div class="game-image">
+                    <img src="images/time-shooter-3-swat.jpg" alt="Time Shooter 3 SWAT">
+                </div>
+                <div class="game-title">Time Shooter 3 SWAT</div>
+            </a>
+            <a href="games/run-3/" class="game-card">
+                <div class="game-image">
+                    <img src="images/run-3.png" alt="Run 3">
+                </div>
+                <div class="game-title">Run 3</div>
+            </a>
+            <a href="games/poly-track/" class="game-card">
+                <div class="game-image">
+                    <img src="images/poly-track.jpg" alt="Poly Track">
+                </div>
+                <div class="game-title">Poly Track</div>
+            </a>
+            <a href="games/aquapark.io/" class="game-card">
+                <div class="game-image">
+                    <img src="images/aquapark.io.png" alt="Aquapark.io">
+                </div>
+                <div class="game-title">Aquapark.io</div>
+            </a>
+            <a href="games/basketball-stars/" class="game-card">
+                <div class="game-image">
+                    <img src="images/basketball-stars.png" alt="Basketball Stars">
+                </div>
+                <div class="game-title">Basketball Stars</div>
+            </a>
+            <a href="games/cookie-clicker/" class="game-card">
+                <div class="game-image">
+                    <img src="images/cookie-clicker.png" alt="Cookie Clicker">
+                </div>
+                <div class="game-title">Cookie Clicker</div>
+            </a>
+            <a href="games/clash/" class="game-card">
+                <div class="game-image">
+                    <img src="images/clash-royale.jpg" alt="Clash Royale">
+                </div>
+                <div class="game-title">Clash Royale</div>
+            </a>
+            <a href="games/fnaf/" class="game-card">
+                <div class="game-image">
+                    <img src="images/fnaf.jpg" alt="Five Nights at Freddy's">
+                </div>
+                <div class="game-title">Five Nights at Freddy's</div>
+            </a>
+            <a href="games/block-blast/" class="game-card">
+                <div class="game-image">
+                    <img src="images/block-blast.png" alt="Block Blast">
+                </div>
+                <div class="game-title">Block Blast</div>
+            </a>
         </div>
-        </div>
-    </div>
-
-    <div class="content">
-
-    <hr>
-
-    <div class="search">
-        <input type="text" placeholder="Search..." oninput="">
-        <button><i class="fas fa-search"></i></button>
-    </div>
-
-    <div id="games">
-        <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
-        <a href="games/vex3/"><img src="images/vex3.jpg" alt="vex 3"></a>
-        <a href="games/vex4/"><img src="images/vex4.jpg" alt="vex 4"></a>
-        <a href="games/vex5/"><img src="images/vex5.jpg" alt="vex 5"></a>
-        <a href="games/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
-        <a href="games/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
-        <a href="games/eaglercraft-1.12.2/"><img src="images/mc.png" alt="minecraft"></a>
-        <a href="games/moto-x3m/"><img src="images/moto-x3m.jpg" alt="moto x3m"></a>
-        <a href="games/retro-bowl/"><img src="images/retro-bowl.jpg" alt="retrobowl"></a>
-        <a href="games/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
-        <a href="games/slope/"><img src="images/slope.jpg" alt="slope"></a>
-        <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-        <a href="games/friday-night-funkin/"><img src="images/fridaynightfunkin.png" alt="friday night funkin'"></a>
-        <a href="games/a-dance-of-fire-and-ice/"><img src="images/a-dance-of-fire-and-ice.jpg" alt="a dance of fire and ice"></a>
-        <a href="games/survival-race/"><img src="images/survival-race.png" alt="survival race"></a>
-        <a href="games/ARC/"><img src="images/ARC.png" alt="ARC"></a>
-        <a href="games/granny/"><img src="images/granny.png" alt="granny"></a>
-        <a href="games/repo/"><img src="images/repo.png" alt="repo"></a>
-        <a href="games/snow-rider/"><img src="images/snow-rider.png" alt="snow rider"></a>
-        <a href="games/time-shooter-3-swat/"><img src="images/time-shooter-3-swat.jpg" alt="time shooter 3 swat"></a>
-        <a href="games/run-3/"><img src="images/run-3.png" alt="run 3"></a>
-        <a href="games/poly-track/"><img src="images/poly-track.jpg" alt="poly track"></a>
-        <a href="games/aquapark.io/"><img src="images/aquapark.io.png" alt="aquapark.io"></a>
-        <a href="games/bouncemasters/"><img src="images/bouncemasters.png" alt="bouncemasters"></a>
-        <a href="games/bowmasters/"><img src="images/bowmasters.png" alt="bowmasters"></a>
-        <a href="games/bridge-race/"><img src="images/bridge-race.png" alt="bridge race"></a>'
-        <a href="games/crossy-road/"><img src="images/crossy-road.png" alt="crossy road"></a>
-        <a href="games/hill-climb-racing-lite/"><img src="images/hill-climb-racing-lite.png" alt="hill climb racing lite"></a>
-        <a href="games/getaway-shootout/"><img src="images/getaway-shootout.jpg" alt="getaway shootout"></a>
-        <a href="games/gun-mayhem/"><img src="images/gun-mayhem.jpg" alt="gun mayhem"></a>
-        <a href="games/basketball-stars/"><img src="images/basketball-stars.png" alt="basketball stars"></a>
-        <a href="games/ultrakill/"><img src="images/ultrakill.png" alt="ultrakill"></a>
-        <a href="games/block-blast/"><img src="images/block-blast.png" alt="block blast"></a>
-        <a href="games/cookie-clicker/"><img src="images/cookie-clicker.png" alt="cookie clicker"></a>
-        <a href="games/clash/"><img src="images/clash-royale.jpg" alt="clash royale"></a>
-        <a href="games/cheese-chompers-3d/"><img src="images/cheese-chompers-3d.jpeg" alt="cheese chomeprs 3d"></a>
-        <a href="games/fnaf/"><img src="images/fnaf.jpg" alt="five nights at freddys"></a>
     </div>
 </body>
 </html>
-
-
-<script src="script.js"></script>
-
-
-
-
-
-
