@@ -161,7 +161,7 @@ nav h1 {
 .featured a {
     display: inline-block;
     position: relative;
-    color: #2c7ffc;
+    color: #002b6b;
     text-decoration: none;
 }
     
@@ -181,5 +181,5 @@ nav h1 {
     
     .featured .play-button i {
     font-size: 5vw;
-    text-shadow: 0 0 100px #2c7ffc;
+    text-shadow: 0 0 100px #0b397e;
     }
