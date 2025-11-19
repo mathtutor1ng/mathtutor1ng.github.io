@@ -2,6 +2,10 @@
 
 This is the changelog of mathtutor1ng in order from newest to oldest.
 
+**November 19, 2025**
+---
+- Updates won't be coming as quick temporarily.
+
 **November 11, 2025**
 ---
 - MASSIVE new design
